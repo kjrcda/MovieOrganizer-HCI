@@ -7,3 +7,4 @@ C:\Users\kjrcda\Documents\University\Year 4\COMP 3020\a3\MovieOrganizer-HCI\Movi
 C:\Users\kjrcda\Documents\University\Year 4\COMP 3020\a3\MovieOrganizer-HCI\MovieOrganizer\MovieOrganizer\obj\Debug\MovieOrganizer.exe
 C:\Users\kjrcda\Documents\University\Year 4\COMP 3020\a3\MovieOrganizer-HCI\MovieOrganizer\MovieOrganizer\obj\Debug\MovieOrganizer.pdb
 C:\Users\kjrcda\Documents\University\Year 4\COMP 3020\a3\MovieOrganizer-HCI\MovieOrganizer\MovieOrganizer\obj\Debug\MovieOrganizer.MainForm.resources
+C:\Users\kjrcda\Documents\University\Year 4\COMP 3020\a3\MovieOrganizer-HCI\MovieOrganizer\MovieOrganizer\obj\Debug\MovieOrganizer.DataEntryAbstract.resources
