@@ -16,5 +16,19 @@ namespace MovieOrganizer
         {
             InitializeComponent();
         }
+
+        private void btnAddMovie_Click(object sender, EventArgs e)
+        {
+            using(var form = new DataEntryAbstract("Add Movie"))
+            {
+                var result = form.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    MessageBox.Show("Add Movie Successfully!");
+                }
+                else
+                    MessageBox.Show("Cancelled Movie Entry");
+            }
+        }
     }
 }
