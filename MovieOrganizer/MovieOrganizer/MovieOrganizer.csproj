@@ -50,6 +50,18 @@
     <Compile Include="DataEntryAbstract.Designer.cs">
       <DependentUpon>DataEntryAbstract.cs</DependentUpon>
     </Compile>
+    <Compile Include="LibraryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibraryForm.Designer.cs">
+      <DependentUpon>LibraryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sign_In_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sign_In_Form.Designer.cs">
+      <DependentUpon>Sign_In_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +72,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DataEntryAbstract.resx">
       <DependentUpon>DataEntryAbstract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibraryForm.resx">
+      <DependentUpon>LibraryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sign_In_Form.resx">
+      <DependentUpon>Sign_In_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
