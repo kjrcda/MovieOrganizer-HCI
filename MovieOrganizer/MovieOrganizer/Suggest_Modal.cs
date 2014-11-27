@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace MovieOrganizer
 {
-    public partial class LibraryForm : Form
+    public partial class Suggest_Modal : Form
     {
-        public LibraryForm()
+        public Suggest_Modal()
         {
             InitializeComponent();
-        }
-
-        private void LibraryForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            panel1.Hide();
-            panel2.Show();
         }
     }
 }

@@ -50,6 +50,24 @@
     <Compile Include="DataEntryAbstract.Designer.cs">
       <DependentUpon>DataEntryAbstract.cs</DependentUpon>
     </Compile>
+    <Compile Include="Details_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Details_Form.Designer.cs">
+      <DependentUpon>Details_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced_Search_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced_Search_Form.Designer.cs">
+      <DependentUpon>Advanced_Search_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Suggest_Modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suggest_Modal.Designer.cs">
+      <DependentUpon>Suggest_Modal.cs</DependentUpon>
+    </Compile>
     <Compile Include="LibraryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,8 +88,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Advanced_Search_Form.resx">
+      <DependentUpon>Advanced_Search_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DataEntryAbstract.resx">
       <DependentUpon>DataEntryAbstract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Details_Form.resx">
+      <DependentUpon>Details_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LibraryForm.resx">
       <DependentUpon>LibraryForm.cs</DependentUpon>
@@ -91,6 +115,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Suggest_Modal.resx">
+      <DependentUpon>Suggest_Modal.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

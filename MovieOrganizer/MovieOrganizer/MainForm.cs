@@ -15,11 +15,27 @@ namespace MovieOrganizer
         public MainForm()
         {
             InitializeComponent();
+            NavigationPanel.Hide();
         }
 
-        private void btnAddMovie_Click(object sender, EventArgs e)
+        //syntax is objectType_panelObjectIsOn_panelObjectPointsTo
+        private void btn_pLibrary_ViewMain_Click(object sender, EventArgs e)
         {
-            using(var form = new DataEntryAbstract("Add Movie"))
+            LibraryPanel.Hide();
+            NavigationPanel.Hide();
+            MainMenuPanel.Show();
+        }
+
+        private void btn_pMain_ViewLibrary_Click(object sender, EventArgs e)
+        {
+            MainMenuPanel.Hide();
+            LibraryPanel.Show();
+            NavigationPanel.Show();
+        }
+
+        private void btn_pMain_AddMovie_Click(object sender, EventArgs e)
+        {
+            using (var form = new DataEntryAbstract("Add Movie"))
             {
                 var result = form.ShowDialog();
                 if (result == DialogResult.OK)
