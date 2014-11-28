@@ -18,8 +18,6 @@ C:\Users\Madeline\Desktop\MovieOrganizer-HCI\MovieOrganizer\MovieOrganizer\obj\D
 C:\Users\Madeline\Desktop\MovieOrganizer-HCI\MovieOrganizer\MovieOrganizer\obj\Debug\MovieOrganizer.MainForm.resources
 C:\Users\Madeline\Desktop\MovieOrganizer-HCI\MovieOrganizer\MovieOrganizer\obj\Debug\MovieOrganizer.Properties.Resources.resources
 C:\Users\Madeline\Desktop\MovieOrganizer-HCI\MovieOrganizer\MovieOrganizer\obj\Debug\MovieOrganizer.csproj.GenerateResource.Cache
-C:\Users\Madeline\Desktop\MovieOrganizer-HCI\MovieOrganizer\MovieOrganizer\obj\Debug\MovieOrganizer.Advanced_Search_Form.resources
 C:\Users\Madeline\Desktop\MovieOrganizer-HCI\MovieOrganizer\MovieOrganizer\obj\Debug\MovieOrganizer.Details_Form.resources
-C:\Users\Madeline\Desktop\MovieOrganizer-HCI\MovieOrganizer\MovieOrganizer\obj\Debug\MovieOrganizer.LibraryForm.resources
 C:\Users\Madeline\Desktop\MovieOrganizer-HCI\MovieOrganizer\MovieOrganizer\obj\Debug\MovieOrganizer.Sign_In_Form.resources
 C:\Users\Madeline\Desktop\MovieOrganizer-HCI\MovieOrganizer\MovieOrganizer\obj\Debug\MovieOrganizer.Suggest_Modal.resources
