@@ -29,6 +29,24 @@
         private void InitializeComponent()
         {
             this.LibraryPanel = new System.Windows.Forms.Panel();
+            this.label_panel = new System.Windows.Forms.Panel();
+            this.lbl_SortBy = new System.Windows.Forms.Label();
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.tlStrp_Genre = new System.Windows.Forms.ToolStripMenuItem();
+            this.horrorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.otherDynamicallyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addedFieldsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlStrp_Actor = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlStrp_Director = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlStrp_Year = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlStrp_Rating = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlStrp_RecentlyViewed = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlStrp_TimesWatched = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtBox_SearchBar = new System.Windows.Forms.TextBox();
+            this.panel_MovieListing = new System.Windows.Forms.Panel();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.MainMenuPanel = new System.Windows.Forms.Panel();
             this.pic_WelcomeBanner = new System.Windows.Forms.PictureBox();
             this.link_pMain_pTaggedSearch = new System.Windows.Forms.LinkLabel();
@@ -40,7 +58,6 @@
             this.pic_pMain_pLibrary = new System.Windows.Forms.PictureBox();
             this.link_pMain_pLibrary = new System.Windows.Forms.LinkLabel();
             this.NavigationPanel = new System.Windows.Forms.Panel();
-            this.txt_placeHolder = new System.Windows.Forms.TextBox();
             this.DataEntryPanel = new System.Windows.Forms.Panel();
             this.cmb_Rating = new System.Windows.Forms.ComboBox();
             this.btn_UploadImage = new System.Windows.Forms.Button();
@@ -59,25 +76,26 @@
             this.lbl_Username = new System.Windows.Forms.Label();
             this.lbl_LOSI = new System.Windows.Forms.Label();
             this.link_LOSI = new System.Windows.Forms.LinkLabel();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.panel_MovieListing = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tlStrp_Genre = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlStrp_Actor = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlStrp_Director = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlStrp_Year = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlStrp_Rating = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlStrp_RecentlyViewed = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlStrp_TimesWatched = new System.Windows.Forms.ToolStripMenuItem();
-            this.horrorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.otherDynamicallyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addedFieldsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lbl_SortBy = new System.Windows.Forms.Label();
-            this.label_panel = new System.Windows.Forms.Panel();
+            this.link_pNavBar_TaggedSearch = new System.Windows.Forms.LinkLabel();
+            this.link_pNavBar_Suggest = new System.Windows.Forms.LinkLabel();
+            this.link_pNavBar_AddMovie = new System.Windows.Forms.LinkLabel();
+            this.link_pNavBar_ViewLibrary = new System.Windows.Forms.LinkLabel();
+            this.btn_pLibrary_BeginSearch = new System.Windows.Forms.Button();
+            this.TaggedSearchPanel = new System.Windows.Forms.Panel();
+            this.listBox_pTaggedSearch_available = new System.Windows.Forms.ListBox();
+            this.lbl_pTaggedSearch_available = new System.Windows.Forms.Label();
+            this.lbl_pTaggedSearch_search = new System.Windows.Forms.Label();
+            this.listBox_pTaggedSearch_search = new System.Windows.Forms.ListBox();
+            this.btn_pTaggedSearch_Search = new System.Windows.Forms.Button();
+            this.btn_pTaggedSearch_Cancel = new System.Windows.Forms.Button();
+            this.btn_pTaggedSearch_moveToSearch = new System.Windows.Forms.Button();
+            this.btn_pTaggedSearch_moveToAvail = new System.Windows.Forms.Button();
             this.LibraryPanel.SuspendLayout();
+            this.label_panel.SuspendLayout();
+            this.toolStripContainer1.ContentPanel.SuspendLayout();
+            this.toolStripContainer1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            this.panel_MovieListing.SuspendLayout();
             this.MainMenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_WelcomeBanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pTagged)).BeginInit();
@@ -88,23 +106,173 @@
             this.DataEntryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_EditMovieImage)).BeginInit();
             this.LoginPanel.SuspendLayout();
-            this.panel_MovieListing.SuspendLayout();
-            this.toolStripContainer1.ContentPanel.SuspendLayout();
-            this.toolStripContainer1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.label_panel.SuspendLayout();
+            this.TaggedSearchPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // LibraryPanel
             // 
+            this.LibraryPanel.Controls.Add(this.btn_pLibrary_BeginSearch);
             this.LibraryPanel.Controls.Add(this.label_panel);
             this.LibraryPanel.Controls.Add(this.toolStripContainer1);
-            this.LibraryPanel.Controls.Add(this.textBox1);
+            this.LibraryPanel.Controls.Add(this.txtBox_SearchBar);
             this.LibraryPanel.Controls.Add(this.panel_MovieListing);
             this.LibraryPanel.Location = new System.Drawing.Point(0, 0);
             this.LibraryPanel.Name = "LibraryPanel";
             this.LibraryPanel.Size = new System.Drawing.Size(605, 615);
             this.LibraryPanel.TabIndex = 2;
+            // 
+            // label_panel
+            // 
+            this.label_panel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_panel.Controls.Add(this.lbl_SortBy);
+            this.label_panel.Location = new System.Drawing.Point(0, 84);
+            this.label_panel.Name = "label_panel";
+            this.label_panel.Size = new System.Drawing.Size(121, 26);
+            this.label_panel.TabIndex = 6;
+            // 
+            // lbl_SortBy
+            // 
+            this.lbl_SortBy.AutoSize = true;
+            this.lbl_SortBy.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lbl_SortBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SortBy.Location = new System.Drawing.Point(20, 3);
+            this.lbl_SortBy.Name = "lbl_SortBy";
+            this.lbl_SortBy.Size = new System.Drawing.Size(58, 17);
+            this.lbl_SortBy.TabIndex = 1;
+            this.lbl_SortBy.Text = "Sort By:";
+            // 
+            // toolStripContainer1
+            // 
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            this.toolStripContainer1.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.menuStrip1);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(121, 500);
+            this.toolStripContainer1.Location = new System.Drawing.Point(0, 87);
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            this.toolStripContainer1.Size = new System.Drawing.Size(121, 525);
+            this.toolStripContainer1.TabIndex = 5;
+            this.toolStripContainer1.Text = "toolStripContainer1";
+            // 
+            // toolStripContainer1.TopToolStripPanel
+            // 
+            this.toolStripContainer1.TopToolStripPanel.Click += new System.EventHandler(this.toolStripContainer1_TopToolStripPanel_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tlStrp_Genre,
+            this.tlStrp_Actor,
+            this.tlStrp_Director,
+            this.tlStrp_Year,
+            this.tlStrp_Rating,
+            this.tlStrp_RecentlyViewed,
+            this.tlStrp_TimesWatched});
+            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.menuStrip1.Location = new System.Drawing.Point(0, 25);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(111, 139);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked_2);
+            // 
+            // tlStrp_Genre
+            // 
+            this.tlStrp_Genre.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.horrorToolStripMenuItem,
+            this.actionToolStripMenuItem,
+            this.otherDynamicallyToolStripMenuItem,
+            this.addedFieldsToolStripMenuItem});
+            this.tlStrp_Genre.Name = "tlStrp_Genre";
+            this.tlStrp_Genre.Size = new System.Drawing.Size(104, 19);
+            this.tlStrp_Genre.Text = "Genre";
+            // 
+            // horrorToolStripMenuItem
+            // 
+            this.horrorToolStripMenuItem.Name = "horrorToolStripMenuItem";
+            this.horrorToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.horrorToolStripMenuItem.Text = "Horror";
+            // 
+            // actionToolStripMenuItem
+            // 
+            this.actionToolStripMenuItem.Name = "actionToolStripMenuItem";
+            this.actionToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.actionToolStripMenuItem.Text = "Action";
+            // 
+            // otherDynamicallyToolStripMenuItem
+            // 
+            this.otherDynamicallyToolStripMenuItem.Name = "otherDynamicallyToolStripMenuItem";
+            this.otherDynamicallyToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.otherDynamicallyToolStripMenuItem.Text = "Other dynamically";
+            // 
+            // addedFieldsToolStripMenuItem
+            // 
+            this.addedFieldsToolStripMenuItem.Name = "addedFieldsToolStripMenuItem";
+            this.addedFieldsToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.addedFieldsToolStripMenuItem.Text = "added fields";
+            // 
+            // tlStrp_Actor
+            // 
+            this.tlStrp_Actor.Name = "tlStrp_Actor";
+            this.tlStrp_Actor.Size = new System.Drawing.Size(104, 19);
+            this.tlStrp_Actor.Text = "Actor";
+            // 
+            // tlStrp_Director
+            // 
+            this.tlStrp_Director.Name = "tlStrp_Director";
+            this.tlStrp_Director.Size = new System.Drawing.Size(104, 19);
+            this.tlStrp_Director.Text = "Director";
+            // 
+            // tlStrp_Year
+            // 
+            this.tlStrp_Year.Name = "tlStrp_Year";
+            this.tlStrp_Year.Size = new System.Drawing.Size(104, 19);
+            this.tlStrp_Year.Text = "Year";
+            // 
+            // tlStrp_Rating
+            // 
+            this.tlStrp_Rating.Name = "tlStrp_Rating";
+            this.tlStrp_Rating.Size = new System.Drawing.Size(104, 19);
+            this.tlStrp_Rating.Text = "Rating";
+            // 
+            // tlStrp_RecentlyViewed
+            // 
+            this.tlStrp_RecentlyViewed.Name = "tlStrp_RecentlyViewed";
+            this.tlStrp_RecentlyViewed.Size = new System.Drawing.Size(104, 19);
+            this.tlStrp_RecentlyViewed.Text = "Recently Viewed";
+            // 
+            // tlStrp_TimesWatched
+            // 
+            this.tlStrp_TimesWatched.Name = "tlStrp_TimesWatched";
+            this.tlStrp_TimesWatched.Size = new System.Drawing.Size(104, 19);
+            this.tlStrp_TimesWatched.Text = "Times Watched";
+            // 
+            // txtBox_SearchBar
+            // 
+            this.txtBox_SearchBar.Location = new System.Drawing.Point(124, 87);
+            this.txtBox_SearchBar.Multiline = true;
+            this.txtBox_SearchBar.Name = "txtBox_SearchBar";
+            this.txtBox_SearchBar.Size = new System.Drawing.Size(467, 20);
+            this.txtBox_SearchBar.TabIndex = 4;
+            this.txtBox_SearchBar.Text = "Search for a Title";
+            // 
+            // panel_MovieListing
+            // 
+            this.panel_MovieListing.Controls.Add(this.vScrollBar1);
+            this.panel_MovieListing.Location = new System.Drawing.Point(121, 113);
+            this.panel_MovieListing.Name = "panel_MovieListing";
+            this.panel_MovieListing.Size = new System.Drawing.Size(484, 499);
+            this.panel_MovieListing.TabIndex = 3;
+            // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Location = new System.Drawing.Point(458, 0);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(20, 499);
+            this.vScrollBar1.TabIndex = 2;
             // 
             // MainMenuPanel
             // 
@@ -141,6 +309,7 @@
             this.link_pMain_pTaggedSearch.TabIndex = 9;
             this.link_pMain_pTaggedSearch.TabStop = true;
             this.link_pMain_pTaggedSearch.Text = "Tagged Search";
+            this.link_pMain_pTaggedSearch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_pMain_pTaggedSearch_LinkClicked);
             // 
             // link_pMain_frmSuggest
             // 
@@ -152,6 +321,7 @@
             this.link_pMain_frmSuggest.TabIndex = 8;
             this.link_pMain_frmSuggest.TabStop = true;
             this.link_pMain_frmSuggest.Text = "Suggest a Movie for Me";
+            this.link_pMain_frmSuggest.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_pMain_frmSuggest_LinkClicked);
             // 
             // pic_pMain_pTagged
             // 
@@ -215,20 +385,14 @@
             // 
             // NavigationPanel
             // 
-            this.NavigationPanel.Controls.Add(this.txt_placeHolder);
+            this.NavigationPanel.Controls.Add(this.link_pNavBar_ViewLibrary);
+            this.NavigationPanel.Controls.Add(this.link_pNavBar_AddMovie);
+            this.NavigationPanel.Controls.Add(this.link_pNavBar_Suggest);
+            this.NavigationPanel.Controls.Add(this.link_pNavBar_TaggedSearch);
             this.NavigationPanel.Location = new System.Drawing.Point(0, 0);
             this.NavigationPanel.Name = "NavigationPanel";
             this.NavigationPanel.Size = new System.Drawing.Size(605, 51);
             this.NavigationPanel.TabIndex = 2;
-            // 
-            // txt_placeHolder
-            // 
-            this.txt_placeHolder.Location = new System.Drawing.Point(14, 12);
-            this.txt_placeHolder.Name = "txt_placeHolder";
-            this.txt_placeHolder.Size = new System.Drawing.Size(576, 20);
-            this.txt_placeHolder.TabIndex = 0;
-            this.txt_placeHolder.Text = "Ideally we\'ll have tag-like objects here that will link to the panel options the " +
-    "main menu provides";
             // 
             // DataEntryPanel
             // 
@@ -421,173 +585,185 @@
             this.link_LOSI.TabIndex = 0;
             this.link_LOSI.TabStop = true;
             this.link_LOSI.Text = "Log Out";
+            this.link_LOSI.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_LOSI_LinkClicked);
             // 
-            // vScrollBar1
+            // link_pNavBar_TaggedSearch
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(458, 0);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(20, 499);
-            this.vScrollBar1.TabIndex = 2;
+            this.link_pNavBar_TaggedSearch.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.link_pNavBar_TaggedSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.link_pNavBar_TaggedSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.link_pNavBar_TaggedSearch.Location = new System.Drawing.Point(453, 0);
+            this.link_pNavBar_TaggedSearch.Name = "link_pNavBar_TaggedSearch";
+            this.link_pNavBar_TaggedSearch.Size = new System.Drawing.Size(151, 48);
+            this.link_pNavBar_TaggedSearch.TabIndex = 8;
+            this.link_pNavBar_TaggedSearch.TabStop = true;
+            this.link_pNavBar_TaggedSearch.Text = "TaggedSearch";
+            this.link_pNavBar_TaggedSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.link_pNavBar_TaggedSearch.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
-            // panel_MovieListing
+            // link_pNavBar_Suggest
             // 
-            this.panel_MovieListing.Controls.Add(this.vScrollBar1);
-            this.panel_MovieListing.Location = new System.Drawing.Point(121, 113);
-            this.panel_MovieListing.Name = "panel_MovieListing";
-            this.panel_MovieListing.Size = new System.Drawing.Size(484, 499);
-            this.panel_MovieListing.TabIndex = 3;
+            this.link_pNavBar_Suggest.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.link_pNavBar_Suggest.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.link_pNavBar_Suggest.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.link_pNavBar_Suggest.Location = new System.Drawing.Point(302, 0);
+            this.link_pNavBar_Suggest.Name = "link_pNavBar_Suggest";
+            this.link_pNavBar_Suggest.Size = new System.Drawing.Size(151, 48);
+            this.link_pNavBar_Suggest.TabIndex = 9;
+            this.link_pNavBar_Suggest.TabStop = true;
+            this.link_pNavBar_Suggest.Text = "Suggest Movie";
+            this.link_pNavBar_Suggest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.link_pNavBar_Suggest.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
-            // textBox1
+            // link_pNavBar_AddMovie
             // 
-            this.textBox1.Location = new System.Drawing.Point(124, 87);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(467, 20);
-            this.textBox1.TabIndex = 4;
+            this.link_pNavBar_AddMovie.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.link_pNavBar_AddMovie.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.link_pNavBar_AddMovie.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.link_pNavBar_AddMovie.Location = new System.Drawing.Point(151, 0);
+            this.link_pNavBar_AddMovie.Name = "link_pNavBar_AddMovie";
+            this.link_pNavBar_AddMovie.Size = new System.Drawing.Size(151, 48);
+            this.link_pNavBar_AddMovie.TabIndex = 10;
+            this.link_pNavBar_AddMovie.TabStop = true;
+            this.link_pNavBar_AddMovie.Text = "Add a Movie";
+            this.link_pNavBar_AddMovie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.link_pNavBar_AddMovie.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
-            // toolStripContainer1
+            // link_pNavBar_ViewLibrary
             // 
+            this.link_pNavBar_ViewLibrary.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.link_pNavBar_ViewLibrary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.link_pNavBar_ViewLibrary.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.link_pNavBar_ViewLibrary.Location = new System.Drawing.Point(0, 0);
+            this.link_pNavBar_ViewLibrary.Name = "link_pNavBar_ViewLibrary";
+            this.link_pNavBar_ViewLibrary.Size = new System.Drawing.Size(151, 48);
+            this.link_pNavBar_ViewLibrary.TabIndex = 11;
+            this.link_pNavBar_ViewLibrary.TabStop = true;
+            this.link_pNavBar_ViewLibrary.Text = "View Library";
+            this.link_pNavBar_ViewLibrary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.link_pNavBar_ViewLibrary.VisitedLinkColor = System.Drawing.Color.Blue;
+            this.link_pNavBar_ViewLibrary.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_pNavBar_ViewLibrary_LinkClicked);
             // 
-            // toolStripContainer1.tlStrp_Content
+            // btn_pLibrary_BeginSearch
             // 
-            this.toolStripContainer1.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.menuStrip1);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(121, 500);
-            this.toolStripContainer1.Location = new System.Drawing.Point(0, 87);
-            this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(121, 525);
-            this.toolStripContainer1.TabIndex = 5;
-            this.toolStripContainer1.Text = "toolStripContainer1";
+            this.btn_pLibrary_BeginSearch.Location = new System.Drawing.Point(516, 87);
+            this.btn_pLibrary_BeginSearch.Name = "btn_pLibrary_BeginSearch";
+            this.btn_pLibrary_BeginSearch.Size = new System.Drawing.Size(74, 20);
+            this.btn_pLibrary_BeginSearch.TabIndex = 7;
+            this.btn_pLibrary_BeginSearch.Text = "Search";
+            this.btn_pLibrary_BeginSearch.UseVisualStyleBackColor = true;
             // 
-            // toolStripContainer1.TopToolStripPanel
+            // TaggedSearchPanel
             // 
-            this.toolStripContainer1.TopToolStripPanel.Click += new System.EventHandler(this.toolStripContainer1_TopToolStripPanel_Click);
+            this.TaggedSearchPanel.Controls.Add(this.btn_pTaggedSearch_moveToAvail);
+            this.TaggedSearchPanel.Controls.Add(this.btn_pTaggedSearch_moveToSearch);
+            this.TaggedSearchPanel.Controls.Add(this.btn_pTaggedSearch_Cancel);
+            this.TaggedSearchPanel.Controls.Add(this.btn_pTaggedSearch_Search);
+            this.TaggedSearchPanel.Controls.Add(this.listBox_pTaggedSearch_search);
+            this.TaggedSearchPanel.Controls.Add(this.lbl_pTaggedSearch_search);
+            this.TaggedSearchPanel.Controls.Add(this.lbl_pTaggedSearch_available);
+            this.TaggedSearchPanel.Controls.Add(this.listBox_pTaggedSearch_available);
+            this.TaggedSearchPanel.Location = new System.Drawing.Point(0, 0);
+            this.TaggedSearchPanel.Name = "TaggedSearchPanel";
+            this.TaggedSearchPanel.Size = new System.Drawing.Size(604, 615);
+            this.TaggedSearchPanel.TabIndex = 1;
             // 
-            // menuStrip1
+            // listBox_pTaggedSearch_available
             // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tlStrp_Genre,
-            this.tlStrp_Actor,
-            this.tlStrp_Director,
-            this.tlStrp_Year,
-            this.tlStrp_Rating,
-            this.tlStrp_RecentlyViewed,
-            this.tlStrp_TimesWatched});
-            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(0, 25);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(111, 139);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked_2);
+            this.listBox_pTaggedSearch_available.FormattingEnabled = true;
+            this.listBox_pTaggedSearch_available.Location = new System.Drawing.Point(80, 153);
+            this.listBox_pTaggedSearch_available.Name = "listBox_pTaggedSearch_available";
+            this.listBox_pTaggedSearch_available.Size = new System.Drawing.Size(166, 238);
+            this.listBox_pTaggedSearch_available.TabIndex = 1;
             // 
-            // tlStrp_Genre
+            // lbl_pTaggedSearch_available
             // 
-            this.tlStrp_Genre.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.horrorToolStripMenuItem,
-            this.actionToolStripMenuItem,
-            this.otherDynamicallyToolStripMenuItem,
-            this.addedFieldsToolStripMenuItem});
-            this.tlStrp_Genre.Name = "tlStrp_Genre";
-            this.tlStrp_Genre.Size = new System.Drawing.Size(104, 19);
-            this.tlStrp_Genre.Text = "Genre";
+            this.lbl_pTaggedSearch_available.AutoSize = true;
+            this.lbl_pTaggedSearch_available.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pTaggedSearch_available.Location = new System.Drawing.Point(77, 128);
+            this.lbl_pTaggedSearch_available.Name = "lbl_pTaggedSearch_available";
+            this.lbl_pTaggedSearch_available.Size = new System.Drawing.Size(115, 20);
+            this.lbl_pTaggedSearch_available.TabIndex = 3;
+            this.lbl_pTaggedSearch_available.Text = "Available Tags:";
             // 
-            // tlStrp_Actor
+            // lbl_pTaggedSearch_search
             // 
-            this.tlStrp_Actor.Name = "tlStrp_Actor";
-            this.tlStrp_Actor.Size = new System.Drawing.Size(104, 19);
-            this.tlStrp_Actor.Text = "Actor";
+            this.lbl_pTaggedSearch_search.AutoSize = true;
+            this.lbl_pTaggedSearch_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pTaggedSearch_search.Location = new System.Drawing.Point(348, 130);
+            this.lbl_pTaggedSearch_search.Name = "lbl_pTaggedSearch_search";
+            this.lbl_pTaggedSearch_search.Size = new System.Drawing.Size(149, 20);
+            this.lbl_pTaggedSearch_search.TabIndex = 4;
+            this.lbl_pTaggedSearch_search.Text = "Tags to Search For:";
             // 
-            // tlStrp_Director
+            // listBox_pTaggedSearch_search
             // 
-            this.tlStrp_Director.Name = "tlStrp_Director";
-            this.tlStrp_Director.Size = new System.Drawing.Size(104, 19);
-            this.tlStrp_Director.Text = "Director";
+            this.listBox_pTaggedSearch_search.FormattingEnabled = true;
+            this.listBox_pTaggedSearch_search.Location = new System.Drawing.Point(352, 153);
+            this.listBox_pTaggedSearch_search.Name = "listBox_pTaggedSearch_search";
+            this.listBox_pTaggedSearch_search.Size = new System.Drawing.Size(166, 238);
+            this.listBox_pTaggedSearch_search.TabIndex = 5;
             // 
-            // tlStrp_Year
+            // btn_pTaggedSearch_Search
             // 
-            this.tlStrp_Year.Name = "tlStrp_Year";
-            this.tlStrp_Year.Size = new System.Drawing.Size(104, 19);
-            this.tlStrp_Year.Text = "Year";
+            this.btn_pTaggedSearch_Search.Location = new System.Drawing.Point(515, 578);
+            this.btn_pTaggedSearch_Search.Name = "btn_pTaggedSearch_Search";
+            this.btn_pTaggedSearch_Search.Size = new System.Drawing.Size(75, 23);
+            this.btn_pTaggedSearch_Search.TabIndex = 6;
+            this.btn_pTaggedSearch_Search.Text = "Search";
+            this.btn_pTaggedSearch_Search.UseVisualStyleBackColor = true;
             // 
-            // tlStrp_Rating
+            // btn_pTaggedSearch_Cancel
             // 
-            this.tlStrp_Rating.Name = "tlStrp_Rating";
-            this.tlStrp_Rating.Size = new System.Drawing.Size(104, 19);
-            this.tlStrp_Rating.Text = "Rating";
+            this.btn_pTaggedSearch_Cancel.Location = new System.Drawing.Point(434, 578);
+            this.btn_pTaggedSearch_Cancel.Name = "btn_pTaggedSearch_Cancel";
+            this.btn_pTaggedSearch_Cancel.Size = new System.Drawing.Size(75, 23);
+            this.btn_pTaggedSearch_Cancel.TabIndex = 7;
+            this.btn_pTaggedSearch_Cancel.Text = "Cancel";
+            this.btn_pTaggedSearch_Cancel.UseVisualStyleBackColor = true;
             // 
-            // tlStrp_RecentlyViewed
+            // btn_pTaggedSearch_moveToSearch
             // 
-            this.tlStrp_RecentlyViewed.Name = "tlStrp_RecentlyViewed";
-            this.tlStrp_RecentlyViewed.Size = new System.Drawing.Size(104, 19);
-            this.tlStrp_RecentlyViewed.Text = "Recently Viewed";
+            this.btn_pTaggedSearch_moveToSearch.Location = new System.Drawing.Point(280, 209);
+            this.btn_pTaggedSearch_moveToSearch.Name = "btn_pTaggedSearch_moveToSearch";
+            this.btn_pTaggedSearch_moveToSearch.Size = new System.Drawing.Size(38, 36);
+            this.btn_pTaggedSearch_moveToSearch.TabIndex = 8;
+            this.btn_pTaggedSearch_moveToSearch.Text = ">";
+            this.btn_pTaggedSearch_moveToSearch.UseVisualStyleBackColor = true;
             // 
-            // tlStrp_TimesWatched
+            // btn_pTaggedSearch_moveToAvail
             // 
-            this.tlStrp_TimesWatched.Name = "tlStrp_TimesWatched";
-            this.tlStrp_TimesWatched.Size = new System.Drawing.Size(104, 19);
-            this.tlStrp_TimesWatched.Text = "Times Watched";
-            // 
-            // horrorToolStripMenuItem
-            // 
-            this.horrorToolStripMenuItem.Name = "horrorToolStripMenuItem";
-            this.horrorToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.horrorToolStripMenuItem.Text = "Horror";
-            // 
-            // actionToolStripMenuItem
-            // 
-            this.actionToolStripMenuItem.Name = "actionToolStripMenuItem";
-            this.actionToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.actionToolStripMenuItem.Text = "Action";
-            // 
-            // otherDynamicallyToolStripMenuItem
-            // 
-            this.otherDynamicallyToolStripMenuItem.Name = "otherDynamicallyToolStripMenuItem";
-            this.otherDynamicallyToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.otherDynamicallyToolStripMenuItem.Text = "Other dynamically";
-            // 
-            // addedFieldsToolStripMenuItem
-            // 
-            this.addedFieldsToolStripMenuItem.Name = "addedFieldsToolStripMenuItem";
-            this.addedFieldsToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.addedFieldsToolStripMenuItem.Text = "added fields";
-            // 
-            // lbl_SortBy
-            // 
-            this.lbl_SortBy.AutoSize = true;
-            this.lbl_SortBy.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lbl_SortBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SortBy.Location = new System.Drawing.Point(20, 3);
-            this.lbl_SortBy.Name = "lbl_SortBy";
-            this.lbl_SortBy.Size = new System.Drawing.Size(58, 17);
-            this.lbl_SortBy.TabIndex = 1;
-            this.lbl_SortBy.Text = "Sort By:";
-            // 
-            // label_panel
-            // 
-            this.label_panel.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label_panel.Controls.Add(this.lbl_SortBy);
-            this.label_panel.Location = new System.Drawing.Point(0, 84);
-            this.label_panel.Name = "label_panel";
-            this.label_panel.Size = new System.Drawing.Size(121, 26);
-            this.label_panel.TabIndex = 6;
+            this.btn_pTaggedSearch_moveToAvail.Location = new System.Drawing.Point(280, 274);
+            this.btn_pTaggedSearch_moveToAvail.Name = "btn_pTaggedSearch_moveToAvail";
+            this.btn_pTaggedSearch_moveToAvail.Size = new System.Drawing.Size(38, 36);
+            this.btn_pTaggedSearch_moveToAvail.TabIndex = 9;
+            this.btn_pTaggedSearch_moveToAvail.Text = "<";
+            this.btn_pTaggedSearch_moveToAvail.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 613);
-            this.Controls.Add(this.LoginPanel);
-            this.Controls.Add(this.NavigationPanel);
             this.Controls.Add(this.MainMenuPanel);
+            this.Controls.Add(this.NavigationPanel);
+            this.Controls.Add(this.LoginPanel);
+            this.Controls.Add(this.TaggedSearchPanel);
             this.Controls.Add(this.LibraryPanel);
             this.Controls.Add(this.DataEntryPanel);
             this.Name = "MainForm";
             this.Text = "Movie Organizer";
             this.LibraryPanel.ResumeLayout(false);
             this.LibraryPanel.PerformLayout();
+            this.label_panel.ResumeLayout(false);
+            this.label_panel.PerformLayout();
+            this.toolStripContainer1.ContentPanel.ResumeLayout(false);
+            this.toolStripContainer1.ContentPanel.PerformLayout();
+            this.toolStripContainer1.ResumeLayout(false);
+            this.toolStripContainer1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.panel_MovieListing.ResumeLayout(false);
             this.MainMenuPanel.ResumeLayout(false);
             this.MainMenuPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_WelcomeBanner)).EndInit();
@@ -596,21 +772,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pDataEntry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pLibrary)).EndInit();
             this.NavigationPanel.ResumeLayout(false);
-            this.NavigationPanel.PerformLayout();
             this.DataEntryPanel.ResumeLayout(false);
             this.DataEntryPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_EditMovieImage)).EndInit();
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
-            this.panel_MovieListing.ResumeLayout(false);
-            this.toolStripContainer1.ContentPanel.ResumeLayout(false);
-            this.toolStripContainer1.ContentPanel.PerformLayout();
-            this.toolStripContainer1.ResumeLayout(false);
-            this.toolStripContainer1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.label_panel.ResumeLayout(false);
-            this.label_panel.PerformLayout();
+            this.TaggedSearchPanel.ResumeLayout(false);
+            this.TaggedSearchPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -620,7 +788,6 @@
         private System.Windows.Forms.Panel LibraryPanel;
         private System.Windows.Forms.Panel MainMenuPanel;
         private System.Windows.Forms.Panel NavigationPanel;
-        private System.Windows.Forms.TextBox txt_placeHolder;
         private System.Windows.Forms.LinkLabel link_pMain_pLibrary;
         private System.Windows.Forms.PictureBox pic_pMain_pLibrary;
         private System.Windows.Forms.LinkLabel link_pMain_pTaggedSearch;
@@ -650,7 +817,7 @@
         private System.Windows.Forms.ComboBox cmb_Rating;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.Panel panel_MovieListing;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBox_SearchBar;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tlStrp_Genre;
@@ -666,6 +833,20 @@
         private System.Windows.Forms.ToolStripMenuItem addedFieldsToolStripMenuItem;
         private System.Windows.Forms.Label lbl_SortBy;
         private System.Windows.Forms.Panel label_panel;
+        private System.Windows.Forms.LinkLabel link_pNavBar_ViewLibrary;
+        private System.Windows.Forms.LinkLabel link_pNavBar_AddMovie;
+        private System.Windows.Forms.LinkLabel link_pNavBar_Suggest;
+        private System.Windows.Forms.LinkLabel link_pNavBar_TaggedSearch;
+        private System.Windows.Forms.Button btn_pLibrary_BeginSearch;
+        private System.Windows.Forms.Panel TaggedSearchPanel;
+        private System.Windows.Forms.Button btn_pTaggedSearch_moveToAvail;
+        private System.Windows.Forms.Button btn_pTaggedSearch_moveToSearch;
+        private System.Windows.Forms.Button btn_pTaggedSearch_Cancel;
+        private System.Windows.Forms.Button btn_pTaggedSearch_Search;
+        private System.Windows.Forms.ListBox listBox_pTaggedSearch_search;
+        private System.Windows.Forms.Label lbl_pTaggedSearch_search;
+        private System.Windows.Forms.Label lbl_pTaggedSearch_available;
+        private System.Windows.Forms.ListBox listBox_pTaggedSearch_available;
     }
 }
 

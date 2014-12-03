@@ -47,6 +47,7 @@ namespace MovieOrganizer
 
         private void link_pMain_pLibrary_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            //if there is no user signed in - do not redirect. Instead send alert: "Need to be signed in to use app."
             MainMenuPanel.Hide();
             LibraryPanel.Show();
             NavigationPanel.Show();
@@ -54,6 +55,7 @@ namespace MovieOrganizer
 
         private void link_pMain_pDataEntry_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            //if there is no user signed in - do not redirect. Instead send alert: "Need to be signed in to use app."
             MainMenuPanel.Hide();
             DataEntryPanel.Show();
             NavigationPanel.Show();
@@ -189,6 +191,32 @@ namespace MovieOrganizer
         private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void link_LOSI_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //if there is an active user, this link signs them out and redirects to the sign-in form
+            //if there is not an active user, this link's Text is changed to 'Sign-in' and redirects to the sign-in form.
+        }
+
+        private void link_pMain_frmSuggest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //if there is no user signed in - do not redirect. Instead send alert: "Need to be signed in to use app."
+        }
+
+        private void link_pMain_pTaggedSearch_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //if there is no user signed in - do not redirect. Instead send alert: "Need to be signed in to use app."
+            MainMenuPanel.Hide();
+            TaggedSearchPanel.Show();
+            NavigationPanel.Show();
+            LoginPanel.Show();
+        }
+
+        private void link_pNavBar_ViewLibrary_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //hide the current panel and show thew library panel
+            //set all nav tabs to background color = ControlLight and the ViewLibrary tab bgcolor to ControlLightLight
         }
     }
 }
