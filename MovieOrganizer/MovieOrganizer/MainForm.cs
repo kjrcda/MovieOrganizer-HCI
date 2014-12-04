@@ -16,7 +16,6 @@ namespace MovieOrganizer
         {
             InitializeComponent();
             NavigationPanel.Hide();
-            DataEntryPanel.Hide();
             LibraryPanel.Hide();
             LoginPanel.Show();
             MainMenuPanel.Show();
@@ -31,7 +30,14 @@ namespace MovieOrganizer
             MainMenuPanel.Show();
         }
 
-        private void btn_pMain_AddMovie_Click(object sender, EventArgs e)
+        private void link_pMain_pLibrary_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MainMenuPanel.Hide();
+            LibraryPanel.Show();
+            NavigationPanel.Show();
+        }
+
+        private void link_pMain_pDataEntry_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             using (var form = new DataEntryAbstract("Add Movie"))
             {
@@ -43,20 +49,6 @@ namespace MovieOrganizer
                 else
                     MessageBox.Show("Cancelled Movie Entry");
             }
-        }
-
-        private void link_pMain_pLibrary_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            MainMenuPanel.Hide();
-            LibraryPanel.Show();
-            NavigationPanel.Show();
-        }
-
-        private void link_pMain_pDataEntry_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            MainMenuPanel.Hide();
-            DataEntryPanel.Show();
-            NavigationPanel.Show();
         }
 
         private void txt_MovieTitle_TextChanged(object sender, EventArgs e)
@@ -152,14 +144,12 @@ namespace MovieOrganizer
 
         private void btn_pDataEntry_pLibrary_Save_Click(object sender, EventArgs e)
         {
-            DataEntryPanel.Hide();
             LibraryPanel.Show();
             //alert movie changes was saved
         }
 
         private void btn_pDataEntry_pLibrary_Cancel_Click(object sender, EventArgs e)
         {
-            DataEntryPanel.Hide();
             LibraryPanel.Show();
             //alert movie changes was cancelled
         }
@@ -190,5 +180,6 @@ namespace MovieOrganizer
         {
 
         }
+
     }
 }
