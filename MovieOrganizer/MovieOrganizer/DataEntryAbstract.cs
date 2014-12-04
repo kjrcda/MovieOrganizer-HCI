@@ -21,15 +21,10 @@ namespace MovieOrganizer
         public DataEntryAbstract(String name)
         {
             InitializeComponent();
-            SendMessage(txt_MovieTitle.Handle, EM_SETCUEBANNER, 0, "Movie Title");
-            SendMessage(txt_Year.Handle, EM_SETCUEBANNER, 0, "Year");
-            SendMessage(txt_Director.Handle, EM_SETCUEBANNER, 0, "Director");
-            SendMessage(txt_Actors.Handle, EM_SETCUEBANNER, 0, "Actors");
-            SendMessage(txt_Genre.Handle, EM_SETCUEBANNER, 0, "Genre");
-            SendMessage(txt_Description.Handle, EM_SETCUEBANNER, 0, "Description");
-            SendMessage(txt_Tags.Handle, EM_SETCUEBANNER, 0, "Tags");
-            btn_pDataEntry_pLibrary_Save.Focus();
+            
             Text = name;
+            if (name == "Add Movie")
+                btn_pDataEntry_modalConfirmation_DeleteMovie.Visible = false;
         }
 
         private void btn_pDataEntry_pLibrary_Save_Click(object sender, EventArgs e)
@@ -42,6 +37,12 @@ namespace MovieOrganizer
         {
             DialogResult = DialogResult.Cancel;
             Dispose();
+        }
+
+
+        private void DataEntryAbstract_Load(object sender, EventArgs e)
+        {
+            btn_pDataEntry_pLibrary_Save.Select();
         }
 
     }

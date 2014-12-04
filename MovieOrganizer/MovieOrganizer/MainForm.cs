@@ -44,10 +44,8 @@ namespace MovieOrganizer
                 var result = form.ShowDialog();
                 if (result == DialogResult.OK)
                 {
-                    MessageBox.Show("Add Movie Successfully!");
+                    ;
                 }
-                else
-                    MessageBox.Show("Cancelled Movie Entry");
             }
         }
 
