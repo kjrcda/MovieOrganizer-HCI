@@ -39,7 +39,7 @@ namespace MovieOrganizer
 
         private void link_pMain_pDataEntry_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            using (var form = new DataEntryAbstract("Add Movie"))
+           using (var form = new EditMovie())
             {
                 var result = form.ShowDialog();
                 if (result == DialogResult.OK)
