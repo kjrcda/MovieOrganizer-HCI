@@ -15,6 +15,7 @@ namespace MovieOrganizer
         public MainForm()
         {
             InitializeComponent();
+            ReadXML();
             NavigationPanel.Hide();
             LibraryPanel.Hide();
             LoginPanel.Show();
@@ -39,104 +40,13 @@ namespace MovieOrganizer
 
         private void link_pMain_pDataEntry_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           using (var form = new EditMovie())
+           using (var form = new AddMovie())
             {
                 var result = form.ShowDialog();
                 if (result == DialogResult.OK)
                 {
                     ;
                 }
-            }
-        }
-
-        private void txt_MovieTitle_TextChanged(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(txt_MovieTitle.Text))
-            {
-                txt_MovieTitle.Text = "Movie Title";
-                txt_MovieTitle.ForeColor = Color.Gray;
-            }
-            else
-            {
-                txt_MovieTitle.ForeColor = Color.Black;
-            }
-        }
-
-        private void txt_Year_TextChanged(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(txt_Year.Text))
-            {
-                txt_Year.Text = "Year";
-                txt_Year.ForeColor = Color.Gray;
-            }
-            else
-            {
-                txt_Year.ForeColor = Color.Black;
-            }
-        }
-
-        private void txt_Director_TextChanged(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(txt_Director.Text))
-            {
-                txt_Director.Text = "Director";
-                txt_Director.ForeColor = Color.Gray;
-            }
-            else
-            {
-                txt_Director.ForeColor = Color.Black;
-            }
-        }
-
-        private void txt_Actors_TextChanged(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(txt_Actors.Text))
-            {
-                txt_Actors.Text = "Actors";
-                txt_Actors.ForeColor = Color.Gray;
-            }
-            else
-            {
-                txt_Actors.ForeColor = Color.Black;
-            }
-        }
-
-        private void txt_Genre_TextChanged(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(txt_Genre.Text))
-            {
-                txt_Genre.Text = "Genre";
-                txt_Genre.ForeColor = Color.Gray;
-            }
-            else
-            {
-                txt_Genre.ForeColor = Color.Black;
-            }
-        }
-
-        private void txt_Description_TextChanged(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(txt_Description.Text))
-            {
-                txt_Description.Text = "Description";
-                txt_Description.ForeColor = Color.Gray;
-            }
-            else
-            {
-                txt_Description.ForeColor = Color.Black;
-            }
-        }
-
-        private void txt_Tags_TextChanged(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(txt_Tags.Text))
-            {
-                txt_Tags.Text = "Tags";
-                txt_Tags.ForeColor = Color.Gray;
-            }
-            else
-            {
-                txt_Tags.ForeColor = Color.Black;
             }
         }
 
@@ -179,5 +89,21 @@ namespace MovieOrganizer
 
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            WriteXML();
+        }
+
+        private void ReadXML()
+        {
+
+        }
+
+        private void WriteXML()
+        {
+
+        }
     }
 }

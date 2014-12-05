@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            ((System.ComponentModel.ISupportInitialize)(this.pic_EditMovieImage)).BeginInit();
             this.SuspendLayout();
             // 
             // EditMovie
@@ -36,7 +37,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(542, 439);
             this.Name = "EditMovie";
-            this.Text = "EditMovie";
+            this.Text = "Edit Movie";
+            ((System.ComponentModel.ISupportInitialize)(this.pic_EditMovieImage)).EndInit();
             this.ResumeLayout(false);
 
         }

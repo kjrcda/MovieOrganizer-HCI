@@ -34,19 +34,6 @@
             this.lbl_LOSI = new System.Windows.Forms.Label();
             this.lbl_Username = new System.Windows.Forms.Label();
             this.LoginPanel = new System.Windows.Forms.Panel();
-            this.pic_EditMovieImage = new System.Windows.Forms.PictureBox();
-            this.txt_MovieTitle = new System.Windows.Forms.TextBox();
-            this.txt_Year = new System.Windows.Forms.TextBox();
-            this.txt_Director = new System.Windows.Forms.TextBox();
-            this.txt_Actors = new System.Windows.Forms.TextBox();
-            this.txt_Genre = new System.Windows.Forms.TextBox();
-            this.txt_Description = new System.Windows.Forms.TextBox();
-            this.txt_Tags = new System.Windows.Forms.TextBox();
-            this.btn_pDataEntry_pLibrary_Save = new System.Windows.Forms.Button();
-            this.btn_pDataEntry_pLibrary_Cancel = new System.Windows.Forms.Button();
-            this.btn_pDataEntry_modalConfirmation_DeleteMovie = new System.Windows.Forms.Button();
-            this.btn_UploadImage = new System.Windows.Forms.Button();
-            this.cmb_Rating = new System.Windows.Forms.ComboBox();
             this.panel_MovieListing = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
@@ -65,7 +52,6 @@
             this.label_panel = new System.Windows.Forms.Panel();
             this.lbl_SortBy = new System.Windows.Forms.Label();
             this.LibraryPanel = new System.Windows.Forms.Panel();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.link_pMain_pLibrary = new System.Windows.Forms.LinkLabel();
             this.pic_pMain_pLibrary = new System.Windows.Forms.PictureBox();
             this.link_pMain_pDataEntry = new System.Windows.Forms.LinkLabel();
@@ -78,7 +64,6 @@
             this.MainMenuPanel = new System.Windows.Forms.Panel();
             this.NavigationPanel.SuspendLayout();
             this.LoginPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_EditMovieImage)).BeginInit();
             this.panel_MovieListing.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -153,138 +138,8 @@
             this.LoginPanel.Size = new System.Drawing.Size(605, 33);
             this.LoginPanel.TabIndex = 10;
             // 
-            // pic_EditMovieImage
-            // 
-            this.pic_EditMovieImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_EditMovieImage.Location = new System.Drawing.Point(16, 99);
-            this.pic_EditMovieImage.Name = "pic_EditMovieImage";
-            this.pic_EditMovieImage.Size = new System.Drawing.Size(185, 224);
-            this.pic_EditMovieImage.TabIndex = 0;
-            this.pic_EditMovieImage.TabStop = false;
-            // 
-            // txt_MovieTitle
-            // 
-            this.txt_MovieTitle.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_MovieTitle.Location = new System.Drawing.Point(233, 99);
-            this.txt_MovieTitle.Name = "txt_MovieTitle";
-            this.txt_MovieTitle.Size = new System.Drawing.Size(191, 20);
-            this.txt_MovieTitle.TabIndex = 1;
-            this.txt_MovieTitle.Text = "Movie Title";
-            this.txt_MovieTitle.TextChanged += new System.EventHandler(this.txt_MovieTitle_TextChanged);
-            // 
-            // txt_Year
-            // 
-            this.txt_Year.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_Year.Location = new System.Drawing.Point(233, 125);
-            this.txt_Year.Name = "txt_Year";
-            this.txt_Year.Size = new System.Drawing.Size(191, 20);
-            this.txt_Year.TabIndex = 2;
-            this.txt_Year.Text = "Year";
-            this.txt_Year.TextChanged += new System.EventHandler(this.txt_Year_TextChanged);
-            // 
-            // txt_Director
-            // 
-            this.txt_Director.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_Director.Location = new System.Drawing.Point(233, 151);
-            this.txt_Director.Name = "txt_Director";
-            this.txt_Director.Size = new System.Drawing.Size(191, 20);
-            this.txt_Director.TabIndex = 3;
-            this.txt_Director.Text = "Director";
-            this.txt_Director.TextChanged += new System.EventHandler(this.txt_Director_TextChanged);
-            // 
-            // txt_Actors
-            // 
-            this.txt_Actors.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_Actors.Location = new System.Drawing.Point(233, 177);
-            this.txt_Actors.Name = "txt_Actors";
-            this.txt_Actors.Size = new System.Drawing.Size(191, 20);
-            this.txt_Actors.TabIndex = 4;
-            this.txt_Actors.Text = "Actors";
-            this.txt_Actors.TextChanged += new System.EventHandler(this.txt_Actors_TextChanged);
-            // 
-            // txt_Genre
-            // 
-            this.txt_Genre.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_Genre.Location = new System.Drawing.Point(233, 229);
-            this.txt_Genre.Name = "txt_Genre";
-            this.txt_Genre.Size = new System.Drawing.Size(191, 20);
-            this.txt_Genre.TabIndex = 6;
-            this.txt_Genre.Text = "Genre";
-            this.txt_Genre.TextChanged += new System.EventHandler(this.txt_Genre_TextChanged);
-            // 
-            // txt_Description
-            // 
-            this.txt_Description.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_Description.Location = new System.Drawing.Point(233, 255);
-            this.txt_Description.Multiline = true;
-            this.txt_Description.Name = "txt_Description";
-            this.txt_Description.Size = new System.Drawing.Size(191, 68);
-            this.txt_Description.TabIndex = 7;
-            this.txt_Description.Text = "Description";
-            this.txt_Description.TextChanged += new System.EventHandler(this.txt_Description_TextChanged);
-            // 
-            // txt_Tags
-            // 
-            this.txt_Tags.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txt_Tags.Location = new System.Drawing.Point(233, 329);
-            this.txt_Tags.Name = "txt_Tags";
-            this.txt_Tags.Size = new System.Drawing.Size(191, 20);
-            this.txt_Tags.TabIndex = 8;
-            this.txt_Tags.Text = "Tags";
-            this.txt_Tags.TextChanged += new System.EventHandler(this.txt_Tags_TextChanged);
-            // 
-            // btn_pDataEntry_pLibrary_Save
-            // 
-            this.btn_pDataEntry_pLibrary_Save.Location = new System.Drawing.Point(516, 578);
-            this.btn_pDataEntry_pLibrary_Save.Name = "btn_pDataEntry_pLibrary_Save";
-            this.btn_pDataEntry_pLibrary_Save.Size = new System.Drawing.Size(75, 23);
-            this.btn_pDataEntry_pLibrary_Save.TabIndex = 9;
-            this.btn_pDataEntry_pLibrary_Save.Text = "Save";
-            this.btn_pDataEntry_pLibrary_Save.UseVisualStyleBackColor = true;
-            this.btn_pDataEntry_pLibrary_Save.Click += new System.EventHandler(this.btn_pDataEntry_pLibrary_Save_Click);
-            // 
-            // btn_pDataEntry_pLibrary_Cancel
-            // 
-            this.btn_pDataEntry_pLibrary_Cancel.Location = new System.Drawing.Point(435, 578);
-            this.btn_pDataEntry_pLibrary_Cancel.Name = "btn_pDataEntry_pLibrary_Cancel";
-            this.btn_pDataEntry_pLibrary_Cancel.Size = new System.Drawing.Size(75, 23);
-            this.btn_pDataEntry_pLibrary_Cancel.TabIndex = 10;
-            this.btn_pDataEntry_pLibrary_Cancel.Text = "Cancel";
-            this.btn_pDataEntry_pLibrary_Cancel.UseVisualStyleBackColor = true;
-            this.btn_pDataEntry_pLibrary_Cancel.Click += new System.EventHandler(this.btn_pDataEntry_pLibrary_Cancel_Click);
-            // 
-            // btn_pDataEntry_modalConfirmation_DeleteMovie
-            // 
-            this.btn_pDataEntry_modalConfirmation_DeleteMovie.Location = new System.Drawing.Point(12, 578);
-            this.btn_pDataEntry_modalConfirmation_DeleteMovie.Name = "btn_pDataEntry_modalConfirmation_DeleteMovie";
-            this.btn_pDataEntry_modalConfirmation_DeleteMovie.Size = new System.Drawing.Size(95, 23);
-            this.btn_pDataEntry_modalConfirmation_DeleteMovie.TabIndex = 11;
-            this.btn_pDataEntry_modalConfirmation_DeleteMovie.Text = "Delete Movie";
-            this.btn_pDataEntry_modalConfirmation_DeleteMovie.UseVisualStyleBackColor = true;
-            this.btn_pDataEntry_modalConfirmation_DeleteMovie.Click += new System.EventHandler(this.btn_pDataEntry_modalConfirmation_DeleteMovie_Click);
-            // 
-            // btn_UploadImage
-            // 
-            this.btn_UploadImage.Location = new System.Drawing.Point(16, 326);
-            this.btn_UploadImage.Name = "btn_UploadImage";
-            this.btn_UploadImage.Size = new System.Drawing.Size(91, 23);
-            this.btn_UploadImage.TabIndex = 12;
-            this.btn_UploadImage.Text = "Upload Image";
-            this.btn_UploadImage.UseVisualStyleBackColor = true;
-            // 
-            // cmb_Rating
-            // 
-            this.cmb_Rating.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.cmb_Rating.FormattingEnabled = true;
-            this.cmb_Rating.Location = new System.Drawing.Point(233, 202);
-            this.cmb_Rating.Name = "cmb_Rating";
-            this.cmb_Rating.Size = new System.Drawing.Size(191, 21);
-            this.cmb_Rating.TabIndex = 13;
-            this.cmb_Rating.Text = "Rating";
-            // 
             // panel_MovieListing
             // 
-            this.panel_MovieListing.Controls.Add(this.vScrollBar1);
             this.panel_MovieListing.Location = new System.Drawing.Point(121, 113);
             this.panel_MovieListing.Name = "panel_MovieListing";
             this.panel_MovieListing.Size = new System.Drawing.Size(484, 499);
@@ -439,13 +294,6 @@
             this.LibraryPanel.Size = new System.Drawing.Size(605, 615);
             this.LibraryPanel.TabIndex = 2;
             // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(458, 0);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(20, 499);
-            this.vScrollBar1.TabIndex = 2;
-            // 
             // link_pMain_pLibrary
             // 
             this.link_pMain_pLibrary.AutoSize = true;
@@ -568,7 +416,6 @@
             this.NavigationPanel.PerformLayout();
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_EditMovieImage)).EndInit();
             this.panel_MovieListing.ResumeLayout(false);
             this.toolStripContainer1.ContentPanel.ResumeLayout(false);
             this.toolStripContainer1.ContentPanel.PerformLayout();
@@ -599,21 +446,7 @@
         private System.Windows.Forms.Label lbl_LOSI;
         private System.Windows.Forms.Label lbl_Username;
         private System.Windows.Forms.Panel LoginPanel;
-        private System.Windows.Forms.PictureBox pic_EditMovieImage;
-        private System.Windows.Forms.TextBox txt_MovieTitle;
-        private System.Windows.Forms.TextBox txt_Year;
-        private System.Windows.Forms.TextBox txt_Director;
-        private System.Windows.Forms.TextBox txt_Actors;
-        private System.Windows.Forms.TextBox txt_Genre;
-        private System.Windows.Forms.TextBox txt_Description;
-        private System.Windows.Forms.TextBox txt_Tags;
-        private System.Windows.Forms.Button btn_pDataEntry_pLibrary_Save;
-        private System.Windows.Forms.Button btn_pDataEntry_pLibrary_Cancel;
-        private System.Windows.Forms.Button btn_pDataEntry_modalConfirmation_DeleteMovie;
-        private System.Windows.Forms.Button btn_UploadImage;
-        private System.Windows.Forms.ComboBox cmb_Rating;
         private System.Windows.Forms.Panel panel_MovieListing;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.MenuStrip menuStrip1;

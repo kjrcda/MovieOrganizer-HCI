@@ -33,7 +33,7 @@ namespace MovieOrganizer
 
         protected void setDeleteToFalse()
         {
-            btn_pDataEntry_modalConfirmation_DeleteMovie.Visible = false;
+            btn_Delete_Movie.Visible = false;
         }
 
     }
