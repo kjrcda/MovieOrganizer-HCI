@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace MovieOrganizer
 {
     public partial class MainForm : Form
     {
+        private List<MovieEntry> movieList = new List<MovieEntry>();
+
         public MainForm()
         {
             InitializeComponent();
@@ -98,12 +102,35 @@ namespace MovieOrganizer
 
         private void ReadXML()
         {
+            var reader = new XmlSerializer(typeof(List<MovieEntry>));
+            StreamReader file;
 
+            try
+            {
+                file = new StreamReader("file.xml");
+                var list = reader.Deserialize(file);
+                movieList = (List<MovieEntry>)list;
+                file.Close();
+            }
+            catch
+            {
+                return; //then there is no file or its empty and will be created/written on exit
+            }
         }
 
         private void WriteXML()
         {
-
+            try
+            {
+                var writer = new XmlSerializer(typeof(List<MovieEntry>));
+                var file = new StreamWriter("file.xml");
+                writer.Serialize(file, movieList);
+                file.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error writing to file");
+            }
         }
     }
 }

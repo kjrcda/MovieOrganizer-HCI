@@ -51,6 +51,7 @@
     <Compile Include="AddMovie.Designer.cs">
       <DependentUpon>AddMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="MovieEntry.cs" />
     <Compile Include="DataEntryAbstract.cs">
       <SubType>Form</SubType>
     </Compile>
