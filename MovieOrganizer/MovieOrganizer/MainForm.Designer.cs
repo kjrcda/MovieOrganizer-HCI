@@ -37,10 +37,6 @@
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tlStrp_Genre = new System.Windows.Forms.ToolStripMenuItem();
-            this.horrorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.otherDynamicallyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addedFieldsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tlStrp_Actor = new System.Windows.Forms.ToolStripMenuItem();
             this.tlStrp_Director = new System.Windows.Forms.ToolStripMenuItem();
             this.tlStrp_Year = new System.Windows.Forms.ToolStripMenuItem();
@@ -180,74 +176,52 @@
             // 
             // tlStrp_Genre
             // 
-            this.tlStrp_Genre.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.horrorToolStripMenuItem,
-            this.actionToolStripMenuItem,
-            this.otherDynamicallyToolStripMenuItem,
-            this.addedFieldsToolStripMenuItem});
             this.tlStrp_Genre.Name = "tlStrp_Genre";
             this.tlStrp_Genre.Size = new System.Drawing.Size(104, 19);
             this.tlStrp_Genre.Text = "Genre";
-            // 
-            // horrorToolStripMenuItem
-            // 
-            this.horrorToolStripMenuItem.Name = "horrorToolStripMenuItem";
-            this.horrorToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.horrorToolStripMenuItem.Text = "Horror";
-            // 
-            // actionToolStripMenuItem
-            // 
-            this.actionToolStripMenuItem.Name = "actionToolStripMenuItem";
-            this.actionToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.actionToolStripMenuItem.Text = "Action";
-            // 
-            // otherDynamicallyToolStripMenuItem
-            // 
-            this.otherDynamicallyToolStripMenuItem.Name = "otherDynamicallyToolStripMenuItem";
-            this.otherDynamicallyToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.otherDynamicallyToolStripMenuItem.Text = "Other dynamically";
-            // 
-            // addedFieldsToolStripMenuItem
-            // 
-            this.addedFieldsToolStripMenuItem.Name = "addedFieldsToolStripMenuItem";
-            this.addedFieldsToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.addedFieldsToolStripMenuItem.Text = "added fields";
+            this.tlStrp_Genre.Click += new System.EventHandler(this.tlStrp_Click);
             // 
             // tlStrp_Actor
             // 
             this.tlStrp_Actor.Name = "tlStrp_Actor";
             this.tlStrp_Actor.Size = new System.Drawing.Size(104, 19);
             this.tlStrp_Actor.Text = "Actor";
+            this.tlStrp_Actor.Click += new System.EventHandler(this.tlStrp_Click);
             // 
             // tlStrp_Director
             // 
             this.tlStrp_Director.Name = "tlStrp_Director";
             this.tlStrp_Director.Size = new System.Drawing.Size(104, 19);
             this.tlStrp_Director.Text = "Director";
+            this.tlStrp_Director.Click += new System.EventHandler(this.tlStrp_Click);
             // 
             // tlStrp_Year
             // 
             this.tlStrp_Year.Name = "tlStrp_Year";
             this.tlStrp_Year.Size = new System.Drawing.Size(104, 19);
             this.tlStrp_Year.Text = "Year";
+            this.tlStrp_Year.Click += new System.EventHandler(this.tlStrp_Click);
             // 
             // tlStrp_Rating
             // 
             this.tlStrp_Rating.Name = "tlStrp_Rating";
             this.tlStrp_Rating.Size = new System.Drawing.Size(104, 19);
             this.tlStrp_Rating.Text = "Rating";
+            this.tlStrp_Rating.Click += new System.EventHandler(this.tlStrp_Click);
             // 
             // tlStrp_RecentlyViewed
             // 
             this.tlStrp_RecentlyViewed.Name = "tlStrp_RecentlyViewed";
             this.tlStrp_RecentlyViewed.Size = new System.Drawing.Size(104, 19);
             this.tlStrp_RecentlyViewed.Text = "Recently Viewed";
+            this.tlStrp_RecentlyViewed.Click += new System.EventHandler(this.tlStrp_Click);
             // 
             // tlStrp_TimesWatched
             // 
             this.tlStrp_TimesWatched.Name = "tlStrp_TimesWatched";
             this.tlStrp_TimesWatched.Size = new System.Drawing.Size(104, 19);
             this.tlStrp_TimesWatched.Text = "Times Watched";
+            this.tlStrp_TimesWatched.Click += new System.EventHandler(this.tlStrp_Click);
             // 
             // label_panel
             // 
@@ -279,6 +253,7 @@
             this.LibraryPanel.Controls.Add(this.toolStripContainer1);
             this.LibraryPanel.Controls.Add(this.textBox1);
             this.LibraryPanel.Controls.Add(this.panel_MovieListing);
+            this.LibraryPanel.Controls.Add(this.NavigationPanel);
             this.LibraryPanel.Location = new System.Drawing.Point(0, 0);
             this.LibraryPanel.Name = "LibraryPanel";
             this.LibraryPanel.Size = new System.Drawing.Size(605, 615);
@@ -408,7 +383,6 @@
             this.MainMenuPanel.Controls.Add(this.link_pMain_pDataEntry);
             this.MainMenuPanel.Controls.Add(this.pic_pMain_pLibrary);
             this.MainMenuPanel.Controls.Add(this.link_pMain_pLibrary);
-            this.MainMenuPanel.Controls.Add(this.NavigationPanel);
             this.MainMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.MainMenuPanel.Name = "MainMenuPanel";
             this.MainMenuPanel.Size = new System.Drawing.Size(605, 615);
@@ -420,8 +394,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 613);
             this.Controls.Add(this.LoginPanel);
-            this.Controls.Add(this.MainMenuPanel);
             this.Controls.Add(this.LibraryPanel);
+            this.Controls.Add(this.MainMenuPanel);
             this.Name = "MainForm";
             this.Text = "Movie Organizer";
             this.LoginPanel.ResumeLayout(false);
@@ -457,10 +431,6 @@
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tlStrp_Genre;
-        private System.Windows.Forms.ToolStripMenuItem horrorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem actionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem otherDynamicallyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addedFieldsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tlStrp_Actor;
         private System.Windows.Forms.ToolStripMenuItem tlStrp_Director;
         private System.Windows.Forms.ToolStripMenuItem tlStrp_Year;

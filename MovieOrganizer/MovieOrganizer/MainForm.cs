@@ -15,6 +15,7 @@ namespace MovieOrganizer
     public partial class MainForm : Form
     {
         private List<MovieEntry> movieList = new List<MovieEntry>();
+        private List<ToolStripMenuItem> toolItems = new List<ToolStripMenuItem>();
         protected int newMovieIndex;
 
         public MainForm()
@@ -25,6 +26,14 @@ namespace MovieOrganizer
                 newMovieIndex =1;
             else
                 newMovieIndex = movieList[movieList.Count - 1].ID + 1;
+
+            toolItems.Add(tlStrp_Genre);
+            toolItems.Add(tlStrp_Director);
+            toolItems.Add(tlStrp_Actor);
+            toolItems.Add(tlStrp_Rating);
+            toolItems.Add(tlStrp_RecentlyViewed);
+            toolItems.Add(tlStrp_TimesWatched);
+            toolItems.Add(tlStrp_Year);
 
             NavigationPanel.Hide();
             LibraryPanel.Hide();
@@ -102,6 +111,18 @@ namespace MovieOrganizer
             {
                 MessageBox.Show("Error writing to file");
             }
+        }
+
+        private void tlStrp_Click(object sender, EventArgs e)
+        {
+            foreach(var listItem in toolItems)
+            {
+                listItem.ForeColor = SystemColors.ControlText;
+                listItem.BackColor = SystemColors.Control;
+            }
+            ToolStripMenuItem item = (ToolStripMenuItem)sender;
+            item.BackColor = SystemColors.ControlDark;
+            item.ForeColor = SystemColors.ControlLightLight;
         }
     }
 }
