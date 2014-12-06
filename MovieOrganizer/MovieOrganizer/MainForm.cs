@@ -63,45 +63,6 @@ namespace MovieOrganizer
             }
         }
 
-        private void btn_pDataEntry_pLibrary_Save_Click(object sender, EventArgs e)
-        {
-            LibraryPanel.Show();
-            //alert movie changes was saved
-        }
-
-        private void btn_pDataEntry_pLibrary_Cancel_Click(object sender, EventArgs e)
-        {
-            LibraryPanel.Show();
-            //alert movie changes was cancelled
-        }
-
-        private void btn_pDataEntry_modalConfirmation_DeleteMovie_Click(object sender, EventArgs e)
-        {
-            //modal popup asking for confirmation of delete movie.
-            //if denied, close modal with no changes
-            //if accepted, alert movie was deleted and return to library
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked_2(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
@@ -133,7 +94,7 @@ namespace MovieOrganizer
             try
             {
                 var writer = new XmlSerializer(typeof(List<MovieEntry>));
-                var file = new StreamWriter("file.xml");
+                var file = new StreamWriter("file.xml",false);
                 writer.Serialize(file, movieList);
                 file.Close();
             }
