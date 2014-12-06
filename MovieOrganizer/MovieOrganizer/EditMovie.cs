@@ -12,10 +12,20 @@ namespace MovieOrganizer
 {
     public partial class EditMovie : DataEntryAbstract
     {
-        public EditMovie()
+        public EditMovie(MovieEntry entry)
         {
             InitializeComponent();
-            
+            movie = entry;
+            if (movie != null)
+            {
+                txt_MovieTitle.Text = movie.Title;
+                txt_Year.Text = "" + movie.Year;
+                txt_Director.Text = movie.Director;
+                txt_Actors.Text = movie.Actors;
+                cmb_Rating.SelectedValue = (int)movie.Rate;
+                txt_Description.Text = movie.Description;
+                txt_Tags.Text = movie.Tags;
+            }
         }
 
     }

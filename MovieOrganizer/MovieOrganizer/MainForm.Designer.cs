@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_placeHolder = new System.Windows.Forms.TextBox();
             this.NavigationPanel = new System.Windows.Forms.Panel();
             this.link_LOSI = new System.Windows.Forms.LinkLabel();
             this.lbl_LOSI = new System.Windows.Forms.Label();
@@ -62,9 +61,7 @@
             this.link_pMain_pTaggedSearch = new System.Windows.Forms.LinkLabel();
             this.pic_WelcomeBanner = new System.Windows.Forms.PictureBox();
             this.MainMenuPanel = new System.Windows.Forms.Panel();
-            this.NavigationPanel.SuspendLayout();
             this.LoginPanel.SuspendLayout();
-            this.panel_MovieListing.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -78,18 +75,8 @@
             this.MainMenuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txt_placeHolder
-            // 
-            this.txt_placeHolder.Location = new System.Drawing.Point(14, 12);
-            this.txt_placeHolder.Name = "txt_placeHolder";
-            this.txt_placeHolder.Size = new System.Drawing.Size(576, 20);
-            this.txt_placeHolder.TabIndex = 0;
-            this.txt_placeHolder.Text = "Ideally we\'ll have tag-like objects here that will link to the panel options the " +
-    "main menu provides";
-            // 
             // NavigationPanel
             // 
-            this.NavigationPanel.Controls.Add(this.txt_placeHolder);
             this.NavigationPanel.Location = new System.Drawing.Point(0, 0);
             this.NavigationPanel.Name = "NavigationPanel";
             this.NavigationPanel.Size = new System.Drawing.Size(605, 51);
@@ -412,11 +399,8 @@
             this.Controls.Add(this.LibraryPanel);
             this.Name = "MainForm";
             this.Text = "Movie Organizer";
-            this.NavigationPanel.ResumeLayout(false);
-            this.NavigationPanel.PerformLayout();
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
-            this.panel_MovieListing.ResumeLayout(false);
             this.toolStripContainer1.ContentPanel.ResumeLayout(false);
             this.toolStripContainer1.ContentPanel.PerformLayout();
             this.toolStripContainer1.ResumeLayout(false);
@@ -440,7 +424,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txt_placeHolder;
         private System.Windows.Forms.Panel NavigationPanel;
         private System.Windows.Forms.LinkLabel link_LOSI;
         private System.Windows.Forms.Label lbl_LOSI;

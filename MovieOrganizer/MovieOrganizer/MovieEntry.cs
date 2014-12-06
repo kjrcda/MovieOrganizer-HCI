@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 
 namespace MovieOrganizer
 {
+    
     public enum Rating {One, Two, Three, Four, Five};
+
     public class MovieEntry
-    { 
-        String Title;
-        int Year;
-        String Director;
-        String Actors;
-        Rating Rate;
-        String Description;
-        String Tags;
+    {
+        public int ID;
+        public String Title;
+        public int Year;
+        public String Director;
+        public String Actors;
+        public Rating Rate;
+        public String Description;
+        public String Tags;
 
         public MovieEntry(String ti, int y, String di, String a, Rating r, String de, String ta)
         {
@@ -30,6 +33,7 @@ namespace MovieOrganizer
 
         public MovieEntry()
         {
+            ID = -1;
             Title = "";
             Year = 0;
             Director = "";
@@ -37,63 +41,6 @@ namespace MovieOrganizer
             Rate = Rating.One;
             Description = "";
             Tags = "";
-        }
-
-        public void SetTitle(String title)
-        {
-            Title = title;
-        }
-
-        public void SetYear(int year)
-        {
-            Year = year;
-        }
-
-        public void SetDirector(String dir)
-        {
-            Director = dir;
-        }
-        public void SetActor(String act)
-        {
-            Actors = act;
-        }
-
-        public void ChangeRating(Rating r)
-        {
-            Rate = r;
-        }
-        public void ChangeRating(int r)
-        {
-            switch (r)
-            {
-                case 1:
-                    ChangeRating(Rating.One);
-                    break;
-                case 2:
-                    ChangeRating(Rating.Two);
-                    break;
-                case 3:
-                    ChangeRating(Rating.Three);
-                    break;
-                case 4:
-                    ChangeRating(Rating.Four);
-                    break;
-                case 5:
-                    ChangeRating(Rating.Five);
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        public void SetDescription(String desc)
-        {
-            Description = desc;
-        }
-
-        public void SetTags(String tags)
-        {
-            Tags = tags;
         }
     }
 }

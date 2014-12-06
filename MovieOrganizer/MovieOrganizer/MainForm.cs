@@ -15,11 +15,17 @@ namespace MovieOrganizer
     public partial class MainForm : Form
     {
         private List<MovieEntry> movieList = new List<MovieEntry>();
+        protected int newMovieIndex;
 
         public MainForm()
         {
             InitializeComponent();
             ReadXML();
+            if(movieList.Count==0)
+                newMovieIndex =1;
+            else
+                newMovieIndex = movieList[movieList.Count - 1].ID + 1;
+
             NavigationPanel.Hide();
             LibraryPanel.Hide();
             LoginPanel.Show();
@@ -44,12 +50,15 @@ namespace MovieOrganizer
 
         private void link_pMain_pDataEntry_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           using (var form = new AddMovie())
+            using (var form = new AddMovie())
             {
                 var result = form.ShowDialog();
                 if (result == DialogResult.OK)
                 {
-                    ;
+                    var record = form.movie;
+                    record.ID = newMovieIndex++;
+                    movieList.Add(record);
+                    link_pMain_pLibrary_LinkClicked(sender, e);
                 }
             }
         }
@@ -114,6 +123,7 @@ namespace MovieOrganizer
             }
             catch
             {
+                MessageBox.Show("Error reading file");
                 return; //then there is no file or its empty and will be created/written on exit
             }
         }

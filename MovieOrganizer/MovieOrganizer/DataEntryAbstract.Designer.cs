@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.DataEntryPanel = new System.Windows.Forms.Panel();
+            this.btn_Delete_Movie = new System.Windows.Forms.Button();
             this.lbl_Tags = new System.Windows.Forms.Label();
             this.lbl_Description = new System.Windows.Forms.Label();
             this.lbl_Genre = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.txt_Year = new System.Windows.Forms.TextBox();
             this.txt_MovieTitle = new System.Windows.Forms.TextBox();
             this.pic_EditMovieImage = new System.Windows.Forms.PictureBox();
-            this.btn_Delete_Movie = new System.Windows.Forms.Button();
             this.DataEntryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_EditMovieImage)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +81,16 @@
             this.DataEntryPanel.Name = "DataEntryPanel";
             this.DataEntryPanel.Size = new System.Drawing.Size(542, 438);
             this.DataEntryPanel.TabIndex = 1;
+            // 
+            // btn_Delete_Movie
+            // 
+            this.btn_Delete_Movie.Location = new System.Drawing.Point(31, 387);
+            this.btn_Delete_Movie.Name = "btn_Delete_Movie";
+            this.btn_Delete_Movie.Size = new System.Drawing.Size(95, 23);
+            this.btn_Delete_Movie.TabIndex = 22;
+            this.btn_Delete_Movie.Text = "Delete Movie";
+            this.btn_Delete_Movie.UseVisualStyleBackColor = true;
+            this.btn_Delete_Movie.Click += new System.EventHandler(this.btn_Delete_Movie_Click);
             // 
             // lbl_Tags
             // 
@@ -156,9 +166,11 @@
             // 
             // cmb_Rating
             // 
+            this.cmb_Rating.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Rating.ForeColor = System.Drawing.SystemColors.Desktop;
             this.cmb_Rating.FormattingEnabled = true;
             this.cmb_Rating.Location = new System.Drawing.Point(316, 149);
+            this.cmb_Rating.MaxDropDownItems = 5;
             this.cmb_Rating.Name = "cmb_Rating";
             this.cmb_Rating.Size = new System.Drawing.Size(191, 21);
             this.cmb_Rating.TabIndex = 6;
@@ -172,25 +184,25 @@
             this.btn_UploadImage.Text = "Upload Image";
             this.btn_UploadImage.UseVisualStyleBackColor = true;
             // 
-            // btn_pDataEntry_pLibrary_Cancel
+            // btn_Cancel_Entry
             // 
             this.btn_Cancel_Entry.Location = new System.Drawing.Point(355, 387);
-            this.btn_Cancel_Entry.Name = "btn_pDataEntry_pLibrary_Cancel";
+            this.btn_Cancel_Entry.Name = "btn_Cancel_Entry";
             this.btn_Cancel_Entry.Size = new System.Drawing.Size(75, 23);
             this.btn_Cancel_Entry.TabIndex = 12;
             this.btn_Cancel_Entry.Text = "Cancel";
             this.btn_Cancel_Entry.UseVisualStyleBackColor = true;
-            this.btn_Cancel_Entry.Click += new System.EventHandler(this.btn_pDataEntry_pLibrary_Cancel_Click);
+            this.btn_Cancel_Entry.Click += new System.EventHandler(this.btn_Cancel_Movie_Click);
             // 
-            // btn_pDataEntry_pLibrary_Save
+            // btn_Save_Movie
             // 
             this.btn_Save_Movie.Location = new System.Drawing.Point(436, 387);
-            this.btn_Save_Movie.Name = "btn_pDataEntry_pLibrary_Save";
+            this.btn_Save_Movie.Name = "btn_Save_Movie";
             this.btn_Save_Movie.Size = new System.Drawing.Size(75, 23);
             this.btn_Save_Movie.TabIndex = 11;
             this.btn_Save_Movie.Text = "Save";
             this.btn_Save_Movie.UseVisualStyleBackColor = true;
-            this.btn_Save_Movie.Click += new System.EventHandler(this.btn_pDataEntry_pLibrary_Save_Click);
+            this.btn_Save_Movie.Click += new System.EventHandler(this.btn_Save_Movie_Click);
             // 
             // txt_Tags
             // 
@@ -257,15 +269,6 @@
             this.pic_EditMovieImage.Size = new System.Drawing.Size(185, 228);
             this.pic_EditMovieImage.TabIndex = 0;
             this.pic_EditMovieImage.TabStop = false;
-            // 
-            // btn_pDataEntry_modalConfirmation_DeleteMovie
-            // 
-            this.btn_Delete_Movie.Location = new System.Drawing.Point(31, 387);
-            this.btn_Delete_Movie.Name = "btn_pDataEntry_modalConfirmation_DeleteMovie";
-            this.btn_Delete_Movie.Size = new System.Drawing.Size(95, 23);
-            this.btn_Delete_Movie.TabIndex = 22;
-            this.btn_Delete_Movie.Text = "Delete Movie";
-            this.btn_Delete_Movie.UseVisualStyleBackColor = true;
             // 
             // DataEntryAbstract
             // 
