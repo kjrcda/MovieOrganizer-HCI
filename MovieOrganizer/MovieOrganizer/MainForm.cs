@@ -124,5 +124,20 @@ namespace MovieOrganizer
             item.BackColor = SystemColors.ControlDark;
             item.ForeColor = SystemColors.ControlLightLight;
         }
+
+        private void link_pMain_frmSuggest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            using( var form = new Suggest_Modal())
+            {
+                var result = form.ShowDialog();
+                if(result == DialogResult.OK)
+                {
+                    MessageBox.Show(""+form.suggest);
+                    link_pMain_pLibrary_LinkClicked(sender, e);
+                }
+            }
+        }
+
+        //TODO: write and edit method for movies and dont forget to delete the picture
     }
 }

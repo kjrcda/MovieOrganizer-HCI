@@ -261,9 +261,10 @@
             // 
             // NavigationPanel
             // 
-            this.NavigationPanel.Location = new System.Drawing.Point(0, 1);
+            this.NavigationPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.NavigationPanel.Location = new System.Drawing.Point(0, 0);
             this.NavigationPanel.Name = "NavigationPanel";
-            this.NavigationPanel.Size = new System.Drawing.Size(605, 51);
+            this.NavigationPanel.Size = new System.Drawing.Size(605, 48);
             this.NavigationPanel.TabIndex = 2;
             // 
             // link_pMain_pLibrary
@@ -342,6 +343,7 @@
             this.link_pMain_frmSuggest.TabIndex = 8;
             this.link_pMain_frmSuggest.TabStop = true;
             this.link_pMain_frmSuggest.Text = "Suggest a Movie for Me";
+            this.link_pMain_frmSuggest.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_pMain_frmSuggest_LinkClicked);
             // 
             // link_pMain_pTaggedSearch
             // 
@@ -396,6 +398,8 @@
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.LibraryPanel);
             this.Controls.Add(this.MainMenuPanel);
+            this.MaximumSize = new System.Drawing.Size(1000, 702);
+            this.MinimumSize = new System.Drawing.Size(618, 500);
             this.Name = "MainForm";
             this.Text = "Movie Organizer";
             this.LoginPanel.ResumeLayout(false);

@@ -25,6 +25,7 @@ namespace MovieOrganizer
                 cmb_Rating.SelectedValue = (int)movie.Rate;
                 txt_Description.Text = movie.Description;
                 txt_Tags.Text = movie.Tags;
+                pic_EditMovieImage.BackgroundImage = Image.FromFile(path + movie.PictureName);
             }
         }
 

@@ -19,8 +19,9 @@ namespace MovieOrganizer
         public Rating Rate;
         public String Description;
         public String Tags;
+        public String PictureName;
 
-        public MovieEntry(String ti, int y, String di, String a, Rating r, String de, String ta)
+        public MovieEntry(String ti, int y, String di, String a, Rating r, String de, String ta, String pp)
         {
             Title = ti;
             Year = y;
@@ -29,6 +30,7 @@ namespace MovieOrganizer
             Rate = r;
             Description = de;
             Tags = ta;
+            PictureName = pp;
         }
 
         public MovieEntry()
@@ -41,6 +43,7 @@ namespace MovieOrganizer
             Rate = Rating.One;
             Description = "";
             Tags = "";
+            PictureName = "";
         }
     }
 }

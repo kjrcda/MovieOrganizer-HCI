@@ -183,6 +183,7 @@
             this.btn_UploadImage.TabIndex = 10;
             this.btn_UploadImage.Text = "Upload Image";
             this.btn_UploadImage.UseVisualStyleBackColor = true;
+            this.btn_UploadImage.Click += new System.EventHandler(this.btn_UploadImage_Click);
             // 
             // btn_Cancel_Entry
             // 
@@ -267,6 +268,7 @@
             this.pic_EditMovieImage.Location = new System.Drawing.Point(31, 45);
             this.pic_EditMovieImage.Name = "pic_EditMovieImage";
             this.pic_EditMovieImage.Size = new System.Drawing.Size(185, 228);
+            this.pic_EditMovieImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_EditMovieImage.TabIndex = 0;
             this.pic_EditMovieImage.TabStop = false;
             // 
