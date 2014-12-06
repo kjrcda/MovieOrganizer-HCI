@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.NavigationPanel = new System.Windows.Forms.Panel();
             this.link_LOSI = new System.Windows.Forms.LinkLabel();
             this.lbl_LOSI = new System.Windows.Forms.Label();
             this.lbl_Username = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@
             this.label_panel = new System.Windows.Forms.Panel();
             this.lbl_SortBy = new System.Windows.Forms.Label();
             this.LibraryPanel = new System.Windows.Forms.Panel();
+            this.NavigationPanel = new System.Windows.Forms.Panel();
             this.link_pMain_pLibrary = new System.Windows.Forms.LinkLabel();
             this.pic_pMain_pLibrary = new System.Windows.Forms.PictureBox();
             this.link_pMain_pDataEntry = new System.Windows.Forms.LinkLabel();
@@ -59,7 +59,7 @@
             this.pic_pMain_pTagged = new System.Windows.Forms.PictureBox();
             this.link_pMain_frmSuggest = new System.Windows.Forms.LinkLabel();
             this.link_pMain_pTaggedSearch = new System.Windows.Forms.LinkLabel();
-            this.pic_WelcomeBanner = new System.Windows.Forms.PictureBox();
+            this.lbl_WelcomeBanner = new System.Windows.Forms.Label();
             this.MainMenuPanel = new System.Windows.Forms.Panel();
             this.LoginPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
@@ -71,19 +71,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pDataEntry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_frmSuggest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pTagged)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_WelcomeBanner)).BeginInit();
             this.MainMenuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // NavigationPanel
-            // 
-            this.NavigationPanel.Location = new System.Drawing.Point(0, 0);
-            this.NavigationPanel.Name = "NavigationPanel";
-            this.NavigationPanel.Size = new System.Drawing.Size(605, 51);
-            this.NavigationPanel.TabIndex = 2;
-            // 
             // link_LOSI
             // 
+            this.link_LOSI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.link_LOSI.AutoSize = true;
             this.link_LOSI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_LOSI.Location = new System.Drawing.Point(531, 6);
@@ -115,6 +108,8 @@
             // 
             // LoginPanel
             // 
+            this.LoginPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LoginPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.LoginPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LoginPanel.Controls.Add(this.lbl_Username);
@@ -127,6 +122,9 @@
             // 
             // panel_MovieListing
             // 
+            this.panel_MovieListing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_MovieListing.Location = new System.Drawing.Point(121, 113);
             this.panel_MovieListing.Name = "panel_MovieListing";
             this.panel_MovieListing.Size = new System.Drawing.Size(484, 499);
@@ -134,7 +132,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(124, 87);
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(127, 87);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(467, 20);
@@ -142,6 +142,8 @@
             // 
             // toolStripContainer1
             // 
+            this.toolStripContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             // 
             // toolStripContainer1.ContentPanel
             // 
@@ -270,6 +272,9 @@
             // 
             // LibraryPanel
             // 
+            this.LibraryPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LibraryPanel.Controls.Add(this.label_panel);
             this.LibraryPanel.Controls.Add(this.toolStripContainer1);
             this.LibraryPanel.Controls.Add(this.textBox1);
@@ -279,8 +284,17 @@
             this.LibraryPanel.Size = new System.Drawing.Size(605, 615);
             this.LibraryPanel.TabIndex = 2;
             // 
+            // NavigationPanel
+            // 
+            this.NavigationPanel.Location = new System.Drawing.Point(0, 1);
+            this.NavigationPanel.Name = "NavigationPanel";
+            this.NavigationPanel.Size = new System.Drawing.Size(605, 51);
+            this.NavigationPanel.TabIndex = 2;
+            // 
             // link_pMain_pLibrary
             // 
+            this.link_pMain_pLibrary.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.link_pMain_pLibrary.AutoSize = true;
             this.link_pMain_pLibrary.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_pMain_pLibrary.Location = new System.Drawing.Point(174, 138);
@@ -302,6 +316,8 @@
             // 
             // link_pMain_pDataEntry
             // 
+            this.link_pMain_pDataEntry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.link_pMain_pDataEntry.AutoSize = true;
             this.link_pMain_pDataEntry.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_pMain_pDataEntry.Location = new System.Drawing.Point(174, 206);
@@ -341,6 +357,8 @@
             // 
             // link_pMain_frmSuggest
             // 
+            this.link_pMain_frmSuggest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.link_pMain_frmSuggest.AutoSize = true;
             this.link_pMain_frmSuggest.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_pMain_frmSuggest.Location = new System.Drawing.Point(174, 274);
@@ -352,6 +370,8 @@
             // 
             // link_pMain_pTaggedSearch
             // 
+            this.link_pMain_pTaggedSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.link_pMain_pTaggedSearch.AutoSize = true;
             this.link_pMain_pTaggedSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_pMain_pTaggedSearch.Location = new System.Drawing.Point(174, 342);
@@ -361,18 +381,25 @@
             this.link_pMain_pTaggedSearch.TabStop = true;
             this.link_pMain_pTaggedSearch.Text = "Tagged Search";
             // 
-            // pic_WelcomeBanner
+            // lbl_WelcomeBanner
             // 
-            this.pic_WelcomeBanner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_WelcomeBanner.Location = new System.Drawing.Point(0, 0);
-            this.pic_WelcomeBanner.Name = "pic_WelcomeBanner";
-            this.pic_WelcomeBanner.Size = new System.Drawing.Size(605, 48);
-            this.pic_WelcomeBanner.TabIndex = 10;
-            this.pic_WelcomeBanner.TabStop = false;
+            this.lbl_WelcomeBanner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_WelcomeBanner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_WelcomeBanner.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_WelcomeBanner.Location = new System.Drawing.Point(0, 0);
+            this.lbl_WelcomeBanner.Name = "lbl_WelcomeBanner";
+            this.lbl_WelcomeBanner.Size = new System.Drawing.Size(605, 48);
+            this.lbl_WelcomeBanner.TabIndex = 10;
+            this.lbl_WelcomeBanner.Text = "Welcome to the Movie Organizer";
+            this.lbl_WelcomeBanner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainMenuPanel
             // 
-            this.MainMenuPanel.Controls.Add(this.pic_WelcomeBanner);
+            this.MainMenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MainMenuPanel.Controls.Add(this.lbl_WelcomeBanner);
             this.MainMenuPanel.Controls.Add(this.link_pMain_pTaggedSearch);
             this.MainMenuPanel.Controls.Add(this.link_pMain_frmSuggest);
             this.MainMenuPanel.Controls.Add(this.pic_pMain_pTagged);
@@ -381,6 +408,7 @@
             this.MainMenuPanel.Controls.Add(this.link_pMain_pDataEntry);
             this.MainMenuPanel.Controls.Add(this.pic_pMain_pLibrary);
             this.MainMenuPanel.Controls.Add(this.link_pMain_pLibrary);
+            this.MainMenuPanel.Controls.Add(this.NavigationPanel);
             this.MainMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.MainMenuPanel.Name = "MainMenuPanel";
             this.MainMenuPanel.Size = new System.Drawing.Size(605, 615);
@@ -392,7 +420,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 613);
             this.Controls.Add(this.LoginPanel);
-            this.Controls.Add(this.NavigationPanel);
             this.Controls.Add(this.MainMenuPanel);
             this.Controls.Add(this.LibraryPanel);
             this.Name = "MainForm";
@@ -413,7 +440,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pDataEntry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_frmSuggest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pTagged)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_WelcomeBanner)).EndInit();
             this.MainMenuPanel.ResumeLayout(false);
             this.MainMenuPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -422,7 +448,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel NavigationPanel;
         private System.Windows.Forms.LinkLabel link_LOSI;
         private System.Windows.Forms.Label lbl_LOSI;
         private System.Windows.Forms.Label lbl_Username;
@@ -445,6 +470,7 @@
         private System.Windows.Forms.Panel label_panel;
         private System.Windows.Forms.Label lbl_SortBy;
         private System.Windows.Forms.Panel LibraryPanel;
+        private System.Windows.Forms.Panel NavigationPanel;
         private System.Windows.Forms.LinkLabel link_pMain_pLibrary;
         private System.Windows.Forms.PictureBox pic_pMain_pLibrary;
         private System.Windows.Forms.LinkLabel link_pMain_pDataEntry;
@@ -453,7 +479,7 @@
         private System.Windows.Forms.PictureBox pic_pMain_pTagged;
         private System.Windows.Forms.LinkLabel link_pMain_frmSuggest;
         private System.Windows.Forms.LinkLabel link_pMain_pTaggedSearch;
-        private System.Windows.Forms.PictureBox pic_WelcomeBanner;
+        private System.Windows.Forms.Label lbl_WelcomeBanner;
         private System.Windows.Forms.Panel MainMenuPanel;
 
 
