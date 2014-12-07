@@ -37,6 +37,7 @@ namespace MovieOrganizer
             toolItems.Add(tlStrp_TimesWatched);
             toolItems.Add(tlStrp_Year);
 
+            TagPanel.Hide();
             LibraryPanel.Hide();
             LoginPanel.Show();
             MainMenuPanel.Show();
@@ -46,6 +47,7 @@ namespace MovieOrganizer
 
         private void link_pMain_pLibrary_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            TagPanel.Hide();
             MainMenuPanel.Hide();
             LibraryPanel.Show();
             NavigationPanel.Show();
@@ -175,15 +177,20 @@ namespace MovieOrganizer
 
         private void lnk_Library_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (LibraryPanel.Visible == false)
+            if (!LibraryPanel.Visible)
             {
+                TagPanel.Hide();
                 LibraryPanel.Show();
             }
         }
 
         private void lnk_TagSearch_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            LibraryPanel.Hide();
+            if (!TagPanel.Visible)
+            {
+                LibraryPanel.Hide();
+                TagPanel.Show();
+            }
         }
 
         private void link_pMain_pTaggedSearch_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -194,6 +201,36 @@ namespace MovieOrganizer
         }
 
         private void txt_Search_TextChanged(object sender, EventArgs e)
+        {
+            if (current == null)
+            {
+
+            }
+            else if (current == tlStrp_Genre)
+            {
+
+            }
+            else if (current == tlStrp_Actor)
+            {
+
+            }
+            else if (current == tlStrp_Director)
+            {
+
+            }
+            else if (current == tlStrp_Year)
+            {
+
+            }
+            else if (current == tlStrp_Rating)
+            {
+
+            }
+            else
+                MessageBox.Show("Unable to Search");
+        }
+
+        private void list_availableTags_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

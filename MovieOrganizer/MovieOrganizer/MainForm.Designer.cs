@@ -61,6 +61,14 @@
             this.lnk_Suggest = new System.Windows.Forms.LinkLabel();
             this.lnk_TagSearch = new System.Windows.Forms.LinkLabel();
             this.NavigationPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.TagPanel = new System.Windows.Forms.Panel();
+            this.lblAvailable = new System.Windows.Forms.Label();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.list_availableTags = new System.Windows.Forms.ListBox();
+            this.btn_Add_Tag = new System.Windows.Forms.Button();
+            this.btn_Remove_Tag = new System.Windows.Forms.Button();
+            this.list_ToSearch = new System.Windows.Forms.ListBox();
+            this.btn_Search = new System.Windows.Forms.Button();
             this.LoginPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -73,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pTagged)).BeginInit();
             this.MainMenuPanel.SuspendLayout();
             this.NavigationPanel.SuspendLayout();
+            this.TagPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_MovieListing
@@ -484,11 +493,93 @@
             this.NavigationPanel.Size = new System.Drawing.Size(609, 48);
             this.NavigationPanel.TabIndex = 7;
             // 
+            // TagPanel
+            // 
+            this.TagPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TagPanel.Controls.Add(this.btn_Search);
+            this.TagPanel.Controls.Add(this.list_ToSearch);
+            this.TagPanel.Controls.Add(this.btn_Remove_Tag);
+            this.TagPanel.Controls.Add(this.btn_Add_Tag);
+            this.TagPanel.Controls.Add(this.list_availableTags);
+            this.TagPanel.Controls.Add(this.lblSearch);
+            this.TagPanel.Controls.Add(this.lblAvailable);
+            this.TagPanel.Location = new System.Drawing.Point(0, 84);
+            this.TagPanel.Name = "TagPanel";
+            this.TagPanel.Size = new System.Drawing.Size(609, 531);
+            this.TagPanel.TabIndex = 11;
+            // 
+            // lblAvailable
+            // 
+            this.lblAvailable.AutoSize = true;
+            this.lblAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvailable.Location = new System.Drawing.Point(82, 106);
+            this.lblAvailable.Name = "lblAvailable";
+            this.lblAvailable.Size = new System.Drawing.Size(133, 24);
+            this.lblAvailable.TabIndex = 1;
+            this.lblAvailable.Text = "Available Tags";
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.Location = new System.Drawing.Point(349, 106);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(137, 24);
+            this.lblSearch.TabIndex = 2;
+            this.lblSearch.Text = "Tags to Search";
+            // 
+            // list_availableTags
+            // 
+            this.list_availableTags.FormattingEnabled = true;
+            this.list_availableTags.Location = new System.Drawing.Point(86, 144);
+            this.list_availableTags.Name = "list_availableTags";
+            this.list_availableTags.Size = new System.Drawing.Size(162, 238);
+            this.list_availableTags.TabIndex = 3;
+            this.list_availableTags.SelectedIndexChanged += new System.EventHandler(this.list_availableTags_SelectedIndexChanged);
+            // 
+            // btn_Add_Tag
+            // 
+            this.btn_Add_Tag.Location = new System.Drawing.Point(263, 205);
+            this.btn_Add_Tag.Name = "btn_Add_Tag";
+            this.btn_Add_Tag.Size = new System.Drawing.Size(75, 23);
+            this.btn_Add_Tag.TabIndex = 4;
+            this.btn_Add_Tag.Text = "> >";
+            this.btn_Add_Tag.UseVisualStyleBackColor = true;
+            // 
+            // btn_Remove_Tag
+            // 
+            this.btn_Remove_Tag.Location = new System.Drawing.Point(263, 245);
+            this.btn_Remove_Tag.Name = "btn_Remove_Tag";
+            this.btn_Remove_Tag.Size = new System.Drawing.Size(75, 23);
+            this.btn_Remove_Tag.TabIndex = 5;
+            this.btn_Remove_Tag.Text = "< <";
+            this.btn_Remove_Tag.UseVisualStyleBackColor = true;
+            // 
+            // list_ToSearch
+            // 
+            this.list_ToSearch.FormattingEnabled = true;
+            this.list_ToSearch.Location = new System.Drawing.Point(353, 144);
+            this.list_ToSearch.Name = "list_ToSearch";
+            this.list_ToSearch.Size = new System.Drawing.Size(162, 238);
+            this.list_ToSearch.TabIndex = 6;
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.Location = new System.Drawing.Point(259, 434);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(79, 27);
+            this.btn_Search.TabIndex = 7;
+            this.btn_Search.Text = "Search";
+            this.btn_Search.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 613);
+            this.Controls.Add(this.TagPanel);
             this.Controls.Add(this.NavigationPanel);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.LibraryPanel);
@@ -516,6 +607,8 @@
             this.MainMenuPanel.PerformLayout();
             this.NavigationPanel.ResumeLayout(false);
             this.NavigationPanel.PerformLayout();
+            this.TagPanel.ResumeLayout(false);
+            this.TagPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -555,6 +648,14 @@
         private System.Windows.Forms.LinkLabel lnk_Suggest;
         private System.Windows.Forms.LinkLabel lnk_AddMovie;
         private System.Windows.Forms.LinkLabel lnk_Library;
+        private System.Windows.Forms.Panel TagPanel;
+        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.Label lblAvailable;
+        private System.Windows.Forms.Button btn_Add_Tag;
+        private System.Windows.Forms.ListBox list_availableTags;
+        private System.Windows.Forms.ListBox list_ToSearch;
+        private System.Windows.Forms.Button btn_Remove_Tag;
+        private System.Windows.Forms.Button btn_Search;
     }
 }
 
