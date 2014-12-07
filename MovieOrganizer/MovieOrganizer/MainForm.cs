@@ -205,7 +205,30 @@ namespace MovieOrganizer
                 var result = form.ShowDialog();
                 if (result == DialogResult.OK)
                 {
-                    MessageBox.Show("" + form.suggest);
+                    if (form.suggest == Suggest.RatingBased)
+                    {
+                        List<int> toShow = new List<int>();
+
+                        for (int i = 0; i < 6; i++ )
+                        {
+                            var rate = Rating.Five-i;
+                            foreach (var item in movieList)
+                            {
+                                if (item.Rate == rate)
+                                {
+                                    toShow.Add(item.ID);
+                                    if (toShow.Count == 5)
+                                        break;
+                                }
+                            }
+                            if (toShow.Count == 5)
+                                break;
+                        }
+
+                        DrawList(panel_MovieListing, toShow);
+                    }
+                    else
+                        MessageBox.Show("You have not watched any movies recently");
                     link_pMain_pLibrary_LinkClicked(sender, e);
                 }
             }
