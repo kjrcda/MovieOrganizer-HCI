@@ -41,6 +41,11 @@
             this.tlStrp_Director = new System.Windows.Forms.ToolStripMenuItem();
             this.tlStrp_Year = new System.Windows.Forms.ToolStripMenuItem();
             this.tlStrp_Rating = new System.Windows.Forms.ToolStripMenuItem();
+            this.tool_5Stars = new System.Windows.Forms.ToolStripMenuItem();
+            this.tool_4Stars = new System.Windows.Forms.ToolStripMenuItem();
+            this.tool_3Stars = new System.Windows.Forms.ToolStripMenuItem();
+            this.tool_2Stars = new System.Windows.Forms.ToolStripMenuItem();
+            this.tool_1Stars = new System.Windows.Forms.ToolStripMenuItem();
             this.tlStrp_RecentlyViewed = new System.Windows.Forms.ToolStripMenuItem();
             this.tlStrp_TimesWatched = new System.Windows.Forms.ToolStripMenuItem();
             this.label_panel = new System.Windows.Forms.Panel();
@@ -62,13 +67,15 @@
             this.lnk_TagSearch = new System.Windows.Forms.LinkLabel();
             this.NavigationPanel = new System.Windows.Forms.TableLayoutPanel();
             this.TagPanel = new System.Windows.Forms.Panel();
-            this.lblAvailable = new System.Windows.Forms.Label();
-            this.lblSearch = new System.Windows.Forms.Label();
-            this.list_availableTags = new System.Windows.Forms.ListBox();
-            this.btn_Add_Tag = new System.Windows.Forms.Button();
-            this.btn_Remove_Tag = new System.Windows.Forms.Button();
-            this.list_ToSearch = new System.Windows.Forms.ListBox();
             this.btn_Search = new System.Windows.Forms.Button();
+            this.list_ToSearch = new System.Windows.Forms.ListBox();
+            this.btn_Remove_Tag = new System.Windows.Forms.Button();
+            this.btn_Add_Tag = new System.Windows.Forms.Button();
+            this.list_availableTags = new System.Windows.Forms.ListBox();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.lblAvailable = new System.Windows.Forms.Label();
+            this.tool_0Stars = new System.Windows.Forms.ToolStripMenuItem();
+            this.tool_AllStars = new System.Windows.Forms.ToolStripMenuItem();
             this.LoginPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -186,7 +193,7 @@
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 25);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(111, 139);
+            this.menuStrip1.Size = new System.Drawing.Size(111, 158);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -220,10 +227,58 @@
             // 
             // tlStrp_Rating
             // 
+            this.tlStrp_Rating.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tool_5Stars,
+            this.tool_4Stars,
+            this.tool_3Stars,
+            this.tool_2Stars,
+            this.tool_1Stars,
+            this.tool_0Stars,
+            this.tool_AllStars});
             this.tlStrp_Rating.Name = "tlStrp_Rating";
             this.tlStrp_Rating.Size = new System.Drawing.Size(104, 19);
             this.tlStrp_Rating.Text = "Rating";
             this.tlStrp_Rating.Click += new System.EventHandler(this.tlStrp_Click);
+            // 
+            // tool_5Stars
+            // 
+            this.tool_5Stars.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tool_5Stars.Name = "tool_5Stars";
+            this.tool_5Stars.Size = new System.Drawing.Size(152, 24);
+            this.tool_5Stars.Text = "★★★★★";
+            this.tool_5Stars.Click += new System.EventHandler(this.tool_5Stars_Click);
+            // 
+            // tool_4Stars
+            // 
+            this.tool_4Stars.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tool_4Stars.Name = "tool_4Stars";
+            this.tool_4Stars.Size = new System.Drawing.Size(152, 24);
+            this.tool_4Stars.Text = "★★★★";
+            this.tool_4Stars.Click += new System.EventHandler(this.tool_4Stars_Click);
+            // 
+            // tool_3Stars
+            // 
+            this.tool_3Stars.Font = new System.Drawing.Font("Mistral", 12F);
+            this.tool_3Stars.Name = "tool_3Stars";
+            this.tool_3Stars.Size = new System.Drawing.Size(152, 24);
+            this.tool_3Stars.Text = "★★★";
+            this.tool_3Stars.Click += new System.EventHandler(this.tool_3Stars_Click);
+            // 
+            // tool_2Stars
+            // 
+            this.tool_2Stars.Font = new System.Drawing.Font("Mistral", 12F);
+            this.tool_2Stars.Name = "tool_2Stars";
+            this.tool_2Stars.Size = new System.Drawing.Size(152, 24);
+            this.tool_2Stars.Text = "★★";
+            this.tool_2Stars.Click += new System.EventHandler(this.tool_2Stars_Click);
+            // 
+            // tool_1Stars
+            // 
+            this.tool_1Stars.Font = new System.Drawing.Font("Mistral", 12F);
+            this.tool_1Stars.Name = "tool_1Stars";
+            this.tool_1Stars.Size = new System.Drawing.Size(152, 24);
+            this.tool_1Stars.Text = "★";
+            this.tool_1Stars.Click += new System.EventHandler(this.tool_1Stars_Click);
             // 
             // tlStrp_RecentlyViewed
             // 
@@ -510,15 +565,49 @@
             this.TagPanel.Size = new System.Drawing.Size(609, 531);
             this.TagPanel.TabIndex = 11;
             // 
-            // lblAvailable
+            // btn_Search
             // 
-            this.lblAvailable.AutoSize = true;
-            this.lblAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvailable.Location = new System.Drawing.Point(82, 106);
-            this.lblAvailable.Name = "lblAvailable";
-            this.lblAvailable.Size = new System.Drawing.Size(133, 24);
-            this.lblAvailable.TabIndex = 1;
-            this.lblAvailable.Text = "Available Tags";
+            this.btn_Search.Location = new System.Drawing.Point(259, 434);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(79, 27);
+            this.btn_Search.TabIndex = 7;
+            this.btn_Search.Text = "Search";
+            this.btn_Search.UseVisualStyleBackColor = true;
+            // 
+            // list_ToSearch
+            // 
+            this.list_ToSearch.FormattingEnabled = true;
+            this.list_ToSearch.Location = new System.Drawing.Point(353, 144);
+            this.list_ToSearch.Name = "list_ToSearch";
+            this.list_ToSearch.Size = new System.Drawing.Size(162, 238);
+            this.list_ToSearch.TabIndex = 6;
+            // 
+            // btn_Remove_Tag
+            // 
+            this.btn_Remove_Tag.Location = new System.Drawing.Point(263, 245);
+            this.btn_Remove_Tag.Name = "btn_Remove_Tag";
+            this.btn_Remove_Tag.Size = new System.Drawing.Size(75, 23);
+            this.btn_Remove_Tag.TabIndex = 5;
+            this.btn_Remove_Tag.Text = "< <";
+            this.btn_Remove_Tag.UseVisualStyleBackColor = true;
+            // 
+            // btn_Add_Tag
+            // 
+            this.btn_Add_Tag.Location = new System.Drawing.Point(263, 205);
+            this.btn_Add_Tag.Name = "btn_Add_Tag";
+            this.btn_Add_Tag.Size = new System.Drawing.Size(75, 23);
+            this.btn_Add_Tag.TabIndex = 4;
+            this.btn_Add_Tag.Text = "> >";
+            this.btn_Add_Tag.UseVisualStyleBackColor = true;
+            // 
+            // list_availableTags
+            // 
+            this.list_availableTags.FormattingEnabled = true;
+            this.list_availableTags.Location = new System.Drawing.Point(86, 144);
+            this.list_availableTags.Name = "list_availableTags";
+            this.list_availableTags.Size = new System.Drawing.Size(162, 238);
+            this.list_availableTags.TabIndex = 3;
+            this.list_availableTags.SelectedIndexChanged += new System.EventHandler(this.list_availableTags_SelectedIndexChanged);
             // 
             // lblSearch
             // 
@@ -530,60 +619,41 @@
             this.lblSearch.TabIndex = 2;
             this.lblSearch.Text = "Tags to Search";
             // 
-            // list_availableTags
+            // lblAvailable
             // 
-            this.list_availableTags.FormattingEnabled = true;
-            this.list_availableTags.Location = new System.Drawing.Point(86, 144);
-            this.list_availableTags.Name = "list_availableTags";
-            this.list_availableTags.Size = new System.Drawing.Size(162, 238);
-            this.list_availableTags.TabIndex = 3;
-            this.list_availableTags.SelectedIndexChanged += new System.EventHandler(this.list_availableTags_SelectedIndexChanged);
+            this.lblAvailable.AutoSize = true;
+            this.lblAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvailable.Location = new System.Drawing.Point(82, 106);
+            this.lblAvailable.Name = "lblAvailable";
+            this.lblAvailable.Size = new System.Drawing.Size(133, 24);
+            this.lblAvailable.TabIndex = 1;
+            this.lblAvailable.Text = "Available Tags";
             // 
-            // btn_Add_Tag
+            // tool_0Stars
             // 
-            this.btn_Add_Tag.Location = new System.Drawing.Point(263, 205);
-            this.btn_Add_Tag.Name = "btn_Add_Tag";
-            this.btn_Add_Tag.Size = new System.Drawing.Size(75, 23);
-            this.btn_Add_Tag.TabIndex = 4;
-            this.btn_Add_Tag.Text = "> >";
-            this.btn_Add_Tag.UseVisualStyleBackColor = true;
+            this.tool_0Stars.Font = new System.Drawing.Font("Mistral", 12F);
+            this.tool_0Stars.Name = "tool_0Stars";
+            this.tool_0Stars.Size = new System.Drawing.Size(152, 24);
+            this.tool_0Stars.Text = "☆";
+            this.tool_0Stars.Click += new System.EventHandler(this.tool_0Stars_Click);
             // 
-            // btn_Remove_Tag
+            // tool_AllStars
             // 
-            this.btn_Remove_Tag.Location = new System.Drawing.Point(263, 245);
-            this.btn_Remove_Tag.Name = "btn_Remove_Tag";
-            this.btn_Remove_Tag.Size = new System.Drawing.Size(75, 23);
-            this.btn_Remove_Tag.TabIndex = 5;
-            this.btn_Remove_Tag.Text = "< <";
-            this.btn_Remove_Tag.UseVisualStyleBackColor = true;
-            // 
-            // list_ToSearch
-            // 
-            this.list_ToSearch.FormattingEnabled = true;
-            this.list_ToSearch.Location = new System.Drawing.Point(353, 144);
-            this.list_ToSearch.Name = "list_ToSearch";
-            this.list_ToSearch.Size = new System.Drawing.Size(162, 238);
-            this.list_ToSearch.TabIndex = 6;
-            // 
-            // btn_Search
-            // 
-            this.btn_Search.Location = new System.Drawing.Point(259, 434);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(79, 27);
-            this.btn_Search.TabIndex = 7;
-            this.btn_Search.Text = "Search";
-            this.btn_Search.UseVisualStyleBackColor = true;
+            this.tool_AllStars.Name = "tool_AllStars";
+            this.tool_AllStars.Size = new System.Drawing.Size(152, 24);
+            this.tool_AllStars.Text = "All Ratings";
+            this.tool_AllStars.Click += new System.EventHandler(this.tool_AllStars_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 613);
-            this.Controls.Add(this.TagPanel);
             this.Controls.Add(this.NavigationPanel);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.LibraryPanel);
             this.Controls.Add(this.MainMenuPanel);
+            this.Controls.Add(this.TagPanel);
             this.MinimumSize = new System.Drawing.Size(400, 250);
             this.Name = "MainForm";
             this.Text = "Movie Organizer";
@@ -656,6 +726,13 @@
         private System.Windows.Forms.ListBox list_ToSearch;
         private System.Windows.Forms.Button btn_Remove_Tag;
         private System.Windows.Forms.Button btn_Search;
+        private System.Windows.Forms.ToolStripMenuItem tool_5Stars;
+        private System.Windows.Forms.ToolStripMenuItem tool_4Stars;
+        private System.Windows.Forms.ToolStripMenuItem tool_3Stars;
+        private System.Windows.Forms.ToolStripMenuItem tool_2Stars;
+        private System.Windows.Forms.ToolStripMenuItem tool_1Stars;
+        private System.Windows.Forms.ToolStripMenuItem tool_0Stars;
+        private System.Windows.Forms.ToolStripMenuItem tool_AllStars;
     }
 }
 

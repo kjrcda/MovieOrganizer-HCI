@@ -113,18 +113,22 @@ namespace MovieOrganizer
         private void tlStrp_Click(object sender, EventArgs e)
         {
             ToolStripMenuItem temp = (ToolStripMenuItem)sender;
-            if(current == null)
+            if (temp == tlStrp_Rating || current == temp)
+            {
+                if (current != null)
+                {
+                    current.ForeColor = SystemColors.ControlText;
+                    current.BackColor = SystemColors.Control;
+                    current = null;
+                }
+            }
+            else if(current == null)
             {
                 temp.BackColor = SystemColors.ControlDark;
                 temp.ForeColor = SystemColors.ControlLightLight;
                 current = temp;
             }
-            else if (current == temp)
-            {
-                current.ForeColor = SystemColors.ControlText;
-                current.BackColor = SystemColors.Control;
-                current = null;
-            }
+            
             else
             {
                 current.BackColor = SystemColors.Control;
@@ -150,16 +154,28 @@ namespace MovieOrganizer
 
         public static void DrawList(Panel pan)
         {
+            DrawList(pan, null);            
+        }
+
+        public static void DrawList(Panel pan, List<int> toShow)
+        {
             int pos = 3;
             pan.Controls.Clear();
-            foreach (var item in movieList)
+            if(toShow == null)
+            {
+                toShow = new List<int>();
+                foreach(var item in movieList)
+                    toShow.Add(item.ID);
+            }
+            
+            foreach (var item in toShow)
             {
                 MovieEntryPanel entry = new MovieOrganizer.MovieEntryPanel();
                 entry.Location = new System.Drawing.Point(1, pos);
-                entry.Name = "" + item.ID;
+                entry.Name = "" + item;
                 entry.Size = new System.Drawing.Size(465, 105);
                 entry.TabIndex = 12;
-                entry.setMovie(item.ID);
+                entry.setMovie(item);
                 pan.Controls.Add(entry);
                 pos += 105;
             }
@@ -202,38 +218,109 @@ namespace MovieOrganizer
 
         private void txt_Search_TextChanged(object sender, EventArgs e)
         {
+            String txtInput = ((TextBox)sender).Text;
+            if (txtInput.Length == 0)
+            {
+                DrawList(panel_MovieListing);
+                return;
+            }
+
+            List<int> toShow = new List<int>();
             if (current == null)
             {
-
+                foreach (var item in movieList)
+                {
+                    if (StringMatch.match(item.Title, txtInput))
+                        toShow.Add(item.ID);
+                }
             }
             else if (current == tlStrp_Genre)
             {
-
+                foreach (var item in movieList)
+                {
+                    if (StringMatch.match(item.Genre, txtInput))
+                        toShow.Add(item.ID);
+                }
             }
             else if (current == tlStrp_Actor)
             {
-
+                foreach (var item in movieList)
+                {
+                    if (StringMatch.match(item.Actors, txtInput))
+                        toShow.Add(item.ID);
+                }
             }
             else if (current == tlStrp_Director)
             {
-
+                foreach (var item in movieList)
+                {
+                    if (StringMatch.match(item.Director, txtInput))
+                        toShow.Add(item.ID);
+                }
             }
             else if (current == tlStrp_Year)
             {
-
-            }
-            else if (current == tlStrp_Rating)
-            {
-
+                foreach (var item in movieList)
+                {
+                    if (StringMatch.match((""+item.Year), txtInput))
+                        toShow.Add(item.ID);
+                }
             }
             else
                 MessageBox.Show("Unable to Search");
+
+            DrawList(panel_MovieListing,toShow);
+        }
+
+        private void tool_5Stars_Click(object sender, EventArgs e)
+        {
+            StarSearch(Rating.Five);
+        }
+
+        private void tool_4Stars_Click(object sender, EventArgs e)
+        {
+            StarSearch(Rating.Four);
+        }
+
+        private void tool_3Stars_Click(object sender, EventArgs e)
+        {
+            StarSearch(Rating.Three);
+        }
+
+        private void tool_2Stars_Click(object sender, EventArgs e)
+        {
+            StarSearch(Rating.Two);
+        }
+
+        private void tool_1Stars_Click(object sender, EventArgs e)
+        {
+            StarSearch(Rating.One);
+        }
+
+        private void tool_0Stars_Click(object sender, EventArgs e)
+        {
+            StarSearch(Rating.Zero);
+        }
+
+        private void tool_AllStars_Click(object sender, EventArgs e)
+        {
+            DrawList(panel_MovieListing);
+        }
+
+        private void StarSearch(Rating looking)
+        {
+            List<int> toShow = new List<int>();
+            foreach (var item in movieList)
+            {
+                if (item.Rate == looking)
+                    toShow.Add(item.ID);
+            }
+            DrawList(panel_MovieListing, toShow);
         }
 
         private void list_availableTags_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
     }
 }

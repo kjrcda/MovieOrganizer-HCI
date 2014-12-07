@@ -16,7 +16,7 @@ namespace MovieOrganizer
         public static bool match(String search, String toFind)
         {
             if (search.Length == 0)
-			return false;
+			    return false;
 		    search = search.ToLower();
 		    toFind = toFind.ToLower();
 		 
