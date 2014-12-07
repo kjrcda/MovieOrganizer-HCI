@@ -3,24 +3,43 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace MovieOrganizer
 {
     public partial class MainForm : Form
     {
+        public static List<MovieEntry> movieList = new List<MovieEntry>();
+        private List<ToolStripMenuItem> toolItems = new List<ToolStripMenuItem>();
+        protected int newMovieIndex;
+
         public MainForm()
         {
             InitializeComponent();
+            ReadXML();
+            if (movieList.Count == 0)
+                newMovieIndex = 1;
+            else
+                newMovieIndex = movieList[movieList.Count - 1].ID + 1;
+
+            toolItems.Add(tlStrp_Genre);
+            toolItems.Add(tlStrp_Director);
+            toolItems.Add(tlStrp_Actor);
+            toolItems.Add(tlStrp_Rating);
+            toolItems.Add(tlStrp_RecentlyViewed);
+            toolItems.Add(tlStrp_TimesWatched);
+            toolItems.Add(tlStrp_Year);
+
             NavigationPanel.Hide();
-            DataEntryPanel.Hide();
             LibraryPanel.Hide();
             LoginPanel.Show();
             MainMenuPanel.Show();
-
+            DrawList(panel_MovieListing);
         }
 
         //syntax is objectType_panelObjectIsOn_panelObjectPointsTo
@@ -31,23 +50,8 @@ namespace MovieOrganizer
             MainMenuPanel.Show();
         }
 
-        private void btn_pMain_AddMovie_Click(object sender, EventArgs e)
-        {
-            using (var form = new DataEntryAbstract("Add Movie"))
-            {
-                var result = form.ShowDialog();
-                if (result == DialogResult.OK)
-                {
-                    MessageBox.Show("Add Movie Successfully!");
-                }
-                else
-                    MessageBox.Show("Cancelled Movie Entry");
-            }
-        }
-
         private void link_pMain_pLibrary_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //if there is no user signed in - do not redirect. Instead send alert: "Need to be signed in to use app."
             MainMenuPanel.Hide();
             LibraryPanel.Show();
             NavigationPanel.Show();
@@ -55,168 +59,102 @@ namespace MovieOrganizer
 
         private void link_pMain_pDataEntry_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //if there is no user signed in - do not redirect. Instead send alert: "Need to be signed in to use app."
-            MainMenuPanel.Hide();
-            DataEntryPanel.Show();
-            NavigationPanel.Show();
+            using (var form = new AddMovie())
+            {
+                var result = form.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    var record = form.movie;
+                    record.ID = newMovieIndex++;
+                    movieList.Add(record);
+                    link_pMain_pLibrary_LinkClicked(sender, e);
+                }
+            }
+            DrawList(panel_MovieListing);
         }
 
-        private void txt_MovieTitle_TextChanged(object sender, EventArgs e)
+        protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            if (String.IsNullOrEmpty(txt_MovieTitle.Text))
-            {
-                txt_MovieTitle.Text = "Movie Title";
-                txt_MovieTitle.ForeColor = Color.Gray;
-            }
-            else
-            {
-                txt_MovieTitle.ForeColor = Color.Black;
-            }
+            base.OnFormClosing(e);
+
+            WriteXML();
         }
 
-        private void txt_Year_TextChanged(object sender, EventArgs e)
+        private void ReadXML()
         {
-            if (String.IsNullOrEmpty(txt_Year.Text))
-            {
-                txt_Year.Text = "Year";
-                txt_Year.ForeColor = Color.Gray;
-            }
-            else
-            {
-                txt_Year.ForeColor = Color.Black;
-            }
-        }
+            var reader = new XmlSerializer(typeof(List<MovieEntry>));
+            StreamReader file;
 
-        private void txt_Director_TextChanged(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(txt_Director.Text))
+            try
             {
-                txt_Director.Text = "Director";
-                txt_Director.ForeColor = Color.Gray;
+                file = new StreamReader("file.xml");
+                var list = reader.Deserialize(file);
+                movieList = (List<MovieEntry>)list;
+                file.Close();
             }
-            else
+            catch
             {
-                txt_Director.ForeColor = Color.Black;
+                MessageBox.Show("Error reading file");
+                return; //then there is no file or its empty and will be created/written on exit
             }
         }
 
-        private void txt_Actors_TextChanged(object sender, EventArgs e)
+        private void WriteXML()
         {
-            if (String.IsNullOrEmpty(txt_Actors.Text))
+            try
             {
-                txt_Actors.Text = "Actors";
-                txt_Actors.ForeColor = Color.Gray;
+                var writer = new XmlSerializer(typeof(List<MovieEntry>));
+                var file = new StreamWriter("file.xml", false);
+                writer.Serialize(file, movieList);
+                file.Close();
             }
-            else
+            catch
             {
-                txt_Actors.ForeColor = Color.Black;
-            }
-        }
-
-        private void txt_Genre_TextChanged(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(txt_Genre.Text))
-            {
-                txt_Genre.Text = "Genre";
-                txt_Genre.ForeColor = Color.Gray;
-            }
-            else
-            {
-                txt_Genre.ForeColor = Color.Black;
+                MessageBox.Show("Error writing to file");
             }
         }
 
-        private void txt_Description_TextChanged(object sender, EventArgs e)
+        private void tlStrp_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txt_Description.Text))
+            foreach (var listItem in toolItems)
             {
-                txt_Description.Text = "Description";
-                txt_Description.ForeColor = Color.Gray;
+                listItem.ForeColor = SystemColors.ControlText;
+                listItem.BackColor = SystemColors.Control;
             }
-            else
-            {
-                txt_Description.ForeColor = Color.Black;
-            }
-        }
-
-        private void txt_Tags_TextChanged(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(txt_Tags.Text))
-            {
-                txt_Tags.Text = "Tags";
-                txt_Tags.ForeColor = Color.Gray;
-            }
-            else
-            {
-                txt_Tags.ForeColor = Color.Black;
-            }
-        }
-
-        private void btn_pDataEntry_pLibrary_Save_Click(object sender, EventArgs e)
-        {
-            DataEntryPanel.Hide();
-            LibraryPanel.Show();
-            //alert movie changes was saved
-        }
-
-        private void btn_pDataEntry_pLibrary_Cancel_Click(object sender, EventArgs e)
-        {
-            DataEntryPanel.Hide();
-            LibraryPanel.Show();
-            //alert movie changes was cancelled
-        }
-
-        private void btn_pDataEntry_modalConfirmation_DeleteMovie_Click(object sender, EventArgs e)
-        {
-            //modal popup asking for confirmation of delete movie.
-            //if denied, close modal with no changes
-            //if accepted, alert movie was deleted and return to library
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked_2(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void link_LOSI_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            //if there is an active user, this link signs them out and redirects to the sign-in form
-            //if there is not an active user, this link's Text is changed to 'Sign-in' and redirects to the sign-in form.
+            ToolStripMenuItem item = (ToolStripMenuItem)sender;
+            item.BackColor = SystemColors.ControlDark;
+            item.ForeColor = SystemColors.ControlLightLight;
         }
 
         private void link_pMain_frmSuggest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //if there is no user signed in - do not redirect. Instead send alert: "Need to be signed in to use app."
+            using (var form = new Suggest_Modal())
+            {
+                var result = form.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    MessageBox.Show("" + form.suggest);
+                    link_pMain_pLibrary_LinkClicked(sender, e);
+                }
+            }
         }
 
-        private void link_pMain_pTaggedSearch_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        public static void DrawList(Panel pan)
         {
-            //if there is no user signed in - do not redirect. Instead send alert: "Need to be signed in to use app."
-            MainMenuPanel.Hide();
-            TaggedSearchPanel.Show();
-            NavigationPanel.Show();
-            LoginPanel.Show();
+            int pos = 3;
+            pan.Controls.Clear();
+            foreach (var item in movieList)
+            {
+                MovieEntryPanel entry = new MovieOrganizer.MovieEntryPanel();
+                entry.Location = new System.Drawing.Point(1, pos);
+                entry.Name = "" + item.ID;
+                entry.Size = new System.Drawing.Size(465, 105);
+                entry.TabIndex = 12;
+                entry.setMovie(item.ID);
+                pan.Controls.Add(entry);
+                pos += 105;
+            }
         }
 
-        private void link_pNavBar_ViewLibrary_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            //hide the current panel and show thew library panel
-            //set all nav tabs to background color = ControlLight and the ViewLibrary tab bgcolor to ControlLightLight
-        }
     }
 }
