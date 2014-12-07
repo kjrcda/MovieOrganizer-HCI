@@ -17,17 +17,19 @@ namespace MovieOrganizer
         public String Director;
         public String Actors;
         public Rating Rate;
+        public String Genre;
         public String Description;
         public String Tags;
         public String PictureName;
 
-        public MovieEntry(String ti, int y, String di, String a, Rating r, String de, String ta, String pp)
+        public MovieEntry(String ti, int y, String di, String a, Rating r, String g, String de, String ta, String pp)
         {
             Title = ti;
             Year = y;
             Director = di;
             Actors = a;
             Rate = r;
+            Genre = g;
             Description = de;
             Tags = ta;
             PictureName = pp;
@@ -41,6 +43,7 @@ namespace MovieOrganizer
             Director = "";
             Actors = "";
             Rate = Rating.One;
+            Genre = "";
             Description = "";
             Tags = "";
             PictureName = "";

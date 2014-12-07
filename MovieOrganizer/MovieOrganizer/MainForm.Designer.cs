@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel_MovieListing = new System.Windows.Forms.Panel();
             this.link_LOSI = new System.Windows.Forms.LinkLabel();
             this.lbl_LOSI = new System.Windows.Forms.Label();
             this.lbl_Username = new System.Windows.Forms.Label();
             this.LoginPanel = new System.Windows.Forms.Panel();
-            this.panel_MovieListing = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -69,6 +69,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pTagged)).BeginInit();
             this.MainMenuPanel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel_MovieListing
+            // 
+            this.panel_MovieListing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_MovieListing.AutoScroll = true;
+            this.panel_MovieListing.Location = new System.Drawing.Point(127, 113);
+            this.panel_MovieListing.Name = "panel_MovieListing";
+            this.panel_MovieListing.Size = new System.Drawing.Size(467, 499);
+            this.panel_MovieListing.TabIndex = 3;
             // 
             // link_LOSI
             // 
@@ -115,16 +126,6 @@
             this.LoginPanel.Name = "LoginPanel";
             this.LoginPanel.Size = new System.Drawing.Size(605, 33);
             this.LoginPanel.TabIndex = 10;
-            // 
-            // panel_MovieListing
-            // 
-            this.panel_MovieListing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_MovieListing.Location = new System.Drawing.Point(121, 113);
-            this.panel_MovieListing.Name = "panel_MovieListing";
-            this.panel_MovieListing.Size = new System.Drawing.Size(484, 499);
-            this.panel_MovieListing.TabIndex = 3;
             // 
             // textBox1
             // 
@@ -398,8 +399,7 @@
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.LibraryPanel);
             this.Controls.Add(this.MainMenuPanel);
-            this.MaximumSize = new System.Drawing.Size(1000, 702);
-            this.MinimumSize = new System.Drawing.Size(618, 500);
+            this.MinimumSize = new System.Drawing.Size(400, 250);
             this.Name = "MainForm";
             this.Text = "Movie Organizer";
             this.LoginPanel.ResumeLayout(false);
@@ -430,7 +430,6 @@
         private System.Windows.Forms.Label lbl_LOSI;
         private System.Windows.Forms.Label lbl_Username;
         private System.Windows.Forms.Panel LoginPanel;
-        private System.Windows.Forms.Panel panel_MovieListing;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -455,6 +454,7 @@
         private System.Windows.Forms.LinkLabel link_pMain_pTaggedSearch;
         private System.Windows.Forms.Label lbl_WelcomeBanner;
         private System.Windows.Forms.Panel MainMenuPanel;
+        private System.Windows.Forms.Panel panel_MovieListing;
 
 
     }

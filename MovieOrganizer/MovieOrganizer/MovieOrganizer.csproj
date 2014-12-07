@@ -70,6 +70,12 @@
     <Compile Include="EditMovie.Designer.cs">
       <DependentUpon>EditMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="MovieEntryPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MovieEntryPanel.Designer.cs">
+      <DependentUpon>MovieEntryPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Suggest_Modal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditMovie.resx">
       <DependentUpon>EditMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieEntryPanel.resx">
+      <DependentUpon>MovieEntryPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sign_In_Form.resx">
       <DependentUpon>Sign_In_Form.cs</DependentUpon>

@@ -16,8 +16,9 @@ namespace MovieOrganizer
     public partial class DataEntryAbstract : Form
     {
         public MovieEntry movie;
-        public String path = ".\\pic";
-        String picName = "";
+        public static String path = ".\\pic\\";
+        protected String picName = "";
+        protected bool picPresent = false;
         
         public DataEntryAbstract() 
         { 
@@ -29,12 +30,6 @@ namespace MovieOrganizer
 
         protected virtual void btn_Save_Movie_Click(object sender, EventArgs e)
         {
-            String extractedName = Path.GetFileName(picName);
-            if (!Directory.Exists(path))
-                Directory.CreateDirectory(path);
-            File.Copy(picName, path + extractedName, true);
-            movie = new MovieEntry(txt_MovieTitle.Text, Convert.ToInt32(txt_Year.Text), txt_Director.Text, txt_Actors.Text, (Rating)cmb_Rating.SelectedValue, txt_Description.Text, txt_Tags.Text, extractedName);
-
             DialogResult = DialogResult.OK;
             Dispose();
         }
@@ -70,8 +65,21 @@ namespace MovieOrganizer
             {
                 picName = diag.FileName; 
                 pic_EditMovieImage.Image = Image.FromFile(diag.FileName);
+                picPresent = true;
             }
         }
 
+        public String getFilename()
+        {
+            String extractedName = "";
+            if (!Directory.Exists(path))
+                Directory.CreateDirectory(path);
+            if (picPresent)
+            {
+                extractedName = Path.GetFileName(picName);
+                File.Copy(picName, path + extractedName, true);
+            }
+            return extractedName;
+        }
     }
 }

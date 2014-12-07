@@ -14,7 +14,7 @@ namespace MovieOrganizer
 {
     public partial class MainForm : Form
     {
-        private List<MovieEntry> movieList = new List<MovieEntry>();
+        public static List<MovieEntry> movieList = new List<MovieEntry>();
         private List<ToolStripMenuItem> toolItems = new List<ToolStripMenuItem>();
         protected int newMovieIndex;
 
@@ -39,7 +39,7 @@ namespace MovieOrganizer
             LibraryPanel.Hide();
             LoginPanel.Show();
             MainMenuPanel.Show();
-
+            DrawList(panel_MovieListing);
         }
 
         //syntax is objectType_panelObjectIsOn_panelObjectPointsTo
@@ -70,6 +70,7 @@ namespace MovieOrganizer
                     link_pMain_pLibrary_LinkClicked(sender, e);
                 }
             }
+            DrawList(panel_MovieListing);
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -138,6 +139,22 @@ namespace MovieOrganizer
             }
         }
 
-        //TODO: write and edit method for movies and dont forget to delete the picture
+        public static void DrawList(Panel pan)
+        {
+            int pos = 3;
+            pan.Controls.Clear();
+            foreach(var item in movieList)
+            {
+                MovieEntryPanel entry = new MovieOrganizer.MovieEntryPanel();
+                entry.Location = new System.Drawing.Point(1, pos);
+                entry.Name = ""+item.ID;
+                entry.Size = new System.Drawing.Size(465, 105);
+                entry.TabIndex = 12;
+                entry.setMovie(item.ID);
+                pan.Controls.Add(entry);
+                pos += 105;
+            }
+        }
+
     }
 }
