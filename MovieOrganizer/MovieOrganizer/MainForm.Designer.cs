@@ -73,11 +73,11 @@
             this.btn_Create = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
             this.list_ToSearch = new System.Windows.Forms.ListBox();
+            this.btn_Remove_Tag = new System.Windows.Forms.Button();
             this.btn_Add_Tag = new System.Windows.Forms.Button();
             this.list_availableTags = new System.Windows.Forms.ListBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.lblAvailable = new System.Windows.Forms.Label();
-            this.btn_Remove_Tag = new System.Windows.Forms.Button();
             this.LoginPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -193,9 +193,9 @@
             this.tlStrp_RecentlyViewed,
             this.tlStrp_TimesWatched});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(0, 25);
+            this.menuStrip1.Location = new System.Drawing.Point(3, 18);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(111, 139);
+            this.menuStrip1.Size = new System.Drawing.Size(111, 158);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -314,7 +314,7 @@
             this.label_panel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label_panel.Controls.Add(this.lbl_SortBy);
-            this.label_panel.Location = new System.Drawing.Point(0, 84);
+            this.label_panel.Location = new System.Drawing.Point(0, 87);
             this.label_panel.Name = "label_panel";
             this.label_panel.Size = new System.Drawing.Size(121, 26);
             this.label_panel.TabIndex = 6;
@@ -324,7 +324,7 @@
             this.lbl_SortBy.AutoSize = true;
             this.lbl_SortBy.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lbl_SortBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SortBy.Location = new System.Drawing.Point(20, 3);
+            this.lbl_SortBy.Location = new System.Drawing.Point(25, 4);
             this.lbl_SortBy.Name = "lbl_SortBy";
             this.lbl_SortBy.Size = new System.Drawing.Size(58, 17);
             this.lbl_SortBy.TabIndex = 1;
@@ -622,6 +622,16 @@
             this.list_ToSearch.Size = new System.Drawing.Size(162, 238);
             this.list_ToSearch.TabIndex = 6;
             // 
+            // btn_Remove_Tag
+            // 
+            this.btn_Remove_Tag.Location = new System.Drawing.Point(263, 245);
+            this.btn_Remove_Tag.Name = "btn_Remove_Tag";
+            this.btn_Remove_Tag.Size = new System.Drawing.Size(75, 23);
+            this.btn_Remove_Tag.TabIndex = 5;
+            this.btn_Remove_Tag.Text = "< <";
+            this.btn_Remove_Tag.UseVisualStyleBackColor = true;
+            this.btn_Remove_Tag.Click += new System.EventHandler(this.btn_Remove_Tag_Click);
+            // 
             // btn_Add_Tag
             // 
             this.btn_Add_Tag.Location = new System.Drawing.Point(263, 205);
@@ -660,16 +670,6 @@
             this.lblAvailable.TabIndex = 1;
             this.lblAvailable.Text = "Available Tags";
             // 
-            // btn_Remove_Tag
-            // 
-            this.btn_Remove_Tag.Location = new System.Drawing.Point(263, 245);
-            this.btn_Remove_Tag.Name = "btn_Remove_Tag";
-            this.btn_Remove_Tag.Size = new System.Drawing.Size(75, 23);
-            this.btn_Remove_Tag.TabIndex = 5;
-            this.btn_Remove_Tag.Text = "< <";
-            this.btn_Remove_Tag.UseVisualStyleBackColor = true;
-            this.btn_Remove_Tag.Click += new System.EventHandler(this.btn_Remove_Tag_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -677,9 +677,9 @@
             this.ClientSize = new System.Drawing.Size(609, 613);
             this.Controls.Add(this.NavigationPanel);
             this.Controls.Add(this.LoginPanel);
-            this.Controls.Add(this.TagPanel);
             this.Controls.Add(this.LibraryPanel);
             this.Controls.Add(this.MainMenuPanel);
+            this.Controls.Add(this.TagPanel);
             this.MinimumSize = new System.Drawing.Size(400, 250);
             this.Name = "MainForm";
             this.Text = "Movie Organizer";
