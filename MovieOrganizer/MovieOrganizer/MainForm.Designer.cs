@@ -73,8 +73,7 @@
             // panel_MovieListing
             // 
             this.panel_MovieListing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_MovieListing.AutoScroll = true;
             this.panel_MovieListing.Location = new System.Drawing.Point(127, 113);
             this.panel_MovieListing.Name = "panel_MovieListing";
@@ -115,8 +114,7 @@
             // 
             // LoginPanel
             // 
-            this.LoginPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoginPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.LoginPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.LoginPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LoginPanel.Controls.Add(this.lbl_Username);
@@ -129,8 +127,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(127, 87);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -139,8 +136,7 @@
             // 
             // toolStripContainer1
             // 
-            this.toolStripContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.toolStripContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left)));
             // 
             // toolStripContainer1.ContentPanel
             // 
@@ -248,8 +244,7 @@
             // LibraryPanel
             // 
             this.LibraryPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.LibraryPanel.Controls.Add(this.label_panel);
             this.LibraryPanel.Controls.Add(this.toolStripContainer1);
             this.LibraryPanel.Controls.Add(this.textBox1);
@@ -270,8 +265,7 @@
             // 
             // link_pMain_pLibrary
             // 
-            this.link_pMain_pLibrary.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.link_pMain_pLibrary.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.link_pMain_pLibrary.AutoSize = true;
             this.link_pMain_pLibrary.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_pMain_pLibrary.Location = new System.Drawing.Point(174, 138);
@@ -293,8 +287,7 @@
             // 
             // link_pMain_pDataEntry
             // 
-            this.link_pMain_pDataEntry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.link_pMain_pDataEntry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.link_pMain_pDataEntry.AutoSize = true;
             this.link_pMain_pDataEntry.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_pMain_pDataEntry.Location = new System.Drawing.Point(174, 206);
@@ -334,8 +327,7 @@
             // 
             // link_pMain_frmSuggest
             // 
-            this.link_pMain_frmSuggest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.link_pMain_frmSuggest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.link_pMain_frmSuggest.AutoSize = true;
             this.link_pMain_frmSuggest.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_pMain_frmSuggest.Location = new System.Drawing.Point(174, 274);
@@ -348,8 +340,7 @@
             // 
             // link_pMain_pTaggedSearch
             // 
-            this.link_pMain_pTaggedSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.link_pMain_pTaggedSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.link_pMain_pTaggedSearch.AutoSize = true;
             this.link_pMain_pTaggedSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_pMain_pTaggedSearch.Location = new System.Drawing.Point(174, 342);
@@ -361,8 +352,7 @@
             // 
             // lbl_WelcomeBanner
             // 
-            this.lbl_WelcomeBanner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_WelcomeBanner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_WelcomeBanner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_WelcomeBanner.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_WelcomeBanner.Location = new System.Drawing.Point(0, 0);
@@ -375,8 +365,7 @@
             // MainMenuPanel
             // 
             this.MainMenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.MainMenuPanel.Controls.Add(this.lbl_WelcomeBanner);
             this.MainMenuPanel.Controls.Add(this.link_pMain_pTaggedSearch);
             this.MainMenuPanel.Controls.Add(this.link_pMain_frmSuggest);
