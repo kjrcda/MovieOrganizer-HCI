@@ -22,7 +22,7 @@ namespace MovieOrganizer
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
         {
 
         }
