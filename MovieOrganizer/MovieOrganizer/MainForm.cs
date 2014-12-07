@@ -431,5 +431,28 @@ namespace MovieOrganizer
                 UpdateTags();
             }
         }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            if (tagSelected.Count == 0)
+            {
+                DrawList(panel_MovieListing);
+            }
+            else
+            {
+                List<int> toShow = new List<int>();
+                foreach (var str in tagSelected)
+                {
+                    foreach (var item in movieList)
+                    {
+                        if (StringMatch.match(item.Tags, str) && !toShow.Contains(item.ID))
+                            toShow.Add(item.ID);
+                    }
+                }
+                DrawList(panel_MovieListing, toShow);
+            }
+            TagPanel.Hide();
+            LibraryPanel.Show();
+        }
     }
 }
