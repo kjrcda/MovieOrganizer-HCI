@@ -15,6 +15,9 @@ namespace MovieOrganizer
         public Details_Form(MovieEntry entry)
         {
             InitializeComponent();
+            CenterToParent();
+            MinimizeBox = false;
+            MaximizeBox = false;
             pic_Cover.Image = Image.FromFile(DataEntryAbstract.path + entry.PictureName);
             lbl_Movie_Title.Text = entry.Title;
             lbl_Description.Text = entry.Description;

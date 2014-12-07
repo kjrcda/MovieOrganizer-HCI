@@ -278,6 +278,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(542, 439);
             this.Controls.Add(this.DataEntryPanel);
+            this.MaximumSize = new System.Drawing.Size(558, 478);
+            this.MinimumSize = new System.Drawing.Size(558, 478);
             this.Name = "DataEntryAbstract";
             this.Text = "DataEntryAbstract";
             this.DataEntryPanel.ResumeLayout(false);

@@ -23,6 +23,9 @@ namespace MovieOrganizer
         public DataEntryAbstract() 
         { 
             InitializeComponent();
+            CenterToParent();
+            MinimizeBox = false;
+            MaximizeBox = false;
             cmb_Rating.DataSource = Enum.GetValues(typeof(Rating)).Cast<Rating>().Select(p => new { Key = (int)p, Value = p.ToString() }).ToList();
             cmb_Rating.DisplayMember = "Value";
             cmb_Rating.ValueMember = "Key";

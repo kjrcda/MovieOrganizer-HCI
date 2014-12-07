@@ -79,9 +79,10 @@
             this.Controls.Add(this.btn_fSignIn_OK);
             this.Controls.Add(this.txtBox_fSignIn_Password);
             this.Controls.Add(this.txtBox_fSignIn_Username);
+            this.MaximumSize = new System.Drawing.Size(304, 168);
+            this.MinimumSize = new System.Drawing.Size(304, 168);
             this.Name = "Sign_In_Form";
             this.Text = "Sign In";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

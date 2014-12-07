@@ -9,6 +9,7 @@ namespace MovieOrganizer
         public Suggest_Modal()
         {
             InitializeComponent();
+            CenterToParent();
             MinimizeBox = false;
             MaximizeBox = false;
         }

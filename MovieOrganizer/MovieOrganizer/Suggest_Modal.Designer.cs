@@ -73,6 +73,8 @@
             this.Controls.Add(this.btn_Recent);
             this.Controls.Add(this.btn_Rating);
             this.Controls.Add(this.lbl_Question);
+            this.MaximumSize = new System.Drawing.Size(481, 240);
+            this.MinimumSize = new System.Drawing.Size(481, 240);
             this.Name = "Suggest_Modal";
             this.Text = "Suggest A Movie";
             this.ResumeLayout(false);

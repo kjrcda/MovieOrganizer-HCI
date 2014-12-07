@@ -21,6 +21,7 @@ namespace MovieOrganizer
         public MainForm()
         {
             InitializeComponent();
+            CenterToScreen();
             ReadXML();
             if (movieList.Count == 0)
                 newMovieIndex = 1;
