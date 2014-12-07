@@ -35,26 +35,16 @@ namespace MovieOrganizer
             toolItems.Add(tlStrp_TimesWatched);
             toolItems.Add(tlStrp_Year);
 
-            NavigationPanel.Hide();
             LibraryPanel.Hide();
             LoginPanel.Show();
             MainMenuPanel.Show();
             DrawList(panel_MovieListing);
         }
 
-        //syntax is objectType_panelObjectIsOn_panelObjectPointsTo
-        private void btn_pLibrary_ViewMain_Click(object sender, EventArgs e)
-        {
-            LibraryPanel.Hide();
-            NavigationPanel.Hide();
-            MainMenuPanel.Show();
-        }
-
         private void link_pMain_pLibrary_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MainMenuPanel.Hide();
             LibraryPanel.Show();
-            NavigationPanel.Show();
         }
 
         private void link_pMain_pDataEntry_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
