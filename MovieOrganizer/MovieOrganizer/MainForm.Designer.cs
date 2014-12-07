@@ -46,6 +46,8 @@
             this.tool_3Stars = new System.Windows.Forms.ToolStripMenuItem();
             this.tool_2Stars = new System.Windows.Forms.ToolStripMenuItem();
             this.tool_1Stars = new System.Windows.Forms.ToolStripMenuItem();
+            this.tool_0Stars = new System.Windows.Forms.ToolStripMenuItem();
+            this.tool_AllStars = new System.Windows.Forms.ToolStripMenuItem();
             this.tlStrp_RecentlyViewed = new System.Windows.Forms.ToolStripMenuItem();
             this.tlStrp_TimesWatched = new System.Windows.Forms.ToolStripMenuItem();
             this.label_panel = new System.Windows.Forms.Panel();
@@ -67,15 +69,15 @@
             this.lnk_TagSearch = new System.Windows.Forms.LinkLabel();
             this.NavigationPanel = new System.Windows.Forms.TableLayoutPanel();
             this.TagPanel = new System.Windows.Forms.Panel();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_Create = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
             this.list_ToSearch = new System.Windows.Forms.ListBox();
-            this.btn_Remove_Tag = new System.Windows.Forms.Button();
             this.btn_Add_Tag = new System.Windows.Forms.Button();
             this.list_availableTags = new System.Windows.Forms.ListBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.lblAvailable = new System.Windows.Forms.Label();
-            this.tool_0Stars = new System.Windows.Forms.ToolStripMenuItem();
-            this.tool_AllStars = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_Remove_Tag = new System.Windows.Forms.Button();
             this.LoginPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -244,7 +246,7 @@
             // 
             this.tool_5Stars.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tool_5Stars.Name = "tool_5Stars";
-            this.tool_5Stars.Size = new System.Drawing.Size(152, 24);
+            this.tool_5Stars.Size = new System.Drawing.Size(136, 24);
             this.tool_5Stars.Text = "★★★★★";
             this.tool_5Stars.Click += new System.EventHandler(this.tool_5Stars_Click);
             // 
@@ -252,7 +254,7 @@
             // 
             this.tool_4Stars.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tool_4Stars.Name = "tool_4Stars";
-            this.tool_4Stars.Size = new System.Drawing.Size(152, 24);
+            this.tool_4Stars.Size = new System.Drawing.Size(136, 24);
             this.tool_4Stars.Text = "★★★★";
             this.tool_4Stars.Click += new System.EventHandler(this.tool_4Stars_Click);
             // 
@@ -260,7 +262,7 @@
             // 
             this.tool_3Stars.Font = new System.Drawing.Font("Mistral", 12F);
             this.tool_3Stars.Name = "tool_3Stars";
-            this.tool_3Stars.Size = new System.Drawing.Size(152, 24);
+            this.tool_3Stars.Size = new System.Drawing.Size(136, 24);
             this.tool_3Stars.Text = "★★★";
             this.tool_3Stars.Click += new System.EventHandler(this.tool_3Stars_Click);
             // 
@@ -268,7 +270,7 @@
             // 
             this.tool_2Stars.Font = new System.Drawing.Font("Mistral", 12F);
             this.tool_2Stars.Name = "tool_2Stars";
-            this.tool_2Stars.Size = new System.Drawing.Size(152, 24);
+            this.tool_2Stars.Size = new System.Drawing.Size(136, 24);
             this.tool_2Stars.Text = "★★";
             this.tool_2Stars.Click += new System.EventHandler(this.tool_2Stars_Click);
             // 
@@ -276,9 +278,24 @@
             // 
             this.tool_1Stars.Font = new System.Drawing.Font("Mistral", 12F);
             this.tool_1Stars.Name = "tool_1Stars";
-            this.tool_1Stars.Size = new System.Drawing.Size(152, 24);
+            this.tool_1Stars.Size = new System.Drawing.Size(136, 24);
             this.tool_1Stars.Text = "★";
             this.tool_1Stars.Click += new System.EventHandler(this.tool_1Stars_Click);
+            // 
+            // tool_0Stars
+            // 
+            this.tool_0Stars.Font = new System.Drawing.Font("Mistral", 12F);
+            this.tool_0Stars.Name = "tool_0Stars";
+            this.tool_0Stars.Size = new System.Drawing.Size(136, 24);
+            this.tool_0Stars.Text = "☆";
+            this.tool_0Stars.Click += new System.EventHandler(this.tool_0Stars_Click);
+            // 
+            // tool_AllStars
+            // 
+            this.tool_AllStars.Name = "tool_AllStars";
+            this.tool_AllStars.Size = new System.Drawing.Size(136, 24);
+            this.tool_AllStars.Text = "All Ratings";
+            this.tool_AllStars.Click += new System.EventHandler(this.tool_AllStars_Click);
             // 
             // tlStrp_RecentlyViewed
             // 
@@ -553,6 +570,8 @@
             this.TagPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.TagPanel.Controls.Add(this.btn_Delete);
+            this.TagPanel.Controls.Add(this.btn_Create);
             this.TagPanel.Controls.Add(this.btn_Search);
             this.TagPanel.Controls.Add(this.list_ToSearch);
             this.TagPanel.Controls.Add(this.btn_Remove_Tag);
@@ -565,9 +584,29 @@
             this.TagPanel.Size = new System.Drawing.Size(609, 531);
             this.TagPanel.TabIndex = 11;
             // 
+            // btn_Delete
+            // 
+            this.btn_Delete.Location = new System.Drawing.Point(86, 452);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(93, 27);
+            this.btn_Delete.TabIndex = 9;
+            this.btn_Delete.Text = "Delete Tag";
+            this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
+            // 
+            // btn_Create
+            // 
+            this.btn_Create.Location = new System.Drawing.Point(86, 420);
+            this.btn_Create.Name = "btn_Create";
+            this.btn_Create.Size = new System.Drawing.Size(93, 27);
+            this.btn_Create.TabIndex = 8;
+            this.btn_Create.Text = "Create Tag";
+            this.btn_Create.UseVisualStyleBackColor = true;
+            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
+            // 
             // btn_Search
             // 
-            this.btn_Search.Location = new System.Drawing.Point(259, 434);
+            this.btn_Search.Location = new System.Drawing.Point(436, 452);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(79, 27);
             this.btn_Search.TabIndex = 7;
@@ -582,15 +621,6 @@
             this.list_ToSearch.Size = new System.Drawing.Size(162, 238);
             this.list_ToSearch.TabIndex = 6;
             // 
-            // btn_Remove_Tag
-            // 
-            this.btn_Remove_Tag.Location = new System.Drawing.Point(263, 245);
-            this.btn_Remove_Tag.Name = "btn_Remove_Tag";
-            this.btn_Remove_Tag.Size = new System.Drawing.Size(75, 23);
-            this.btn_Remove_Tag.TabIndex = 5;
-            this.btn_Remove_Tag.Text = "< <";
-            this.btn_Remove_Tag.UseVisualStyleBackColor = true;
-            // 
             // btn_Add_Tag
             // 
             this.btn_Add_Tag.Location = new System.Drawing.Point(263, 205);
@@ -599,6 +629,7 @@
             this.btn_Add_Tag.TabIndex = 4;
             this.btn_Add_Tag.Text = "> >";
             this.btn_Add_Tag.UseVisualStyleBackColor = true;
+            this.btn_Add_Tag.Click += new System.EventHandler(this.btn_Add_Tag_Click);
             // 
             // list_availableTags
             // 
@@ -607,7 +638,6 @@
             this.list_availableTags.Name = "list_availableTags";
             this.list_availableTags.Size = new System.Drawing.Size(162, 238);
             this.list_availableTags.TabIndex = 3;
-            this.list_availableTags.SelectedIndexChanged += new System.EventHandler(this.list_availableTags_SelectedIndexChanged);
             // 
             // lblSearch
             // 
@@ -629,20 +659,15 @@
             this.lblAvailable.TabIndex = 1;
             this.lblAvailable.Text = "Available Tags";
             // 
-            // tool_0Stars
+            // btn_Remove_Tag
             // 
-            this.tool_0Stars.Font = new System.Drawing.Font("Mistral", 12F);
-            this.tool_0Stars.Name = "tool_0Stars";
-            this.tool_0Stars.Size = new System.Drawing.Size(152, 24);
-            this.tool_0Stars.Text = "☆";
-            this.tool_0Stars.Click += new System.EventHandler(this.tool_0Stars_Click);
-            // 
-            // tool_AllStars
-            // 
-            this.tool_AllStars.Name = "tool_AllStars";
-            this.tool_AllStars.Size = new System.Drawing.Size(152, 24);
-            this.tool_AllStars.Text = "All Ratings";
-            this.tool_AllStars.Click += new System.EventHandler(this.tool_AllStars_Click);
+            this.btn_Remove_Tag.Location = new System.Drawing.Point(263, 245);
+            this.btn_Remove_Tag.Name = "btn_Remove_Tag";
+            this.btn_Remove_Tag.Size = new System.Drawing.Size(75, 23);
+            this.btn_Remove_Tag.TabIndex = 5;
+            this.btn_Remove_Tag.Text = "< <";
+            this.btn_Remove_Tag.UseVisualStyleBackColor = true;
+            this.btn_Remove_Tag.Click += new System.EventHandler(this.btn_Remove_Tag_Click);
             // 
             // MainForm
             // 
@@ -724,7 +749,6 @@
         private System.Windows.Forms.Button btn_Add_Tag;
         private System.Windows.Forms.ListBox list_availableTags;
         private System.Windows.Forms.ListBox list_ToSearch;
-        private System.Windows.Forms.Button btn_Remove_Tag;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.ToolStripMenuItem tool_5Stars;
         private System.Windows.Forms.ToolStripMenuItem tool_4Stars;
@@ -733,6 +757,9 @@
         private System.Windows.Forms.ToolStripMenuItem tool_1Stars;
         private System.Windows.Forms.ToolStripMenuItem tool_0Stars;
         private System.Windows.Forms.ToolStripMenuItem tool_AllStars;
+        private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.Button btn_Create;
+        private System.Windows.Forms.Button btn_Remove_Tag;
     }
 }
 

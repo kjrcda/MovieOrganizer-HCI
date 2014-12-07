@@ -17,6 +17,7 @@ namespace MovieOrganizer
         public static List<MovieEntry> movieList = new List<MovieEntry>();
         private List<ToolStripMenuItem> toolItems = new List<ToolStripMenuItem>();
         private List<String> tagList = new List<String>();
+        private List<String> tagSelected = new List<String>();
         private ToolStripMenuItem current = null;
         protected int newMovieIndex;
 
@@ -44,6 +45,7 @@ namespace MovieOrganizer
             MainMenuPanel.Show();
             NavigationPanel.Hide();
             DrawList(panel_MovieListing);
+            UpdateTags();
         }
 
         private void link_pMain_pLibrary_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -375,9 +377,59 @@ namespace MovieOrganizer
             DrawList(panel_MovieListing, toShow);
         }
 
-        private void list_availableTags_SelectedIndexChanged(object sender, EventArgs e)
+        private void btn_Delete_Click(object sender, EventArgs e)
         {
+            if(list_availableTags.SelectedItems.Count >0)
+            {
+                String temp = list_availableTags.SelectedItem.ToString();
+                tagList.Remove(temp);
+                tagSelected.Remove(temp);
+                UpdateTags();
+            }
+        }
 
+        private void btn_Create_Click(object sender, EventArgs e)
+        {
+            using(var form = new AddTag())
+            {
+                var result = form.ShowDialog();
+                if(result == DialogResult.OK && form.newTag !="" && !tagList.Contains(form.newTag.ToUpper()))
+                {
+                    tagList.Add(form.newTag.ToUpper());
+                    UpdateTags();
+                }
+            }
+        }
+
+        public void UpdateTags()
+        {
+            list_availableTags.Items.Clear();
+            list_availableTags.Items.AddRange(tagList.ToArray());
+
+            list_ToSearch.Items.Clear();
+            list_ToSearch.Items.AddRange(tagSelected.ToArray());
+        }
+
+        private void btn_Add_Tag_Click(object sender, EventArgs e)
+        {
+            if(list_availableTags.SelectedItems.Count >0)
+            {
+                String temp = list_availableTags.SelectedItem.ToString();
+                if(!tagSelected.Contains(temp))
+                {
+                    tagSelected.Add(temp);
+                    UpdateTags();
+                }
+            }
+        }
+
+        private void btn_Remove_Tag_Click(object sender, EventArgs e)
+        {
+            if (list_ToSearch.SelectedItems.Count > 0)
+            {
+                tagSelected.Remove(list_ToSearch.SelectedItem.ToString());
+                UpdateTags();
+            }
         }
     }
 }
