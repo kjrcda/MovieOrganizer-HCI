@@ -43,6 +43,9 @@
             this.pic_Movie_Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_Movie_Icon.TabIndex = 0;
             this.pic_Movie_Icon.TabStop = false;
+            this.pic_Movie_Icon.Click += new System.EventHandler(this.pic_Movie_Icon_Click);
+            this.pic_Movie_Icon.MouseEnter += new System.EventHandler(this.pic_Movie_Icon_MouseEnter);
+            this.pic_Movie_Icon.MouseLeave += new System.EventHandler(this.pic_Movie_Icon_MouseLeave);
             // 
             // lnk_Name
             // 
@@ -56,6 +59,7 @@
             this.lnk_Name.TabIndex = 1;
             this.lnk_Name.TabStop = true;
             this.lnk_Name.Text = "Name";
+            this.lnk_Name.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_Name_LinkClicked);
             // 
             // btn_Edit
             // 

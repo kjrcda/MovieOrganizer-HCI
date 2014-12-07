@@ -70,5 +70,33 @@ namespace MovieOrganizer
             }
             return temp;
         }
+
+        private void lnk_Name_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            OpenDetails();
+        }
+
+        private void pic_Movie_Icon_Click(object sender, EventArgs e)
+        {
+            OpenDetails();
+        }
+
+        private void OpenDetails()
+        {
+            using (var form = new Details_Form(getMovie()))
+            {
+                form.ShowDialog();
+            }
+        }
+
+        private void pic_Movie_Icon_MouseEnter(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void pic_Movie_Icon_MouseLeave(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Default;
+        }
     }
 }

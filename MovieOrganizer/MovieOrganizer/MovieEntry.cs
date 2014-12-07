@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MovieOrganizer
 {
     
-    public enum Rating {One, Two, Three, Four, Five};
+    public enum Rating {Zero, One, Two, Three, Four, Five};
 
     public class MovieEntry
     {

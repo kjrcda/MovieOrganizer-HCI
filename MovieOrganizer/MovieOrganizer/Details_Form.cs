@@ -12,19 +12,29 @@ namespace MovieOrganizer
 {
     public partial class Details_Form : Form
     {
-        public Details_Form()
+        public Details_Form(MovieEntry entry)
         {
             InitializeComponent();
+            pic_Cover.Image = Image.FromFile(DataEntryAbstract.path + entry.PictureName);
+            lbl_Movie_Title.Text = entry.Title;
+            lbl_Description.Text = entry.Description;
+            lbl_Director.Text = entry.Director;
+            lbl_Genre.Text = entry.Genre;
+            lbl_Year.Text = ""+entry.Year;
+            String rate = "";
+            for(int i=(int)entry.Rate;i > 0; i--)
+                rate+="★";
+            for(int i= 5-(int)entry.Rate; i>0; i--)
+                rate+="☆";
+            lbl_Rating.Text = rate;
+            lbl_Actors.Text = entry.Actors;
+            lbl_Tags.Text = entry.Tags;
+
         }
 
-        private void Details_Form_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
-        {
-
+            Dispose();
         }
     }
 }
