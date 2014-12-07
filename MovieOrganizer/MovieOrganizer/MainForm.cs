@@ -91,10 +91,13 @@ namespace MovieOrganizer
                 var list = reader.Deserialize(file);
                 movieList = (List<MovieEntry>)list;
             }
+            catch (FileNotFoundException fnfe)
+            {
+                //keep going the file hasnt been created yet
+            }
             catch (Exception e)
             {
-                
-                //MessageBox.Show("Error reading file\n" + e.Message);
+                MessageBox.Show("Error reading file\n" + e.Message);
             }
             finally
             {
@@ -108,6 +111,10 @@ namespace MovieOrganizer
                 tags = new StreamReader("tags.xml");
                 var list = tagReader.Deserialize(tags);
                 tagList = (List<String>)list;
+            }
+            catch (FileNotFoundException fnfe)
+            {
+                //keep going the file hasnt been created yet
             }
             catch (Exception e)
             {
