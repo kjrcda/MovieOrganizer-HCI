@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel_MovieListing = new System.Windows.Forms.Panel();
-            this.lnk_Library = new System.Windows.Forms.LinkLabel();
             this.link_LOSI = new System.Windows.Forms.LinkLabel();
             this.lbl_LOSI = new System.Windows.Forms.Label();
             this.lbl_Username = new System.Windows.Forms.Label();
@@ -47,7 +46,6 @@
             this.label_panel = new System.Windows.Forms.Panel();
             this.lbl_SortBy = new System.Windows.Forms.Label();
             this.LibraryPanel = new System.Windows.Forms.Panel();
-            this.NavigationPanel = new System.Windows.Forms.TableLayoutPanel();
             this.link_pMain_pLibrary = new System.Windows.Forms.LinkLabel();
             this.pic_pMain_pLibrary = new System.Windows.Forms.PictureBox();
             this.link_pMain_pDataEntry = new System.Windows.Forms.LinkLabel();
@@ -58,18 +56,23 @@
             this.link_pMain_pTaggedSearch = new System.Windows.Forms.LinkLabel();
             this.lbl_WelcomeBanner = new System.Windows.Forms.Label();
             this.MainMenuPanel = new System.Windows.Forms.Panel();
+            this.lnk_Library = new System.Windows.Forms.LinkLabel();
+            this.lnk_AddMovie = new System.Windows.Forms.LinkLabel();
+            this.lnk_Suggest = new System.Windows.Forms.LinkLabel();
+            this.lnk_TagSearch = new System.Windows.Forms.LinkLabel();
+            this.NavigationPanel = new System.Windows.Forms.TableLayoutPanel();
             this.LoginPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.label_panel.SuspendLayout();
             this.LibraryPanel.SuspendLayout();
-            this.NavigationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pLibrary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pDataEntry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_frmSuggest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pTagged)).BeginInit();
             this.MainMenuPanel.SuspendLayout();
+            this.NavigationPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_MovieListing
@@ -80,33 +83,15 @@
             this.panel_MovieListing.AutoScroll = true;
             this.panel_MovieListing.Location = new System.Drawing.Point(127, 113);
             this.panel_MovieListing.Name = "panel_MovieListing";
-            this.panel_MovieListing.Size = new System.Drawing.Size(467, 499);
+            this.panel_MovieListing.Size = new System.Drawing.Size(474, 499);
             this.panel_MovieListing.TabIndex = 3;
-            // 
-            // lnk_Library
-            // 
-            this.lnk_Library.ActiveLinkColor = System.Drawing.Color.Black;
-            this.lnk_Library.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnk_Library.AutoSize = true;
-            this.lnk_Library.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnk_Library.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnk_Library.LinkColor = System.Drawing.Color.Black;
-            this.lnk_Library.Location = new System.Drawing.Point(6, 3);
-            this.lnk_Library.Name = "lnk_Library";
-            this.lnk_Library.Size = new System.Drawing.Size(140, 42);
-            this.lnk_Library.TabIndex = 0;
-            this.lnk_Library.TabStop = true;
-            this.lnk_Library.Text = "View Library";
-            this.lnk_Library.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // link_LOSI
             // 
             this.link_LOSI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.link_LOSI.AutoSize = true;
             this.link_LOSI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.link_LOSI.Location = new System.Drawing.Point(531, 6);
+            this.link_LOSI.Location = new System.Drawing.Point(538, 6);
             this.link_LOSI.Name = "link_LOSI";
             this.link_LOSI.Size = new System.Drawing.Size(59, 17);
             this.link_LOSI.TabIndex = 0;
@@ -144,7 +129,7 @@
             this.LoginPanel.Controls.Add(this.link_LOSI);
             this.LoginPanel.Location = new System.Drawing.Point(0, 48);
             this.LoginPanel.Name = "LoginPanel";
-            this.LoginPanel.Size = new System.Drawing.Size(605, 33);
+            this.LoginPanel.Size = new System.Drawing.Size(612, 33);
             this.LoginPanel.TabIndex = 10;
             // 
             // textBox1
@@ -154,7 +139,7 @@
             this.textBox1.Location = new System.Drawing.Point(127, 87);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(467, 20);
+            this.textBox1.Size = new System.Drawing.Size(474, 20);
             this.textBox1.TabIndex = 4;
             // 
             // toolStripContainer1
@@ -270,33 +255,14 @@
             this.LibraryPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LibraryPanel.Controls.Add(this.NavigationPanel);
             this.LibraryPanel.Controls.Add(this.label_panel);
             this.LibraryPanel.Controls.Add(this.toolStripContainer1);
             this.LibraryPanel.Controls.Add(this.textBox1);
             this.LibraryPanel.Controls.Add(this.panel_MovieListing);
             this.LibraryPanel.Location = new System.Drawing.Point(0, 0);
             this.LibraryPanel.Name = "LibraryPanel";
-            this.LibraryPanel.Size = new System.Drawing.Size(605, 615);
+            this.LibraryPanel.Size = new System.Drawing.Size(612, 615);
             this.LibraryPanel.TabIndex = 2;
-            // 
-            // NavigationPanel
-            // 
-            this.NavigationPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.NavigationPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
-            this.NavigationPanel.ColumnCount = 4;
-            this.NavigationPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.NavigationPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.NavigationPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.NavigationPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.NavigationPanel.Controls.Add(this.lnk_Library, 0, 0);
-            this.NavigationPanel.Location = new System.Drawing.Point(0, 0);
-            this.NavigationPanel.Name = "NavigationPanel";
-            this.NavigationPanel.RowCount = 1;
-            this.NavigationPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.NavigationPanel.Size = new System.Drawing.Size(602, 48);
-            this.NavigationPanel.TabIndex = 7;
             // 
             // link_pMain_pLibrary
             // 
@@ -397,7 +363,7 @@
             this.lbl_WelcomeBanner.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_WelcomeBanner.Location = new System.Drawing.Point(0, 0);
             this.lbl_WelcomeBanner.Name = "lbl_WelcomeBanner";
-            this.lbl_WelcomeBanner.Size = new System.Drawing.Size(605, 48);
+            this.lbl_WelcomeBanner.Size = new System.Drawing.Size(612, 48);
             this.lbl_WelcomeBanner.TabIndex = 10;
             this.lbl_WelcomeBanner.Text = "Welcome to the Movie Organizer";
             this.lbl_WelcomeBanner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -418,14 +384,112 @@
             this.MainMenuPanel.Controls.Add(this.link_pMain_pLibrary);
             this.MainMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.MainMenuPanel.Name = "MainMenuPanel";
-            this.MainMenuPanel.Size = new System.Drawing.Size(605, 615);
+            this.MainMenuPanel.Size = new System.Drawing.Size(612, 615);
             this.MainMenuPanel.TabIndex = 3;
+            // 
+            // lnk_Library
+            // 
+            this.lnk_Library.ActiveLinkColor = System.Drawing.Color.Black;
+            this.lnk_Library.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnk_Library.AutoSize = true;
+            this.lnk_Library.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnk_Library.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnk_Library.LinkColor = System.Drawing.Color.Black;
+            this.lnk_Library.Location = new System.Drawing.Point(6, 3);
+            this.lnk_Library.Name = "lnk_Library";
+            this.lnk_Library.Size = new System.Drawing.Size(142, 42);
+            this.lnk_Library.TabIndex = 0;
+            this.lnk_Library.TabStop = true;
+            this.lnk_Library.Text = "View Library";
+            this.lnk_Library.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnk_Library.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_Library_LinkClicked);
+            // 
+            // lnk_AddMovie
+            // 
+            this.lnk_AddMovie.ActiveLinkColor = System.Drawing.Color.Black;
+            this.lnk_AddMovie.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnk_AddMovie.AutoSize = true;
+            this.lnk_AddMovie.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnk_AddMovie.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnk_AddMovie.LinkColor = System.Drawing.Color.Black;
+            this.lnk_AddMovie.Location = new System.Drawing.Point(157, 3);
+            this.lnk_AddMovie.Name = "lnk_AddMovie";
+            this.lnk_AddMovie.Size = new System.Drawing.Size(142, 42);
+            this.lnk_AddMovie.TabIndex = 1;
+            this.lnk_AddMovie.TabStop = true;
+            this.lnk_AddMovie.Text = "Add Movie";
+            this.lnk_AddMovie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnk_AddMovie.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_AddMovie_LinkClicked);
+            // 
+            // lnk_Suggest
+            // 
+            this.lnk_Suggest.ActiveLinkColor = System.Drawing.Color.Black;
+            this.lnk_Suggest.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnk_Suggest.AutoSize = true;
+            this.lnk_Suggest.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnk_Suggest.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnk_Suggest.LinkColor = System.Drawing.Color.Black;
+            this.lnk_Suggest.Location = new System.Drawing.Point(308, 3);
+            this.lnk_Suggest.Name = "lnk_Suggest";
+            this.lnk_Suggest.Size = new System.Drawing.Size(142, 42);
+            this.lnk_Suggest.TabIndex = 2;
+            this.lnk_Suggest.TabStop = true;
+            this.lnk_Suggest.Text = "Suggest Movie";
+            this.lnk_Suggest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnk_Suggest.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_Suggest_LinkClicked);
+            // 
+            // lnk_TagSearch
+            // 
+            this.lnk_TagSearch.ActiveLinkColor = System.Drawing.Color.Black;
+            this.lnk_TagSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnk_TagSearch.AutoSize = true;
+            this.lnk_TagSearch.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnk_TagSearch.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnk_TagSearch.LinkColor = System.Drawing.Color.Black;
+            this.lnk_TagSearch.Location = new System.Drawing.Point(459, 3);
+            this.lnk_TagSearch.Name = "lnk_TagSearch";
+            this.lnk_TagSearch.Size = new System.Drawing.Size(144, 42);
+            this.lnk_TagSearch.TabIndex = 3;
+            this.lnk_TagSearch.TabStop = true;
+            this.lnk_TagSearch.Text = "Tagged Search";
+            this.lnk_TagSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnk_TagSearch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_TagSearch_LinkClicked);
+            // 
+            // NavigationPanel
+            // 
+            this.NavigationPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NavigationPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
+            this.NavigationPanel.ColumnCount = 4;
+            this.NavigationPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.NavigationPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.NavigationPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.NavigationPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.NavigationPanel.Controls.Add(this.lnk_TagSearch, 3, 0);
+            this.NavigationPanel.Controls.Add(this.lnk_Suggest, 2, 0);
+            this.NavigationPanel.Controls.Add(this.lnk_AddMovie, 1, 0);
+            this.NavigationPanel.Controls.Add(this.lnk_Library, 0, 0);
+            this.NavigationPanel.Location = new System.Drawing.Point(0, 0);
+            this.NavigationPanel.Name = "NavigationPanel";
+            this.NavigationPanel.RowCount = 1;
+            this.NavigationPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.NavigationPanel.Size = new System.Drawing.Size(609, 48);
+            this.NavigationPanel.TabIndex = 7;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 613);
+            this.ClientSize = new System.Drawing.Size(609, 613);
+            this.Controls.Add(this.NavigationPanel);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.LibraryPanel);
             this.Controls.Add(this.MainMenuPanel);
@@ -444,14 +508,14 @@
             this.label_panel.PerformLayout();
             this.LibraryPanel.ResumeLayout(false);
             this.LibraryPanel.PerformLayout();
-            this.NavigationPanel.ResumeLayout(false);
-            this.NavigationPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pLibrary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pDataEntry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_frmSuggest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pTagged)).EndInit();
             this.MainMenuPanel.ResumeLayout(false);
             this.MainMenuPanel.PerformLayout();
+            this.NavigationPanel.ResumeLayout(false);
+            this.NavigationPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -487,6 +551,9 @@
         private System.Windows.Forms.Panel MainMenuPanel;
         private System.Windows.Forms.Panel panel_MovieListing;
         private System.Windows.Forms.TableLayoutPanel NavigationPanel;
+        private System.Windows.Forms.LinkLabel lnk_TagSearch;
+        private System.Windows.Forms.LinkLabel lnk_Suggest;
+        private System.Windows.Forms.LinkLabel lnk_AddMovie;
         private System.Windows.Forms.LinkLabel lnk_Library;
 
 

@@ -39,6 +39,7 @@ namespace MovieOrganizer
             LibraryPanel.Hide();
             LoginPanel.Show();
             MainMenuPanel.Show();
+            NavigationPanel.Hide();
             DrawList(panel_MovieListing);
         }
 
@@ -46,6 +47,7 @@ namespace MovieOrganizer
         {
             MainMenuPanel.Hide();
             LibraryPanel.Show();
+            NavigationPanel.Show();
         }
 
         private void link_pMain_pDataEntry_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -145,6 +147,29 @@ namespace MovieOrganizer
                 pan.Controls.Add(entry);
                 pos += 105;
             }
+        }
+
+        private void lnk_AddMovie_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            link_pMain_pDataEntry_LinkClicked(sender, e);
+        }
+
+        private void lnk_Suggest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            link_pMain_frmSuggest_LinkClicked(sender, e);
+        }
+
+        private void lnk_Library_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (LibraryPanel.Visible == false)
+            {
+                LibraryPanel.Show();
+            }
+        }
+
+        private void lnk_TagSearch_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LibraryPanel.Hide();
         }
 
     }
