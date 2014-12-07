@@ -33,7 +33,7 @@
             this.lbl_LOSI = new System.Windows.Forms.Label();
             this.lbl_Username = new System.Windows.Forms.Label();
             this.LoginPanel = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_Search = new System.Windows.Forms.TextBox();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tlStrp_Genre = new System.Windows.Forms.ToolStripMenuItem();
@@ -132,15 +132,16 @@
             this.LoginPanel.Size = new System.Drawing.Size(612, 33);
             this.LoginPanel.TabIndex = 10;
             // 
-            // textBox1
+            // txt_Search
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(127, 87);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(474, 20);
-            this.textBox1.TabIndex = 4;
+            this.txt_Search.Location = new System.Drawing.Point(127, 87);
+            this.txt_Search.Multiline = true;
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.Size = new System.Drawing.Size(474, 20);
+            this.txt_Search.TabIndex = 4;
+            this.txt_Search.TextChanged += new System.EventHandler(this.txt_Search_TextChanged);
             // 
             // toolStripContainer1
             // 
@@ -220,14 +221,12 @@
             this.tlStrp_RecentlyViewed.Name = "tlStrp_RecentlyViewed";
             this.tlStrp_RecentlyViewed.Size = new System.Drawing.Size(104, 19);
             this.tlStrp_RecentlyViewed.Text = "Recently Viewed";
-            this.tlStrp_RecentlyViewed.Click += new System.EventHandler(this.tlStrp_Click);
             // 
             // tlStrp_TimesWatched
             // 
             this.tlStrp_TimesWatched.Name = "tlStrp_TimesWatched";
             this.tlStrp_TimesWatched.Size = new System.Drawing.Size(104, 19);
             this.tlStrp_TimesWatched.Text = "Times Watched";
-            this.tlStrp_TimesWatched.Click += new System.EventHandler(this.tlStrp_Click);
             // 
             // label_panel
             // 
@@ -257,7 +256,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LibraryPanel.Controls.Add(this.label_panel);
             this.LibraryPanel.Controls.Add(this.toolStripContainer1);
-            this.LibraryPanel.Controls.Add(this.textBox1);
+            this.LibraryPanel.Controls.Add(this.txt_Search);
             this.LibraryPanel.Controls.Add(this.panel_MovieListing);
             this.LibraryPanel.Location = new System.Drawing.Point(0, 0);
             this.LibraryPanel.Name = "LibraryPanel";
@@ -354,6 +353,7 @@
             this.link_pMain_pTaggedSearch.TabIndex = 9;
             this.link_pMain_pTaggedSearch.TabStop = true;
             this.link_pMain_pTaggedSearch.Text = "Tagged Search";
+            this.link_pMain_pTaggedSearch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_pMain_pTaggedSearch_LinkClicked);
             // 
             // lbl_WelcomeBanner
             // 
@@ -526,7 +526,7 @@
         private System.Windows.Forms.Label lbl_LOSI;
         private System.Windows.Forms.Label lbl_Username;
         private System.Windows.Forms.Panel LoginPanel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Search;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tlStrp_Genre;
@@ -555,8 +555,6 @@
         private System.Windows.Forms.LinkLabel lnk_Suggest;
         private System.Windows.Forms.LinkLabel lnk_AddMovie;
         private System.Windows.Forms.LinkLabel lnk_Library;
-
-
     }
 }
 

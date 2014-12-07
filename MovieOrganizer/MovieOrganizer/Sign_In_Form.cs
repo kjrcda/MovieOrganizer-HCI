@@ -15,7 +15,7 @@ namespace MovieOrganizer
         public Sign_In_Form()
         {
             InitializeComponent();
-            CenterToParent();
+            CenterToScreen();
             MinimizeBox = false;
             MaximizeBox = false;
         }

@@ -76,6 +76,7 @@
     <Compile Include="MovieEntryPanel.Designer.cs">
       <DependentUpon>MovieEntryPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="StringMatch.cs" />
     <Compile Include="Suggest_Modal.cs">
       <SubType>Form</SubType>
     </Compile>

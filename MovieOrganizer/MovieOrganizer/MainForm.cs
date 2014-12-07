@@ -16,6 +16,7 @@ namespace MovieOrganizer
     {
         public static List<MovieEntry> movieList = new List<MovieEntry>();
         private List<ToolStripMenuItem> toolItems = new List<ToolStripMenuItem>();
+        private ToolStripMenuItem current = null;
         protected int newMovieIndex;
 
         public MainForm()
@@ -109,14 +110,27 @@ namespace MovieOrganizer
 
         private void tlStrp_Click(object sender, EventArgs e)
         {
-            foreach (var listItem in toolItems)
+            ToolStripMenuItem temp = (ToolStripMenuItem)sender;
+            if(current == null)
             {
-                listItem.ForeColor = SystemColors.ControlText;
-                listItem.BackColor = SystemColors.Control;
+                temp.BackColor = SystemColors.ControlDark;
+                temp.ForeColor = SystemColors.ControlLightLight;
+                current = temp;
             }
-            ToolStripMenuItem item = (ToolStripMenuItem)sender;
-            item.BackColor = SystemColors.ControlDark;
-            item.ForeColor = SystemColors.ControlLightLight;
+            else if (current == temp)
+            {
+                current.ForeColor = SystemColors.ControlText;
+                current.BackColor = SystemColors.Control;
+                current = null;
+            }
+            else
+            {
+                current.BackColor = SystemColors.Control;
+                current.ForeColor = SystemColors.ControlText;
+                temp.BackColor = SystemColors.ControlDark;
+                temp.ForeColor = SystemColors.ControlLightLight;
+                current = temp;
+            }
         }
 
         private void link_pMain_frmSuggest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -170,6 +184,18 @@ namespace MovieOrganizer
         private void lnk_TagSearch_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             LibraryPanel.Hide();
+        }
+
+        private void link_pMain_pTaggedSearch_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MainMenuPanel.Hide();
+            NavigationPanel.Show();
+            lnk_TagSearch_LinkClicked(sender, e);
+        }
+
+        private void txt_Search_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
     }

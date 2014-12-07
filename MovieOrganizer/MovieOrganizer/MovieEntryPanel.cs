@@ -19,8 +19,8 @@ namespace MovieOrganizer
             this.ID = ID;
             MovieEntry movie = getMovie();
             
-            if(movie.PictureName !="")
-                pic_Movie_Icon.Image = Image.FromFile(DataEntryAbstract.path +movie.PictureName);
+            if(movie.PictureName !="" && File.Exists(DataEntryAbstract.path +movie.PictureName))
+                pic_Movie_Icon.Image = Image.FromFile(DataEntryAbstract.path +movie.PictureName,true);
             lnk_Name.Text = movie.Title;
         }
 
@@ -33,16 +33,9 @@ namespace MovieOrganizer
                 if(result == DialogResult.Ignore)
                 {
                     //delete movie and picture from file
-                    if (File.Exists(entry.PictureName))
+                    if (File.Exists(DataEntryAbstract.path + entry.PictureName))
                     {
-                        try
-                        {
-                            File.Delete(entry.PictureName);
-                        }
-                        catch (IOException ioe)
-                        {
-                            MessageBox.Show(ioe.Message);
-                        }
+                        //would like to delete file if possible - not required
                     }
                     MainForm.movieList.Remove(entry);
                 }

@@ -15,7 +15,7 @@ namespace MovieOrganizer
         public Details_Form(MovieEntry entry)
         {
             InitializeComponent();
-            CenterToParent();
+            CenterToScreen();
             MinimizeBox = false;
             MaximizeBox = false;
             pic_Cover.Image = Image.FromFile(DataEntryAbstract.path + entry.PictureName);
