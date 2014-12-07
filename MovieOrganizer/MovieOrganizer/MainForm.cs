@@ -16,6 +16,7 @@ namespace MovieOrganizer
     {
         public static List<MovieEntry> movieList = new List<MovieEntry>();
         private List<ToolStripMenuItem> toolItems = new List<ToolStripMenuItem>();
+        private List<String> tagList = new List<String>();
         private ToolStripMenuItem current = null;
         protected int newMovieIndex;
 
@@ -79,34 +80,83 @@ namespace MovieOrganizer
         private void ReadXML()
         {
             var reader = new XmlSerializer(typeof(List<MovieEntry>));
-            StreamReader file;
+            var tagReader = new XmlSerializer(typeof(List<String>));
+            StreamReader file = null;
+            StreamReader tags = null;
 
+            //load entries
             try
             {
                 file = new StreamReader("file.xml");
                 var list = reader.Deserialize(file);
                 movieList = (List<MovieEntry>)list;
-                file.Close();
             }
-            catch
+            catch (Exception e)
             {
-                MessageBox.Show("Error reading file");
-                return; //then there is no file or its empty and will be created/written on exit
+                
+                //MessageBox.Show("Error reading file\n" + e.Message);
+            }
+            finally
+            {
+                if (file != null)
+                    file.Close();
+            }
+
+            //load tags
+            try
+            {
+                tags = new StreamReader("tags.xml");
+                var list = tagReader.Deserialize(tags);
+                tagList = (List<String>)list;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error reading tags\n" + e.Message);
+            }
+            finally
+            {
+                if (tags != null)
+                    tags.Close();
             }
         }
 
         private void WriteXML()
         {
+            var writer = new XmlSerializer(typeof(List<MovieEntry>));
+            var tagWriter = new XmlSerializer(typeof(List<String>));
+            StreamWriter file = null;
+            StreamWriter tags = null;
+
+            //write entries
             try
             {
-                var writer = new XmlSerializer(typeof(List<MovieEntry>));
-                var file = new StreamWriter("file.xml", false);
+                file = new StreamWriter("file.xml", false);
                 writer.Serialize(file, movieList);
-                file.Close();
             }
-            catch
+            catch (Exception e)
             {
-                MessageBox.Show("Error writing to file");
+                MessageBox.Show("Error writing to file\n" + e.Message);
+            }
+            finally
+            {
+                if(file !=null)
+                    file.Close();
+            }
+
+            //write tags
+            try
+            {
+                tags = new StreamWriter("tags.xml", false);
+                tagWriter.Serialize(tags, tagList);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error writing to tags\n"+e.Message);
+            }
+            finally
+            {
+                if (tags != null)
+                    tags.Close();
             }
         }
 
