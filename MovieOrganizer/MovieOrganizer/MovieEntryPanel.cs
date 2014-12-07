@@ -17,7 +17,8 @@ namespace MovieOrganizer
         public void setMovie(int ID)
         {
             this.ID = ID;
-            MovieEntry movie = MainForm.movieList[this.ID-1];
+            MovieEntry movie = getMovie();
+            
             if(movie.PictureName !="")
                 pic_Movie_Icon.Image = Image.FromFile(DataEntryAbstract.path +movie.PictureName);
             lnk_Name.Text = movie.Title;
@@ -25,35 +26,49 @@ namespace MovieOrganizer
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            using(var form = new EditMovie(MainForm.movieList[ID-1]))
+            MovieEntry entry = getMovie();
+            using(var form = new EditMovie(entry))
             {
                 var result = form.ShowDialog();
                 if(result == DialogResult.Ignore)
                 {
                     //delete movie and picture from file
-                    MovieEntry delete = MainForm.movieList[ID - 1];
-                    if (File.Exists(delete.PictureName))
+                    if (File.Exists(entry.PictureName))
                     {
                         try
                         {
-                            File.Delete(delete.PictureName);
+                            File.Delete(entry.PictureName);
                         }
                         catch (IOException ioe)
                         {
                             MessageBox.Show(ioe.Message);
                         }
                     }
-                    MainForm.movieList.Remove(delete);
+                    MainForm.movieList.Remove(entry);
                 }
                 else if(result == DialogResult.OK)
                 {
                     //updates movie id and replaces in master list
                     form.movie.ID = ID;
-                    MainForm.movieList[ID-1] = form.movie;
+                    MainForm.movieList[MainForm.movieList.IndexOf(entry)] = form.movie;
                 }
             }
             Panel obj = (Panel)this.Parent;
             MainForm.DrawList(obj);
+        }
+
+        private MovieEntry getMovie()
+        {
+            MovieEntry temp = null;
+            foreach (var entry in MainForm.movieList)
+            {
+                if (entry.ID == ID)
+                {
+                    temp = entry;
+                    break;
+                }
+            }
+            return temp;
         }
     }
 }
