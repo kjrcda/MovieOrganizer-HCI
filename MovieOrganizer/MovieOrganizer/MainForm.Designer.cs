@@ -51,7 +51,6 @@
             this.tlStrp_RecentlyViewed = new System.Windows.Forms.ToolStripMenuItem();
             this.tlStrp_TimesWatched = new System.Windows.Forms.ToolStripMenuItem();
             this.label_panel = new System.Windows.Forms.Panel();
-            this.lbl_SortBy = new System.Windows.Forms.Label();
             this.LibraryPanel = new System.Windows.Forms.Panel();
             this.link_pMain_pLibrary = new System.Windows.Forms.LinkLabel();
             this.pic_pMain_pLibrary = new System.Windows.Forms.PictureBox();
@@ -78,6 +77,9 @@
             this.list_availableTags = new System.Windows.Forms.ListBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.lblAvailable = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_SortBy = new System.Windows.Forms.Label();
             this.LoginPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -91,6 +93,7 @@
             this.MainMenuPanel.SuspendLayout();
             this.NavigationPanel.SuspendLayout();
             this.TagPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_MovieListing
@@ -169,6 +172,7 @@
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.panel1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.menuStrip1);
             this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(121, 500);
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 87);
@@ -195,7 +199,7 @@
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(3, 18);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(111, 158);
+            this.menuStrip1.Size = new System.Drawing.Size(111, 139);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -318,17 +322,6 @@
             this.label_panel.Name = "label_panel";
             this.label_panel.Size = new System.Drawing.Size(121, 26);
             this.label_panel.TabIndex = 6;
-            // 
-            // lbl_SortBy
-            // 
-            this.lbl_SortBy.AutoSize = true;
-            this.lbl_SortBy.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lbl_SortBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SortBy.Location = new System.Drawing.Point(25, 4);
-            this.lbl_SortBy.Name = "lbl_SortBy";
-            this.lbl_SortBy.Size = new System.Drawing.Size(58, 17);
-            this.lbl_SortBy.TabIndex = 1;
-            this.lbl_SortBy.Text = "Sort By:";
             // 
             // LibraryPanel
             // 
@@ -586,7 +579,7 @@
             // 
             // btn_Delete
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(86, 452);
+            this.btn_Delete.Location = new System.Drawing.Point(86, 434);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(93, 27);
             this.btn_Delete.TabIndex = 9;
@@ -596,7 +589,7 @@
             // 
             // btn_Create
             // 
-            this.btn_Create.Location = new System.Drawing.Point(86, 420);
+            this.btn_Create.Location = new System.Drawing.Point(86, 402);
             this.btn_Create.Name = "btn_Create";
             this.btn_Create.Size = new System.Drawing.Size(93, 27);
             this.btn_Create.TabIndex = 8;
@@ -606,7 +599,7 @@
             // 
             // btn_Search
             // 
-            this.btn_Search.Location = new System.Drawing.Point(436, 452);
+            this.btn_Search.Location = new System.Drawing.Point(436, 434);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(79, 27);
             this.btn_Search.TabIndex = 7;
@@ -617,14 +610,14 @@
             // list_ToSearch
             // 
             this.list_ToSearch.FormattingEnabled = true;
-            this.list_ToSearch.Location = new System.Drawing.Point(353, 144);
+            this.list_ToSearch.Location = new System.Drawing.Point(353, 126);
             this.list_ToSearch.Name = "list_ToSearch";
             this.list_ToSearch.Size = new System.Drawing.Size(162, 238);
             this.list_ToSearch.TabIndex = 6;
             // 
             // btn_Remove_Tag
             // 
-            this.btn_Remove_Tag.Location = new System.Drawing.Point(263, 245);
+            this.btn_Remove_Tag.Location = new System.Drawing.Point(263, 227);
             this.btn_Remove_Tag.Name = "btn_Remove_Tag";
             this.btn_Remove_Tag.Size = new System.Drawing.Size(75, 23);
             this.btn_Remove_Tag.TabIndex = 5;
@@ -634,7 +627,7 @@
             // 
             // btn_Add_Tag
             // 
-            this.btn_Add_Tag.Location = new System.Drawing.Point(263, 205);
+            this.btn_Add_Tag.Location = new System.Drawing.Point(263, 187);
             this.btn_Add_Tag.Name = "btn_Add_Tag";
             this.btn_Add_Tag.Size = new System.Drawing.Size(75, 23);
             this.btn_Add_Tag.TabIndex = 4;
@@ -645,7 +638,7 @@
             // list_availableTags
             // 
             this.list_availableTags.FormattingEnabled = true;
-            this.list_availableTags.Location = new System.Drawing.Point(86, 144);
+            this.list_availableTags.Location = new System.Drawing.Point(86, 126);
             this.list_availableTags.Name = "list_availableTags";
             this.list_availableTags.Size = new System.Drawing.Size(162, 238);
             this.list_availableTags.TabIndex = 3;
@@ -654,7 +647,7 @@
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(349, 106);
+            this.lblSearch.Location = new System.Drawing.Point(349, 88);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(137, 24);
             this.lblSearch.TabIndex = 2;
@@ -664,11 +657,46 @@
             // 
             this.lblAvailable.AutoSize = true;
             this.lblAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvailable.Location = new System.Drawing.Point(82, 106);
+            this.lblAvailable.Location = new System.Drawing.Point(82, 88);
             this.lblAvailable.Name = "lblAvailable";
             this.lblAvailable.Size = new System.Drawing.Size(133, 24);
             this.lblAvailable.TabIndex = 1;
             this.lblAvailable.Text = "Available Tags";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(-1, 181);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(121, 26);
+            this.panel1.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "My Lists";
+            // 
+            // lbl_SortBy
+            // 
+            this.lbl_SortBy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_SortBy.AutoSize = true;
+            this.lbl_SortBy.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lbl_SortBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SortBy.Location = new System.Drawing.Point(32, 4);
+            this.lbl_SortBy.Name = "lbl_SortBy";
+            this.lbl_SortBy.Size = new System.Drawing.Size(54, 17);
+            this.lbl_SortBy.TabIndex = 2;
+            this.lbl_SortBy.Text = "Sort By";
             // 
             // MainForm
             // 
@@ -705,6 +733,8 @@
             this.NavigationPanel.PerformLayout();
             this.TagPanel.ResumeLayout(false);
             this.TagPanel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -726,7 +756,6 @@
         private System.Windows.Forms.ToolStripMenuItem tlStrp_RecentlyViewed;
         private System.Windows.Forms.ToolStripMenuItem tlStrp_TimesWatched;
         private System.Windows.Forms.Panel label_panel;
-        private System.Windows.Forms.Label lbl_SortBy;
         private System.Windows.Forms.Panel LibraryPanel;
         private System.Windows.Forms.LinkLabel link_pMain_pLibrary;
         private System.Windows.Forms.PictureBox pic_pMain_pLibrary;
@@ -761,6 +790,9 @@
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Button btn_Create;
         private System.Windows.Forms.Button btn_Remove_Tag;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_SortBy;
     }
 }
 

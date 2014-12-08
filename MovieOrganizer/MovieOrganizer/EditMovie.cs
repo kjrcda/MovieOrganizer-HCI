@@ -37,16 +37,19 @@ namespace MovieOrganizer
 
         protected override void btn_Save_Movie_Click(object sender, EventArgs e)
         {
-            movie.Title = txt_MovieTitle.Text;
-            movie.Year = Convert.ToInt32(txt_Year.Text);
-            movie.Director = txt_Director.Text;
-            movie.Actors = txt_Actors.Text;
-            movie.Rate = (Rating)cmb_Rating.SelectedValue;
-            movie.Description = txt_Description.Text;
-            movie.Genre = txt_Genre.Text;
-            movie.Tags = txt_Tags.Text;
-            movie.PictureName = picPresent ? getFilename() : Path.GetFileName(picName);
-            base.btn_Save_Movie_Click(sender, e);
+            if (base.Validate())
+            {
+                movie.Title = txt_MovieTitle.Text;
+                movie.Year = Convert.ToInt32(txt_Year.Text);
+                movie.Director = txt_Director.Text;
+                movie.Actors = txt_Actors.Text;
+                movie.Rate = (Rating)cmb_Rating.SelectedValue;
+                movie.Description = txt_Description.Text;
+                movie.Genre = txt_Genre.Text;
+                movie.Tags = txt_Tags.Text;
+                movie.PictureName = picPresent ? getFilename() : Path.GetFileName(picName);
+                base.btn_Save_Movie_Click(sender, e);
+            }
         }
 
     }

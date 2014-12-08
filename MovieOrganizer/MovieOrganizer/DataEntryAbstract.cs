@@ -84,5 +84,34 @@ namespace MovieOrganizer
             }
             return extractedName;
         }
+
+        protected bool Validate()
+        {
+            bool valid = true;
+            if (txt_Year.Text == "")
+                txt_Year.Text = "0";
+            try
+            {
+                int year = Convert.ToInt32(txt_Year.Text);
+                if (year > 2200)
+                {
+                    MessageBox.Show("Year field is too high");
+                    valid = false;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("You must enter a number into the Year field");
+                valid = false;
+            }
+
+            if (txt_MovieTitle.Text == "")
+            {
+                MessageBox.Show("Movie Title field must not be blank");
+                valid = false;
+            }
+
+            return valid;
+        }
     }
 }

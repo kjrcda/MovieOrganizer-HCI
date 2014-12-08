@@ -22,8 +22,15 @@ namespace MovieOrganizer
         private void btn_OK_Click(object sender, EventArgs e)
         {
             newTag = txt_New_Tag.Text;
-            DialogResult = DialogResult.OK;
-            Dispose();
+            if (newTag != "")
+            {
+                DialogResult = DialogResult.OK;
+                Dispose();
+            }
+            else
+            {
+                MessageBox.Show("Cannot add a blank Tag");
+            }
         }
     }
 }
