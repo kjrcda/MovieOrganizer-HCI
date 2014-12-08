@@ -80,6 +80,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_SortBy = new System.Windows.Forms.Label();
+            this.lnk_WatchNext = new System.Windows.Forms.LinkLabel();
+            this.lnk_Give = new System.Windows.Forms.LinkLabel();
+            this.lnk_Wishlist = new System.Windows.Forms.LinkLabel();
             this.LoginPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -172,6 +175,9 @@
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.lnk_Wishlist);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.lnk_Give);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.lnk_WatchNext);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.panel1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.menuStrip1);
             this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(121, 500);
@@ -698,6 +704,61 @@
             this.lbl_SortBy.TabIndex = 2;
             this.lbl_SortBy.Text = "Sort By";
             // 
+            // lnk_WatchNext
+            // 
+            this.lnk_WatchNext.ActiveLinkColor = System.Drawing.Color.Black;
+            this.lnk_WatchNext.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnk_WatchNext.AutoSize = true;
+            this.lnk_WatchNext.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnk_WatchNext.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnk_WatchNext.LinkColor = System.Drawing.Color.Black;
+            this.lnk_WatchNext.Location = new System.Drawing.Point(16, 233);
+            this.lnk_WatchNext.Name = "lnk_WatchNext";
+            this.lnk_WatchNext.Size = new System.Drawing.Size(86, 16);
+            this.lnk_WatchNext.TabIndex = 8;
+            this.lnk_WatchNext.TabStop = true;
+            this.lnk_WatchNext.Text = "Watch Next";
+            this.lnk_WatchNext.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnk_WatchNext.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_WatchNext_LinkClicked);
+            // 
+            // lnk_Give
+            // 
+            this.lnk_Give.ActiveLinkColor = System.Drawing.Color.Black;
+            this.lnk_Give.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnk_Give.AutoSize = true;
+            this.lnk_Give.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnk_Give.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnk_Give.LinkColor = System.Drawing.Color.Black;
+            this.lnk_Give.Location = new System.Drawing.Point(16, 252);
+            this.lnk_Give.Name = "lnk_Give";
+            this.lnk_Give.Size = new System.Drawing.Size(81, 16);
+            this.lnk_Give.TabIndex = 9;
+            this.lnk_Give.TabStop = true;
+            this.lnk_Give.Text = "Gift Movies";
+            this.lnk_Give.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lnk_Wishlist
+            // 
+            this.lnk_Wishlist.ActiveLinkColor = System.Drawing.Color.Black;
+            this.lnk_Wishlist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnk_Wishlist.AutoSize = true;
+            this.lnk_Wishlist.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnk_Wishlist.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnk_Wishlist.LinkColor = System.Drawing.Color.Black;
+            this.lnk_Wishlist.Location = new System.Drawing.Point(16, 268);
+            this.lnk_Wishlist.Name = "lnk_Wishlist";
+            this.lnk_Wishlist.Size = new System.Drawing.Size(82, 16);
+            this.lnk_Wishlist.TabIndex = 10;
+            this.lnk_Wishlist.TabStop = true;
+            this.lnk_Wishlist.Text = "My Wishlist";
+            this.lnk_Wishlist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -793,6 +854,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_SortBy;
+        private System.Windows.Forms.LinkLabel lnk_Wishlist;
+        private System.Windows.Forms.LinkLabel lnk_Give;
+        private System.Windows.Forms.LinkLabel lnk_WatchNext;
     }
 }
 

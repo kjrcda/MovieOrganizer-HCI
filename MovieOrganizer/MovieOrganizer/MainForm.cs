@@ -18,6 +18,7 @@ namespace MovieOrganizer
         private List<ToolStripMenuItem> toolItems = new List<ToolStripMenuItem>();
         private List<String> tagList = new List<String>();
         private List<String> tagSelected = new List<String>();
+        private List<List<MovieEntry>> userList = new List<List<MovieEntry>>(3);
         private ToolStripMenuItem current = null;
         protected int newMovieIndex;
 
@@ -83,8 +84,10 @@ namespace MovieOrganizer
         {
             var reader = new XmlSerializer(typeof(List<MovieEntry>));
             var tagReader = new XmlSerializer(typeof(List<String>));
+            var listReader = new XmlSerializer(typeof(List<List<MovieEntry>>));
             StreamReader file = null;
             StreamReader tags = null;
+            StreamReader lists = null;
 
             //load entries
             try
@@ -127,14 +130,37 @@ namespace MovieOrganizer
                 if (tags != null)
                     tags.Close();
             }
+
+            //load lists
+            try
+            {
+                lists = new StreamReader("lists.xml");
+                var list = listReader.Deserialize(lists);
+                userList = (List<List<MovieEntry>>)list;
+            }
+            catch (FileNotFoundException fnfe)
+            {
+                //keep going the file hasnt been created yet
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error reading lists\n" + e.Message);
+            }
+            finally
+            {
+                if (lists != null)
+                    lists.Close();
+            }
         }
 
         private void WriteXML()
         {
             var writer = new XmlSerializer(typeof(List<MovieEntry>));
             var tagWriter = new XmlSerializer(typeof(List<String>));
+            var listWriter = new XmlSerializer(typeof(List<List<MovieEntry>>));
             StreamWriter file = null;
             StreamWriter tags = null;
+            StreamWriter lists = null;
 
             //write entries
             try
@@ -166,6 +192,22 @@ namespace MovieOrganizer
             {
                 if (tags != null)
                     tags.Close();
+            }
+
+            //write lists
+            try
+            {
+                lists = new StreamWriter("lists.xml", false);
+                listWriter.Serialize(lists, userList);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error writing to lists\n" + e.Message);
+            }
+            finally
+            {
+                if (lists != null)
+                    lists.Close();
             }
         }
 
@@ -476,6 +518,11 @@ namespace MovieOrganizer
             }
             TagPanel.Hide();
             LibraryPanel.Show();
+        }
+
+        private void lnk_WatchNext_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }
