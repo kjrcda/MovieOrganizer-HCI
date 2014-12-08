@@ -220,7 +220,6 @@ namespace MovieOrganizer
             {
                 currentList.LinkColor = SystemColors.ControlText;
                 currentList.BackColor = SystemColors.Control;
-                currentList = null;
             }
 
             ToolStripMenuItem temp = (ToolStripMenuItem)sender;
@@ -550,12 +549,11 @@ namespace MovieOrganizer
         private void ListLink_Clicked(object sender, int list)
         {
             var temp = (LinkLabel)sender;
-            tlStrp_Click(current, new EventArgs());
             currentList = temp;
             temp.LinkColor = SystemColors.ControlLightLight;
             temp.BackColor = SystemColors.ControlDark; 
             DrawList(panel_MovieListing, userList[list]);
-            
+            tlStrp_Click(current, new EventArgs());
         }
 
         private void MainForm_Load(object sender, EventArgs e)
