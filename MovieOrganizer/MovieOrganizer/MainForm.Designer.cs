@@ -768,12 +768,13 @@
             this.ClientSize = new System.Drawing.Size(609, 613);
             this.Controls.Add(this.NavigationPanel);
             this.Controls.Add(this.LoginPanel);
+            this.Controls.Add(this.TagPanel);
             this.Controls.Add(this.LibraryPanel);
             this.Controls.Add(this.MainMenuPanel);
-            this.Controls.Add(this.TagPanel);
             this.MinimumSize = new System.Drawing.Size(400, 250);
             this.Name = "MainForm";
             this.Text = "Movie Organizer";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
             this.toolStripContainer1.ContentPanel.ResumeLayout(false);

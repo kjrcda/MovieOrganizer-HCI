@@ -282,6 +282,7 @@
             this.MinimumSize = new System.Drawing.Size(558, 478);
             this.Name = "DataEntryAbstract";
             this.Text = "DataEntryAbstract";
+            this.Load += new System.EventHandler(this.DataEntryAbstract_Load);
             this.DataEntryPanel.ResumeLayout(false);
             this.DataEntryPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_EditMovieImage)).EndInit();

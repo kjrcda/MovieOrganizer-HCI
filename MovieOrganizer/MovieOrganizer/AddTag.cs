@@ -32,5 +32,17 @@ namespace MovieOrganizer
                 MessageBox.Show("Cannot add a blank Tag");
             }
         }
+
+        private void AddTag_Load(object sender, EventArgs e)
+        {
+            ToolTip TagTip = new ToolTip();
+            TagTip.AutoPopDelay = 5000;
+            TagTip.InitialDelay = 1200;
+            TagTip.ReshowDelay = 500;
+
+            TagTip.ShowAlways = true;
+
+            TagTip.SetToolTip(txt_New_Tag, "Enter a tag name to create. Must not be empty.");
+        }
     }
 }

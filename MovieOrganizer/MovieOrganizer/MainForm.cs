@@ -555,5 +555,27 @@ namespace MovieOrganizer
             DrawList(panel_MovieListing, userList[list]);
             tlStrp_Click(current, new EventArgs());
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            ToolTip tip = new ToolTip();
+            tip.AutoPopDelay = 5000;
+            tip.InitialDelay = 1200;
+            tip.ReshowDelay = 500;
+
+            tip.ShowAlways = true;
+
+            tip.SetToolTip(txt_Search, "Enter the words you want to search for here. You can filter by the criterion on the left.");
+            tip.SetToolTip(lnk_AddMovie, "Add a movie to your library");
+            tip.SetToolTip(lnk_Library, "Go and view your movie library");
+            tip.SetToolTip(lnk_Suggest, "Get a suggestion for a movie to watch");
+            tip.SetToolTip(lnk_TagSearch, "Perform an advanced search here");
+            tip.SetToolTip(link_pMain_pDataEntry, "Add a movie to your library");
+            tip.SetToolTip(link_pMain_pLibrary, "Go and view your movie library");
+            tip.SetToolTip(link_pMain_frmSuggest, "Get a suggestion for a movie to watch");
+            tip.SetToolTip(link_pMain_pTaggedSearch, "Perform an advanced search here");
+            tip.SetToolTip(list_availableTags, "These are the available tags to filter search by");
+            tip.SetToolTip(list_ToSearch, "These are the tags you have selected to search by");
+        }
     }
 }

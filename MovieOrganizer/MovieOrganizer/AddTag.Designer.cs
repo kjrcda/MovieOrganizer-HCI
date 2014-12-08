@@ -71,6 +71,7 @@
             this.Controls.Add(this.txt_New_Tag);
             this.Name = "AddTag";
             this.Text = "AddTag";
+            this.Load += new System.EventHandler(this.AddTag_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

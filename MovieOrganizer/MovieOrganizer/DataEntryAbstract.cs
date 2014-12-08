@@ -113,5 +113,24 @@ namespace MovieOrganizer
 
             return valid;
         }
+
+        private void DataEntryAbstract_Load(object sender, EventArgs e)
+        {
+            ToolTip entryTag = new ToolTip();
+            entryTag.AutoPopDelay = 5000;
+            entryTag.InitialDelay = 1200;
+            entryTag.ReshowDelay = 500;
+
+            entryTag.ShowAlways = true;
+
+            entryTag.SetToolTip(txt_MovieTitle, "Enter the movie title");
+            entryTag.SetToolTip(txt_Genre, "Enter the genre of the movie");
+            entryTag.SetToolTip(txt_Actors, "Enter some of the actors in the movie");
+            entryTag.SetToolTip(txt_Director, "Enter the movie director");
+            entryTag.SetToolTip(txt_Year, "Enter the year of the movie as a number");
+            entryTag.SetToolTip(txt_Description, "Enter a description of the movie");
+            entryTag.SetToolTip(txt_Tags, "Enter custom words you wish to add to the movie as tags");
+            entryTag.SetToolTip(pic_EditMovieImage, "Click the upload button to select a movie cover image");
+        }
     }
 }
