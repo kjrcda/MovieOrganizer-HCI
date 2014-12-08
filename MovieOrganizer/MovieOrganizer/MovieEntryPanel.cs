@@ -117,6 +117,7 @@ namespace MovieOrganizer
             if (listNum >= 0)
                 MainForm.userList[listNum].Remove(ID);
             DrawList();
+            MainForm.currentList = null;
         }
 
         private void DrawList()
