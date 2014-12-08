@@ -740,6 +740,7 @@
             this.lnk_Give.TabStop = true;
             this.lnk_Give.Text = "Gift Movies";
             this.lnk_Give.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnk_Give.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_Give_LinkClicked);
             // 
             // lnk_Wishlist
             // 
@@ -751,13 +752,14 @@
             this.lnk_Wishlist.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnk_Wishlist.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnk_Wishlist.LinkColor = System.Drawing.Color.Black;
-            this.lnk_Wishlist.Location = new System.Drawing.Point(16, 268);
+            this.lnk_Wishlist.Location = new System.Drawing.Point(16, 270);
             this.lnk_Wishlist.Name = "lnk_Wishlist";
             this.lnk_Wishlist.Size = new System.Drawing.Size(82, 16);
             this.lnk_Wishlist.TabIndex = 10;
             this.lnk_Wishlist.TabStop = true;
             this.lnk_Wishlist.Text = "My Wishlist";
             this.lnk_Wishlist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnk_Wishlist.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_Wishlist_LinkClicked);
             // 
             // MainForm
             // 

@@ -12,6 +12,7 @@ namespace MovieOrganizer
         public MovieEntryPanel()
         {
             InitializeComponent();
+            SetRemove(false);
         }
 
         public void setMovie(int ID)
@@ -38,6 +39,12 @@ namespace MovieOrganizer
                         //would like to delete file if possible - not required
                     }
                     MainForm.movieList.Remove(entry);
+
+                    //delete from user lists too
+                    foreach (var list in MainForm.userList)
+                    {
+                        list.Remove(entry.ID);
+                    }
                 }
                 else if(result == DialogResult.OK)
                 {
@@ -46,8 +53,7 @@ namespace MovieOrganizer
                     MainForm.movieList[MainForm.movieList.IndexOf(entry)] = form.movie;
                 }
             }
-            Panel obj = (Panel)this.Parent;
-            MainForm.DrawList(obj);
+            DrawList();
         }
 
         private MovieEntry getMovie()
@@ -62,6 +68,12 @@ namespace MovieOrganizer
                 }
             }
             return temp;
+        }
+        
+        public void SetRemove(bool flag)
+        {
+            btn_Remove_from_list.Visible = flag;
+            btn_Edit.Visible = !flag;
         }
 
         private void lnk_Name_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -90,6 +102,27 @@ namespace MovieOrganizer
         private void pic_Movie_Icon_MouseLeave(object sender, EventArgs e)
         {
             Cursor = Cursors.Default;
+        }
+
+        private void btn_Remove_from_list_Click(object sender, EventArgs e)
+        {
+            var list = MainForm.currentList.Text;
+            int listNum = -1;
+            if (list == "Watch Next")
+                listNum=0;
+            if (list == "Gift Movies")
+                listNum = 1;
+            if (list == "My Wishlist")
+                listNum = 2;
+            if (listNum >= 0)
+                MainForm.userList[listNum].Remove(ID);
+            DrawList();
+        }
+
+        private void DrawList()
+        {
+            Panel obj = (Panel)this.Parent;
+            MainForm.DrawList(obj);
         }
     }
 }

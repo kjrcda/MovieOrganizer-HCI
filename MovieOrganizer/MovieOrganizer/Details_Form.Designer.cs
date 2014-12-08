@@ -45,6 +45,9 @@
             this.lbl_Actors = new System.Windows.Forms.Label();
             this.lbl_Tags = new System.Windows.Forms.Label();
             this.btn_cancel = new System.Windows.Forms.Button();
+            this.btn_Wish = new System.Windows.Forms.Button();
+            this.btn_Gift = new System.Windows.Forms.Button();
+            this.btn_Watch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Cover)).BeginInit();
             this.SuspendLayout();
             // 
@@ -219,7 +222,7 @@
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(358, 495);
+            this.btn_cancel.Location = new System.Drawing.Point(361, 515);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(90, 32);
             this.btn_cancel.TabIndex = 43;
@@ -227,11 +230,44 @@
             this.btn_cancel.UseVisualStyleBackColor = true;
             this.btn_cancel.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btn_Wish
+            // 
+            this.btn_Wish.Location = new System.Drawing.Point(34, 501);
+            this.btn_Wish.Name = "btn_Wish";
+            this.btn_Wish.Size = new System.Drawing.Size(74, 46);
+            this.btn_Wish.TabIndex = 44;
+            this.btn_Wish.Text = "Add to My Wishlist";
+            this.btn_Wish.UseVisualStyleBackColor = true;
+            this.btn_Wish.Click += new System.EventHandler(this.btn_Wish_Click);
+            // 
+            // btn_Gift
+            // 
+            this.btn_Gift.Location = new System.Drawing.Point(114, 501);
+            this.btn_Gift.Name = "btn_Gift";
+            this.btn_Gift.Size = new System.Drawing.Size(74, 46);
+            this.btn_Gift.TabIndex = 45;
+            this.btn_Gift.Text = "Add to Gift Movies";
+            this.btn_Gift.UseVisualStyleBackColor = true;
+            this.btn_Gift.Click += new System.EventHandler(this.btn_Gift_Click);
+            // 
+            // btn_Watch
+            // 
+            this.btn_Watch.Location = new System.Drawing.Point(194, 501);
+            this.btn_Watch.Name = "btn_Watch";
+            this.btn_Watch.Size = new System.Drawing.Size(74, 46);
+            this.btn_Watch.TabIndex = 46;
+            this.btn_Watch.Text = "Add to Watch Next";
+            this.btn_Watch.UseVisualStyleBackColor = true;
+            this.btn_Watch.Click += new System.EventHandler(this.btn_Watch_Click);
+            // 
             // Details_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 539);
+            this.ClientSize = new System.Drawing.Size(482, 568);
+            this.Controls.Add(this.btn_Watch);
+            this.Controls.Add(this.btn_Gift);
+            this.Controls.Add(this.btn_Wish);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.lbl_Tags);
             this.Controls.Add(this.lbl_Actors);
@@ -249,8 +285,8 @@
             this.Controls.Add(this.lbl_label);
             this.Controls.Add(this.lbl_Movie_Title);
             this.Controls.Add(this.pic_Cover);
-            this.MaximumSize = new System.Drawing.Size(498, 578);
-            this.MinimumSize = new System.Drawing.Size(498, 578);
+            this.MaximumSize = new System.Drawing.Size(498, 607);
+            this.MinimumSize = new System.Drawing.Size(498, 607);
             this.Name = "Details_Form";
             this.Text = "Movie Details";
             ((System.ComponentModel.ISupportInitialize)(this.pic_Cover)).EndInit();
@@ -278,6 +314,9 @@
         private System.Windows.Forms.Label lbl_Actors;
         private System.Windows.Forms.Label lbl_Tags;
         private System.Windows.Forms.Button btn_cancel;
+        private System.Windows.Forms.Button btn_Wish;
+        private System.Windows.Forms.Button btn_Gift;
+        private System.Windows.Forms.Button btn_Watch;
 
 
     }

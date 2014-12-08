@@ -31,6 +31,7 @@
             this.pic_Movie_Icon = new System.Windows.Forms.PictureBox();
             this.lnk_Name = new System.Windows.Forms.LinkLabel();
             this.btn_Edit = new System.Windows.Forms.Button();
+            this.btn_Remove_from_list = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Movie_Icon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,11 +72,22 @@
             this.btn_Edit.UseVisualStyleBackColor = true;
             this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
+            // btn_Remove_from_list
+            // 
+            this.btn_Remove_from_list.Location = new System.Drawing.Point(141, 53);
+            this.btn_Remove_from_list.Name = "btn_Remove_from_list";
+            this.btn_Remove_from_list.Size = new System.Drawing.Size(116, 23);
+            this.btn_Remove_from_list.TabIndex = 3;
+            this.btn_Remove_from_list.Text = "Remove from List";
+            this.btn_Remove_from_list.UseVisualStyleBackColor = true;
+            this.btn_Remove_from_list.Click += new System.EventHandler(this.btn_Remove_from_list_Click);
+            // 
             // MovieEntryPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Controls.Add(this.btn_Remove_from_list);
             this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.lnk_Name);
             this.Controls.Add(this.pic_Movie_Icon);
@@ -92,5 +104,6 @@
         private System.Windows.Forms.PictureBox pic_Movie_Icon;
         private System.Windows.Forms.LinkLabel lnk_Name;
         private System.Windows.Forms.Button btn_Edit;
+        private System.Windows.Forms.Button btn_Remove_from_list;
     }
 }

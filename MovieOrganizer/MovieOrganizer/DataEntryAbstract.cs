@@ -85,7 +85,7 @@ namespace MovieOrganizer
             return extractedName;
         }
 
-        protected bool Validate()
+        protected bool ValidateInput()
         {
             bool valid = true;
             if (txt_Year.Text == "")

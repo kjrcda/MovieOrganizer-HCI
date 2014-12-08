@@ -37,7 +37,7 @@ namespace MovieOrganizer
 
         protected override void btn_Save_Movie_Click(object sender, EventArgs e)
         {
-            if (base.Validate())
+            if (base.ValidateInput())
             {
                 movie.Title = txt_MovieTitle.Text;
                 movie.Year = Convert.ToInt32(txt_Year.Text);

@@ -18,14 +18,17 @@ namespace MovieOrganizer
         private List<ToolStripMenuItem> toolItems = new List<ToolStripMenuItem>();
         private List<String> tagList = new List<String>();
         private List<String> tagSelected = new List<String>();
-        private List<List<MovieEntry>> userList = new List<List<MovieEntry>>(3);
+        public static List<List<int>> userList = new List<List<int>>(3);
         private ToolStripMenuItem current = null;
+        public static LinkLabel currentList = null;
         protected int newMovieIndex;
 
         public MainForm()
         {
             InitializeComponent();
             CenterToScreen();
+            for (int i = 0; i < 3;i++ )
+                userList.Add(new List<int>());
             ReadXML();
             if (movieList.Count == 0)
                 newMovieIndex = 1;
@@ -84,7 +87,7 @@ namespace MovieOrganizer
         {
             var reader = new XmlSerializer(typeof(List<MovieEntry>));
             var tagReader = new XmlSerializer(typeof(List<String>));
-            var listReader = new XmlSerializer(typeof(List<List<MovieEntry>>));
+            var listReader = new XmlSerializer(typeof(List<List<int>>));
             StreamReader file = null;
             StreamReader tags = null;
             StreamReader lists = null;
@@ -136,7 +139,7 @@ namespace MovieOrganizer
             {
                 lists = new StreamReader("lists.xml");
                 var list = listReader.Deserialize(lists);
-                userList = (List<List<MovieEntry>>)list;
+                userList = (List<List<int>>)list;
             }
             catch (FileNotFoundException fnfe)
             {
@@ -157,7 +160,7 @@ namespace MovieOrganizer
         {
             var writer = new XmlSerializer(typeof(List<MovieEntry>));
             var tagWriter = new XmlSerializer(typeof(List<String>));
-            var listWriter = new XmlSerializer(typeof(List<List<MovieEntry>>));
+            var listWriter = new XmlSerializer(typeof(List<List<int>>));
             StreamWriter file = null;
             StreamWriter tags = null;
             StreamWriter lists = null;
@@ -213,6 +216,12 @@ namespace MovieOrganizer
 
         private void tlStrp_Click(object sender, EventArgs e)
         {
+            if (currentList != null)
+            {
+                currentList.LinkColor = SystemColors.ControlText;
+                currentList.BackColor = SystemColors.Control;
+            }
+
             ToolStripMenuItem temp = (ToolStripMenuItem)sender;
             if (temp == tlStrp_Rating || current == temp)
             {
@@ -300,6 +309,8 @@ namespace MovieOrganizer
                 entry.Size = new System.Drawing.Size(465, 105);
                 entry.TabIndex = 12;
                 entry.setMovie(item);
+                if (currentList != null)
+                    entry.SetRemove(true);
                 pan.Controls.Add(entry);
                 pos += 105;
             }
@@ -522,7 +533,27 @@ namespace MovieOrganizer
 
         private void lnk_WatchNext_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            ListLink_Clicked(sender, 0);
+        }
 
+        private void lnk_Give_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ListLink_Clicked(sender, 1);
+        }
+
+        private void lnk_Wishlist_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ListLink_Clicked(sender, 2);
+        }
+
+        private void ListLink_Clicked(object sender, int list)
+        {
+            var temp = (LinkLabel)sender;
+            currentList = temp;
+            temp.LinkColor = SystemColors.ControlLightLight;
+            temp.BackColor = SystemColors.ControlDark; 
+            DrawList(panel_MovieListing, userList[list]);
+            tlStrp_Click(current, new EventArgs());
         }
     }
 }
