@@ -35,24 +35,24 @@ namespace MovieOrganizer
             else
                 newMovieIndex = movieList[movieList.Count - 1].ID + 1;
 
-            toolItems.Add(tlStrp_Genre);
-            toolItems.Add(tlStrp_Director);
-            toolItems.Add(tlStrp_Actor);
-            toolItems.Add(tlStrp_Rating);
-            toolItems.Add(tlStrp_RecentlyViewed);
-            toolItems.Add(tlStrp_TimesWatched);
-            toolItems.Add(tlStrp_Year);
+            toolItems.Add(tlsGenre);
+            toolItems.Add(tlsDirector);
+            toolItems.Add(tlsActor);
+            toolItems.Add(tlsRating);
+            toolItems.Add(tlsRecentlyViewed);
+            toolItems.Add(tlsTimesWatched);
+            toolItems.Add(tlsYear);
 
             TagPanel.Hide();
             LibraryPanel.Hide();
             LoginPanel.Show();
             MainMenuPanel.Show();
             NavigationPanel.Hide();
-            DrawList(panel_MovieListing);
+            DrawList(MovieListingPanel);
             UpdateTags();
         }
 
-        private void link_pMain_pLibrary_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lnkMainLibrary_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             TagPanel.Hide();
             MainMenuPanel.Hide();
@@ -60,7 +60,7 @@ namespace MovieOrganizer
             NavigationPanel.Show();
         }
 
-        private void link_pMain_pDataEntry_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lnkMainDataEntry_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             using (var form = new AddMovie())
             {
@@ -70,10 +70,10 @@ namespace MovieOrganizer
                     var record = form.movie;
                     record.ID = newMovieIndex++;
                     movieList.Add(record);
-                    link_pMain_pLibrary_LinkClicked(sender, e);
+                    lnkMainLibrary_LinkClicked(sender, e);
                 }
             }
-            DrawList(panel_MovieListing);
+            DrawList(MovieListingPanel);
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -99,7 +99,7 @@ namespace MovieOrganizer
                 var list = reader.Deserialize(file);
                 movieList = (List<MovieEntry>)list;
             }
-            catch (FileNotFoundException fnfe)
+            catch (FileNotFoundException)
             {
                 //keep going the file hasnt been created yet
             }
@@ -120,7 +120,7 @@ namespace MovieOrganizer
                 var list = tagReader.Deserialize(tags);
                 tagList = (List<String>)list;
             }
-            catch (FileNotFoundException fnfe)
+            catch (FileNotFoundException)
             {
                 //keep going the file hasnt been created yet
             }
@@ -141,7 +141,7 @@ namespace MovieOrganizer
                 var list = listReader.Deserialize(lists);
                 userList = (List<List<int>>)list;
             }
-            catch (FileNotFoundException fnfe)
+            catch (FileNotFoundException)
             {
                 //keep going the file hasnt been created yet
             }
@@ -224,7 +224,7 @@ namespace MovieOrganizer
             }
 
             ToolStripMenuItem temp = (ToolStripMenuItem)sender;
-            if (temp == tlStrp_Rating || current == temp)
+            if (temp == tlsRating || current == temp)
             {
                 if (current != null)
                 {
@@ -250,9 +250,9 @@ namespace MovieOrganizer
             }
         }
 
-        private void link_pMain_frmSuggest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lnkMainSuggest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            using (var form = new Suggest_Modal())
+            using (var form = new SuggestModal())
             {
                 var result = form.ShowDialog();
                 if (result == DialogResult.OK)
@@ -277,11 +277,11 @@ namespace MovieOrganizer
                                 break;
                         }
 
-                        DrawList(panel_MovieListing, toShow);
+                        DrawList(MovieListingPanel, toShow);
                     }
                     else
                         MessageBox.Show("You have not watched any movies recently");
-                    link_pMain_pLibrary_LinkClicked(sender, e);
+                    lnkMainLibrary_LinkClicked(sender, e);
                 }
             }
         }
@@ -317,17 +317,7 @@ namespace MovieOrganizer
             }
         }
 
-        private void lnk_AddMovie_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            link_pMain_pDataEntry_LinkClicked(sender, e);
-        }
-
-        private void lnk_Suggest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            link_pMain_frmSuggest_LinkClicked(sender, e);
-        }
-
-        private void lnk_Library_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lnkLibrary_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (!LibraryPanel.Visible)
             {
@@ -336,7 +326,7 @@ namespace MovieOrganizer
             }
         }
 
-        private void lnk_TagSearch_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lnkTaggedSearch_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (!TagPanel.Visible)
             {
@@ -345,19 +335,19 @@ namespace MovieOrganizer
             }
         }
 
-        private void link_pMain_pTaggedSearch_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lnkMainTaggedSearch_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MainMenuPanel.Hide();
             NavigationPanel.Show();
-            lnk_TagSearch_LinkClicked(sender, e);
+            lnkTaggedSearch_LinkClicked(sender, e);
         }
 
-        private void txt_Search_TextChanged(object sender, EventArgs e)
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             String txtInput = ((TextBox)sender).Text;
             if (txtInput.Length == 0)
             {
-                DrawList(panel_MovieListing);
+                DrawList(MovieListingPanel);
                 return;
             }
 
@@ -370,7 +360,7 @@ namespace MovieOrganizer
                         toShow.Add(item.ID);
                 }
             }
-            else if (current == tlStrp_Genre)
+            else if (current == tlsGenre)
             {
                 foreach (var item in movieList)
                 {
@@ -378,7 +368,7 @@ namespace MovieOrganizer
                         toShow.Add(item.ID);
                 }
             }
-            else if (current == tlStrp_Actor)
+            else if (current == tlsActor)
             {
                 foreach (var item in movieList)
                 {
@@ -386,7 +376,7 @@ namespace MovieOrganizer
                         toShow.Add(item.ID);
                 }
             }
-            else if (current == tlStrp_Director)
+            else if (current == tlsDirector)
             {
                 foreach (var item in movieList)
                 {
@@ -394,7 +384,7 @@ namespace MovieOrganizer
                         toShow.Add(item.ID);
                 }
             }
-            else if (current == tlStrp_Year)
+            else if (current == tlsYear)
             {
                 foreach (var item in movieList)
                 {
@@ -405,42 +395,42 @@ namespace MovieOrganizer
             else
                 MessageBox.Show("Unable to Search");
 
-            DrawList(panel_MovieListing,toShow);
+            DrawList(MovieListingPanel,toShow);
         }
 
-        private void tool_5Stars_Click(object sender, EventArgs e)
+        private void tl5Stars_Click(object sender, EventArgs e)
         {
             StarSearch(Rating.Five);
         }
 
-        private void tool_4Stars_Click(object sender, EventArgs e)
+        private void tl4Stars_Click(object sender, EventArgs e)
         {
             StarSearch(Rating.Four);
         }
 
-        private void tool_3Stars_Click(object sender, EventArgs e)
+        private void tl3Stars_Click(object sender, EventArgs e)
         {
             StarSearch(Rating.Three);
         }
 
-        private void tool_2Stars_Click(object sender, EventArgs e)
+        private void tl2Stars_Click(object sender, EventArgs e)
         {
             StarSearch(Rating.Two);
         }
 
-        private void tool_1Stars_Click(object sender, EventArgs e)
+        private void tl1Stars_Click(object sender, EventArgs e)
         {
             StarSearch(Rating.One);
         }
 
-        private void tool_0Stars_Click(object sender, EventArgs e)
+        private void tl0Stars_Click(object sender, EventArgs e)
         {
             StarSearch(Rating.Zero);
         }
 
-        private void tool_AllStars_Click(object sender, EventArgs e)
+        private void tlAllStars_Click(object sender, EventArgs e)
         {
-            DrawList(panel_MovieListing);
+            DrawList(MovieListingPanel);
         }
 
         private void StarSearch(Rating looking)
@@ -451,21 +441,21 @@ namespace MovieOrganizer
                 if (item.Rate == looking)
                     toShow.Add(item.ID);
             }
-            DrawList(panel_MovieListing, toShow);
+            DrawList(MovieListingPanel, toShow);
         }
 
-        private void btn_Delete_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-            if(list_availableTags.SelectedItems.Count >0)
+            if(lstTagsAvailable.SelectedItems.Count >0)
             {
-                String temp = list_availableTags.SelectedItem.ToString();
+                String temp = lstTagsAvailable.SelectedItem.ToString();
                 tagList.Remove(temp);
                 tagSelected.Remove(temp);
                 UpdateTags();
             }
         }
 
-        private void btn_Create_Click(object sender, EventArgs e)
+        private void btnCreate_Click(object sender, EventArgs e)
         {
             using(var form = new AddTag())
             {
@@ -480,18 +470,18 @@ namespace MovieOrganizer
 
         public void UpdateTags()
         {
-            list_availableTags.Items.Clear();
-            list_availableTags.Items.AddRange(tagList.ToArray());
+            lstTagsAvailable.Items.Clear();
+            lstTagsAvailable.Items.AddRange(tagList.ToArray());
 
-            list_ToSearch.Items.Clear();
-            list_ToSearch.Items.AddRange(tagSelected.ToArray());
+            lstToSearch.Items.Clear();
+            lstToSearch.Items.AddRange(tagSelected.ToArray());
         }
 
-        private void btn_Add_Tag_Click(object sender, EventArgs e)
+        private void btnAddTag_Click(object sender, EventArgs e)
         {
-            if(list_availableTags.SelectedItems.Count >0)
+            if(lstTagsAvailable.SelectedItems.Count >0)
             {
-                String temp = list_availableTags.SelectedItem.ToString();
+                String temp = lstTagsAvailable.SelectedItem.ToString();
                 if(!tagSelected.Contains(temp))
                 {
                     tagSelected.Add(temp);
@@ -500,20 +490,20 @@ namespace MovieOrganizer
             }
         }
 
-        private void btn_Remove_Tag_Click(object sender, EventArgs e)
+        private void btnRemoveTag_Click(object sender, EventArgs e)
         {
-            if (list_ToSearch.SelectedItems.Count > 0)
+            if (lstToSearch.SelectedItems.Count > 0)
             {
-                tagSelected.Remove(list_ToSearch.SelectedItem.ToString());
+                tagSelected.Remove(lstToSearch.SelectedItem.ToString());
                 UpdateTags();
             }
         }
 
-        private void btn_Search_Click(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
             if (tagSelected.Count == 0)
             {
-                DrawList(panel_MovieListing);
+                DrawList(MovieListingPanel);
             }
             else
             {
@@ -526,23 +516,23 @@ namespace MovieOrganizer
                             toShow.Add(item.ID);
                     }
                 }
-                DrawList(panel_MovieListing, toShow);
+                DrawList(MovieListingPanel, toShow);
             }
             TagPanel.Hide();
             LibraryPanel.Show();
         }
 
-        private void lnk_WatchNext_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lnkWatchNext_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ListLink_Clicked(sender, 0);
         }
 
-        private void lnk_Give_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lnkGive_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ListLink_Clicked(sender, 1);
         }
 
-        private void lnk_Wishlist_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lnkWishlist_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ListLink_Clicked(sender, 2);
         }
@@ -554,7 +544,7 @@ namespace MovieOrganizer
             currentList = temp;
             temp.LinkColor = SystemColors.ControlLightLight;
             temp.BackColor = SystemColors.ControlDark; 
-            DrawList(panel_MovieListing, userList[list]);
+            DrawList(MovieListingPanel, userList[list]);
             
         }
 
@@ -567,17 +557,17 @@ namespace MovieOrganizer
 
             tip.ShowAlways = true;
 
-            tip.SetToolTip(txt_Search, "Enter the words you want to search for here. You can filter by the criterion on the left.");
-            tip.SetToolTip(lnk_AddMovie, "Add a movie to your library");
-            tip.SetToolTip(lnk_Library, "Go and view your movie library");
-            tip.SetToolTip(lnk_Suggest, "Get a suggestion for a movie to watch");
-            tip.SetToolTip(lnk_TagSearch, "Perform an advanced search here");
-            tip.SetToolTip(link_pMain_pDataEntry, "Add a movie to your library");
-            tip.SetToolTip(link_pMain_pLibrary, "Go and view your movie library");
-            tip.SetToolTip(link_pMain_frmSuggest, "Get a suggestion for a movie to watch");
-            tip.SetToolTip(link_pMain_pTaggedSearch, "Perform an advanced search here");
-            tip.SetToolTip(list_availableTags, "These are the available tags to filter search by");
-            tip.SetToolTip(list_ToSearch, "These are the tags you have selected to search by");
+            tip.SetToolTip(txtSearch, "Enter the words you want to search for here. You can filter by the criterion on the left.");
+            tip.SetToolTip(lnkAddMovie, "Add a movie to your library");
+            tip.SetToolTip(lnkLibrary, "Go and view your movie library");
+            tip.SetToolTip(lnkSuggest, "Get a suggestion for a movie to watch");
+            tip.SetToolTip(lnkTaggedSearch, "Perform an advanced search here");
+            tip.SetToolTip(lnkMainDataEntry, "Add a movie to your library");
+            tip.SetToolTip(lnkMainLibrary, "Go and view your movie library");
+            tip.SetToolTip(lnkMainSuggest, "Get a suggestion for a movie to watch");
+            tip.SetToolTip(lnkMainTaggedSearch, "Perform an advanced search here");
+            tip.SetToolTip(lstTagsAvailable, "These are the available tags to filter search by");
+            tip.SetToolTip(lstToSearch, "These are the tags you have selected to search by");
         }
     }
 }

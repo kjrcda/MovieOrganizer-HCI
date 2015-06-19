@@ -64,11 +64,11 @@
     <Compile Include="DataEntryAbstract.Designer.cs">
       <DependentUpon>DataEntryAbstract.cs</DependentUpon>
     </Compile>
-    <Compile Include="Details_Form.cs">
+    <Compile Include="DetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Details_Form.Designer.cs">
-      <DependentUpon>Details_Form.cs</DependentUpon>
+    <Compile Include="DetailsForm.Designer.cs">
+      <DependentUpon>DetailsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EditMovie.cs">
       <SubType>Form</SubType>
@@ -83,17 +83,17 @@
       <DependentUpon>MovieEntryPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="StringMatch.cs" />
-    <Compile Include="Suggest_Modal.cs">
+    <Compile Include="SuggestModal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Suggest_Modal.Designer.cs">
-      <DependentUpon>Suggest_Modal.cs</DependentUpon>
+    <Compile Include="SuggestModal.Designer.cs">
+      <DependentUpon>SuggestModal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sign_In_Form.cs">
+    <Compile Include="SignInForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sign_In_Form.Designer.cs">
-      <DependentUpon>Sign_In_Form.cs</DependentUpon>
+    <Compile Include="SignInForm.Designer.cs">
+      <DependentUpon>SignInForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -112,8 +112,8 @@
     <EmbeddedResource Include="DataEntryAbstract.resx">
       <DependentUpon>DataEntryAbstract.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Details_Form.resx">
-      <DependentUpon>Details_Form.cs</DependentUpon>
+    <EmbeddedResource Include="DetailsForm.resx">
+      <DependentUpon>DetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditMovie.resx">
       <DependentUpon>EditMovie.cs</DependentUpon>
@@ -121,8 +121,8 @@
     <EmbeddedResource Include="MovieEntryPanel.resx">
       <DependentUpon>MovieEntryPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sign_In_Form.resx">
-      <DependentUpon>Sign_In_Form.cs</DependentUpon>
+    <EmbeddedResource Include="SignInForm.resx">
+      <DependentUpon>SignInForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -136,8 +136,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Suggest_Modal.resx">
-      <DependentUpon>Suggest_Modal.cs</DependentUpon>
+    <EmbeddedResource Include="SuggestModal.resx">
+      <DependentUpon>SuggestModal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

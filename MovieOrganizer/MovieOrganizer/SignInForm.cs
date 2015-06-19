@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MovieOrganizer
 {
-    public partial class Sign_In_Form : Form
+    public partial class SignInForm : Form
     {
-        public Sign_In_Form()
+        public SignInForm()
         {
             InitializeComponent();
             CenterToScreen();

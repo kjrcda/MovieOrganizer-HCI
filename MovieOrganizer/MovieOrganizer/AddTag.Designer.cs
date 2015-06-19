@@ -28,47 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_New_Tag = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_OK = new System.Windows.Forms.Button();
+            this.txtNewTag = new System.Windows.Forms.TextBox();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.btnOK = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_New_Tag
             // 
-            this.txt_New_Tag.Location = new System.Drawing.Point(56, 59);
-            this.txt_New_Tag.Name = "txt_New_Tag";
-            this.txt_New_Tag.Size = new System.Drawing.Size(229, 20);
-            this.txt_New_Tag.TabIndex = 0;
+            this.txtNewTag.Location = new System.Drawing.Point(56, 59);
+            this.txtNewTag.Name = "txt_New_Tag";
+            this.txtNewTag.Size = new System.Drawing.Size(229, 20);
+            this.txtNewTag.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(53, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Enter the Tag word you wish to create:";
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.Location = new System.Drawing.Point(53, 31);
+            this.lblMessage.Name = "label1";
+            this.lblMessage.Size = new System.Drawing.Size(232, 16);
+            this.lblMessage.TabIndex = 1;
+            this.lblMessage.Text = "Enter the Tag word you wish to create:";
             // 
             // btn_OK
             // 
-            this.btn_OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_OK.Location = new System.Drawing.Point(126, 104);
-            this.btn_OK.Name = "btn_OK";
-            this.btn_OK.Size = new System.Drawing.Size(91, 29);
-            this.btn_OK.TabIndex = 2;
-            this.btn_OK.Text = "Create";
-            this.btn_OK.UseVisualStyleBackColor = true;
-            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
+            this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.Location = new System.Drawing.Point(126, 104);
+            this.btnOK.Name = "btn_OK";
+            this.btnOK.Size = new System.Drawing.Size(91, 29);
+            this.btnOK.TabIndex = 2;
+            this.btnOK.Text = "Create";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // AddTag
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(347, 164);
-            this.Controls.Add(this.btn_OK);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_New_Tag);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.lblMessage);
+            this.Controls.Add(this.txtNewTag);
             this.Name = "AddTag";
             this.Text = "AddTag";
             this.Load += new System.EventHandler(this.AddTag_Load);
@@ -79,8 +79,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txt_New_Tag;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_OK;
+        private System.Windows.Forms.TextBox txtNewTag;
+        private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.Button btnOK;
     }
 }

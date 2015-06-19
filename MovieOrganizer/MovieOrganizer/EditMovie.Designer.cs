@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ((System.ComponentModel.ISupportInitialize)(this.pic_EditMovieImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEditMovieImage)).BeginInit();
             this.SuspendLayout();
             // 
             // EditMovie
@@ -38,7 +38,7 @@
             this.ClientSize = new System.Drawing.Size(542, 439);
             this.Name = "EditMovie";
             this.Text = "Edit Movie";
-            ((System.ComponentModel.ISupportInitialize)(this.pic_EditMovieImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEditMovieImage)).EndInit();
             this.ResumeLayout(false);
 
         }

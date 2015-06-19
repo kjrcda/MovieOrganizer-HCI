@@ -21,11 +21,11 @@ namespace MovieOrganizer
             MovieEntry movie = getMovie();
             
             if(movie.PictureName !="" && File.Exists(DataEntryAbstract.path +movie.PictureName))
-                pic_Movie_Icon.Image = Image.FromFile(DataEntryAbstract.path +movie.PictureName,true);
-            lnk_Name.Text = movie.Title;
+                picMovieIcon.Image = Image.FromFile(DataEntryAbstract.path +movie.PictureName,true);
+            lnkName.Text = movie.Title;
         }
 
-        private void btn_Edit_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
             MovieEntry entry = getMovie();
             using(var form = new EditMovie(entry))
@@ -72,39 +72,39 @@ namespace MovieOrganizer
         
         public void SetRemove(bool flag)
         {
-            btn_Remove_from_list.Visible = flag;
-            btn_Edit.Visible = !flag;
+            btnListRemove.Visible = flag;
+            btnEdit.Visible = !flag;
         }
 
-        private void lnk_Name_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lnkName_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             OpenDetails();
         }
 
-        private void pic_Movie_Icon_Click(object sender, EventArgs e)
+        private void picMovieIcon_Click(object sender, EventArgs e)
         {
             OpenDetails();
         }
 
         private void OpenDetails()
         {
-            using (var form = new Details_Form(getMovie()))
+            using (var form = new DetailsForm(getMovie()))
             {
                 form.ShowDialog();
             }
         }
 
-        private void pic_Movie_Icon_MouseEnter(object sender, EventArgs e)
+        private void picMovieIcon_MouseEnter(object sender, EventArgs e)
         {
             Cursor = Cursors.Hand;
         }
 
-        private void pic_Movie_Icon_MouseLeave(object sender, EventArgs e)
+        private void picMovieIcon_MouseLeave(object sender, EventArgs e)
         {
             Cursor = Cursors.Default;
         }
 
-        private void btn_Remove_from_list_Click(object sender, EventArgs e)
+        private void btnListRemove_Click(object sender, EventArgs e)
         {
             var list = MainForm.currentList.Text;
             int listNum = -1;

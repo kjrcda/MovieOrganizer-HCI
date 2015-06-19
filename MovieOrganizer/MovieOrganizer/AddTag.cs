@@ -19,9 +19,9 @@ namespace MovieOrganizer
             InitializeComponent();
         }
 
-        private void btn_OK_Click(object sender, EventArgs e)
+        private void btnOK_Click(object sender, EventArgs e)
         {
-            newTag = txt_New_Tag.Text;
+            newTag = txtNewTag.Text;
             if (newTag != "")
             {
                 DialogResult = DialogResult.OK;
@@ -42,7 +42,7 @@ namespace MovieOrganizer
 
             TagTip.ShowAlways = true;
 
-            TagTip.SetToolTip(txt_New_Tag, "Enter a tag name to create. Must not be empty.");
+            TagTip.SetToolTip(txtNewTag, "Enter a tag name to create. Must not be empty.");
         }
     }
 }

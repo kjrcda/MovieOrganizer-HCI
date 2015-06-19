@@ -28,119 +28,119 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel_MovieListing = new System.Windows.Forms.Panel();
-            this.link_LOSI = new System.Windows.Forms.LinkLabel();
-            this.lbl_LOSI = new System.Windows.Forms.Label();
-            this.lbl_Username = new System.Windows.Forms.Label();
+            this.MovieListingPanel = new System.Windows.Forms.Panel();
+            this.linkLOSI = new System.Windows.Forms.LinkLabel();
+            this.lblLOSI = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
             this.LoginPanel = new System.Windows.Forms.Panel();
-            this.txt_Search = new System.Windows.Forms.TextBox();
-            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tlStrp_Genre = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlStrp_Actor = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlStrp_Director = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlStrp_Year = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlStrp_Rating = new System.Windows.Forms.ToolStripMenuItem();
-            this.tool_5Stars = new System.Windows.Forms.ToolStripMenuItem();
-            this.tool_4Stars = new System.Windows.Forms.ToolStripMenuItem();
-            this.tool_3Stars = new System.Windows.Forms.ToolStripMenuItem();
-            this.tool_2Stars = new System.Windows.Forms.ToolStripMenuItem();
-            this.tool_1Stars = new System.Windows.Forms.ToolStripMenuItem();
-            this.tool_0Stars = new System.Windows.Forms.ToolStripMenuItem();
-            this.tool_AllStars = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlStrp_RecentlyViewed = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlStrp_TimesWatched = new System.Windows.Forms.ToolStripMenuItem();
-            this.label_panel = new System.Windows.Forms.Panel();
-            this.LibraryPanel = new System.Windows.Forms.Panel();
-            this.link_pMain_pLibrary = new System.Windows.Forms.LinkLabel();
-            this.pic_pMain_pLibrary = new System.Windows.Forms.PictureBox();
-            this.link_pMain_pDataEntry = new System.Windows.Forms.LinkLabel();
-            this.pic_pMain_pDataEntry = new System.Windows.Forms.PictureBox();
-            this.pic_pMain_frmSuggest = new System.Windows.Forms.PictureBox();
-            this.pic_pMain_pTagged = new System.Windows.Forms.PictureBox();
-            this.link_pMain_frmSuggest = new System.Windows.Forms.LinkLabel();
-            this.link_pMain_pTaggedSearch = new System.Windows.Forms.LinkLabel();
-            this.lbl_WelcomeBanner = new System.Windows.Forms.Label();
-            this.MainMenuPanel = new System.Windows.Forms.Panel();
-            this.lnk_Library = new System.Windows.Forms.LinkLabel();
-            this.lnk_AddMovie = new System.Windows.Forms.LinkLabel();
-            this.lnk_Suggest = new System.Windows.Forms.LinkLabel();
-            this.lnk_TagSearch = new System.Windows.Forms.LinkLabel();
-            this.NavigationPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.TagPanel = new System.Windows.Forms.Panel();
-            this.btn_Delete = new System.Windows.Forms.Button();
-            this.btn_Create = new System.Windows.Forms.Button();
-            this.btn_Search = new System.Windows.Forms.Button();
-            this.list_ToSearch = new System.Windows.Forms.ListBox();
-            this.btn_Remove_Tag = new System.Windows.Forms.Button();
-            this.btn_Add_Tag = new System.Windows.Forms.Button();
-            this.list_availableTags = new System.Windows.Forms.ListBox();
-            this.lblSearch = new System.Windows.Forms.Label();
-            this.lblAvailable = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.tlsContainer = new System.Windows.Forms.ToolStripContainer();
+            this.lnkWishlist = new System.Windows.Forms.LinkLabel();
+            this.lnkGive = new System.Windows.Forms.LinkLabel();
+            this.lnkWatchNext = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbl_SortBy = new System.Windows.Forms.Label();
-            this.lnk_WatchNext = new System.Windows.Forms.LinkLabel();
-            this.lnk_Give = new System.Windows.Forms.LinkLabel();
-            this.lnk_Wishlist = new System.Windows.Forms.LinkLabel();
+            this.mnsStrip = new System.Windows.Forms.MenuStrip();
+            this.tlsGenre = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsActor = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsDirector = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsYear = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsRating = new System.Windows.Forms.ToolStripMenuItem();
+            this.tl5Stars = new System.Windows.Forms.ToolStripMenuItem();
+            this.tl4Stars = new System.Windows.Forms.ToolStripMenuItem();
+            this.tl3Stars = new System.Windows.Forms.ToolStripMenuItem();
+            this.tl2Stars = new System.Windows.Forms.ToolStripMenuItem();
+            this.tl1Stars = new System.Windows.Forms.ToolStripMenuItem();
+            this.tl0Stars = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlAllStars = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsRecentlyViewed = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsTimesWatched = new System.Windows.Forms.ToolStripMenuItem();
+            this.LabelPanel = new System.Windows.Forms.Panel();
+            this.lblSortBy = new System.Windows.Forms.Label();
+            this.LibraryPanel = new System.Windows.Forms.Panel();
+            this.lnkMainLibrary = new System.Windows.Forms.LinkLabel();
+            this.picMainLibrary = new System.Windows.Forms.PictureBox();
+            this.lnkMainDataEntry = new System.Windows.Forms.LinkLabel();
+            this.picMainDataEntry = new System.Windows.Forms.PictureBox();
+            this.picMainSuggest = new System.Windows.Forms.PictureBox();
+            this.picMainTaggedSearch = new System.Windows.Forms.PictureBox();
+            this.lnkMainSuggest = new System.Windows.Forms.LinkLabel();
+            this.lnkMainTaggedSearch = new System.Windows.Forms.LinkLabel();
+            this.lblWelcomeBanner = new System.Windows.Forms.Label();
+            this.MainMenuPanel = new System.Windows.Forms.Panel();
+            this.lnkLibrary = new System.Windows.Forms.LinkLabel();
+            this.lnkAddMovie = new System.Windows.Forms.LinkLabel();
+            this.lnkSuggest = new System.Windows.Forms.LinkLabel();
+            this.lnkTaggedSearch = new System.Windows.Forms.LinkLabel();
+            this.NavigationPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.TagPanel = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.lstToSearch = new System.Windows.Forms.ListBox();
+            this.btnRemoveTag = new System.Windows.Forms.Button();
+            this.btnAddTag = new System.Windows.Forms.Button();
+            this.lstTagsAvailable = new System.Windows.Forms.ListBox();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.lblAvailable = new System.Windows.Forms.Label();
             this.LoginPanel.SuspendLayout();
-            this.toolStripContainer1.ContentPanel.SuspendLayout();
-            this.toolStripContainer1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.label_panel.SuspendLayout();
+            this.tlsContainer.ContentPanel.SuspendLayout();
+            this.tlsContainer.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.mnsStrip.SuspendLayout();
+            this.LabelPanel.SuspendLayout();
             this.LibraryPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pLibrary)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pDataEntry)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_frmSuggest)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pTagged)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMainLibrary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMainDataEntry)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMainSuggest)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMainTaggedSearch)).BeginInit();
             this.MainMenuPanel.SuspendLayout();
             this.NavigationPanel.SuspendLayout();
             this.TagPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_MovieListing
             // 
-            this.panel_MovieListing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.MovieListingPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_MovieListing.AutoScroll = true;
-            this.panel_MovieListing.Location = new System.Drawing.Point(127, 113);
-            this.panel_MovieListing.Name = "panel_MovieListing";
-            this.panel_MovieListing.Size = new System.Drawing.Size(474, 499);
-            this.panel_MovieListing.TabIndex = 3;
+            this.MovieListingPanel.AutoScroll = true;
+            this.MovieListingPanel.Location = new System.Drawing.Point(127, 113);
+            this.MovieListingPanel.Name = "panel_MovieListing";
+            this.MovieListingPanel.Size = new System.Drawing.Size(474, 499);
+            this.MovieListingPanel.TabIndex = 3;
             // 
             // link_LOSI
             // 
-            this.link_LOSI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.link_LOSI.AutoSize = true;
-            this.link_LOSI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.link_LOSI.Location = new System.Drawing.Point(538, 6);
-            this.link_LOSI.Name = "link_LOSI";
-            this.link_LOSI.Size = new System.Drawing.Size(59, 17);
-            this.link_LOSI.TabIndex = 0;
-            this.link_LOSI.TabStop = true;
-            this.link_LOSI.Text = "Log Out";
+            this.linkLOSI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLOSI.AutoSize = true;
+            this.linkLOSI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLOSI.Location = new System.Drawing.Point(538, 6);
+            this.linkLOSI.Name = "link_LOSI";
+            this.linkLOSI.Size = new System.Drawing.Size(59, 17);
+            this.linkLOSI.TabIndex = 0;
+            this.linkLOSI.TabStop = true;
+            this.linkLOSI.Text = "Log Out";
             // 
             // lbl_LOSI
             // 
-            this.lbl_LOSI.AutoSize = true;
-            this.lbl_LOSI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_LOSI.Location = new System.Drawing.Point(12, 6);
-            this.lbl_LOSI.Name = "lbl_LOSI";
-            this.lbl_LOSI.Size = new System.Drawing.Size(94, 17);
-            this.lbl_LOSI.TabIndex = 1;
-            this.lbl_LOSI.Text = "Logged in as:";
+            this.lblLOSI.AutoSize = true;
+            this.lblLOSI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLOSI.Location = new System.Drawing.Point(12, 6);
+            this.lblLOSI.Name = "lbl_LOSI";
+            this.lblLOSI.Size = new System.Drawing.Size(94, 17);
+            this.lblLOSI.TabIndex = 1;
+            this.lblLOSI.Text = "Logged in as:";
             // 
             // lbl_Username
             // 
-            this.lbl_Username.AutoSize = true;
-            this.lbl_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Username.Location = new System.Drawing.Point(99, 6);
-            this.lbl_Username.Name = "lbl_Username";
-            this.lbl_Username.Size = new System.Drawing.Size(101, 17);
-            this.lbl_Username.TabIndex = 2;
-            this.lbl_Username.Text = "Jack Harkness";
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(99, 6);
+            this.lblUsername.Name = "lbl_Username";
+            this.lblUsername.Size = new System.Drawing.Size(101, 17);
+            this.lblUsername.TabIndex = 2;
+            this.lblUsername.Text = "Jack Harkness";
             // 
             // LoginPanel
             // 
@@ -148,9 +148,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LoginPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.LoginPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LoginPanel.Controls.Add(this.lbl_Username);
-            this.LoginPanel.Controls.Add(this.lbl_LOSI);
-            this.LoginPanel.Controls.Add(this.link_LOSI);
+            this.LoginPanel.Controls.Add(this.lblUsername);
+            this.LoginPanel.Controls.Add(this.lblLOSI);
+            this.LoginPanel.Controls.Add(this.linkLOSI);
             this.LoginPanel.Location = new System.Drawing.Point(0, 48);
             this.LoginPanel.Name = "LoginPanel";
             this.LoginPanel.Size = new System.Drawing.Size(612, 33);
@@ -158,516 +158,95 @@
             // 
             // txt_Search
             // 
-            this.txt_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Search.Location = new System.Drawing.Point(127, 87);
-            this.txt_Search.Multiline = true;
-            this.txt_Search.Name = "txt_Search";
-            this.txt_Search.Size = new System.Drawing.Size(474, 20);
-            this.txt_Search.TabIndex = 4;
-            this.txt_Search.TextChanged += new System.EventHandler(this.txt_Search_TextChanged);
+            this.txtSearch.Location = new System.Drawing.Point(127, 87);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txt_Search";
+            this.txtSearch.Size = new System.Drawing.Size(474, 20);
+            this.txtSearch.TabIndex = 4;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // toolStripContainer1
             // 
-            this.toolStripContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tlsContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             // 
             // toolStripContainer1.ContentPanel
             // 
-            this.toolStripContainer1.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.lnk_Wishlist);
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.lnk_Give);
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.lnk_WatchNext);
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.panel1);
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.menuStrip1);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(121, 500);
-            this.toolStripContainer1.Location = new System.Drawing.Point(0, 87);
-            this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(121, 525);
-            this.toolStripContainer1.TabIndex = 5;
-            this.toolStripContainer1.Text = "toolStripContainer1";
+            this.tlsContainer.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tlsContainer.ContentPanel.Controls.Add(this.lnkWishlist);
+            this.tlsContainer.ContentPanel.Controls.Add(this.lnkGive);
+            this.tlsContainer.ContentPanel.Controls.Add(this.lnkWatchNext);
+            this.tlsContainer.ContentPanel.Controls.Add(this.panel1);
+            this.tlsContainer.ContentPanel.Controls.Add(this.mnsStrip);
+            this.tlsContainer.ContentPanel.Size = new System.Drawing.Size(121, 500);
+            this.tlsContainer.Location = new System.Drawing.Point(0, 87);
+            this.tlsContainer.Name = "toolStripContainer1";
+            this.tlsContainer.Size = new System.Drawing.Size(121, 525);
+            this.tlsContainer.TabIndex = 5;
+            this.tlsContainer.Text = "toolStripContainer1";
             // 
             // toolStripContainer1.TopToolStripPanel
             // 
-            this.toolStripContainer1.TopToolStripPanel.Padding = new System.Windows.Forms.Padding(0, 0, 25, 25);
+            this.tlsContainer.TopToolStripPanel.Padding = new System.Windows.Forms.Padding(0, 0, 25, 25);
             // 
-            // menuStrip1
+            // lnk_Wishlist
             // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tlStrp_Genre,
-            this.tlStrp_Actor,
-            this.tlStrp_Director,
-            this.tlStrp_Year,
-            this.tlStrp_Rating,
-            this.tlStrp_RecentlyViewed,
-            this.tlStrp_TimesWatched});
-            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(3, 18);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(111, 139);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // tlStrp_Genre
-            // 
-            this.tlStrp_Genre.Name = "tlStrp_Genre";
-            this.tlStrp_Genre.Size = new System.Drawing.Size(104, 19);
-            this.tlStrp_Genre.Text = "Genre";
-            this.tlStrp_Genre.Click += new System.EventHandler(this.tlStrp_Click);
-            // 
-            // tlStrp_Actor
-            // 
-            this.tlStrp_Actor.Name = "tlStrp_Actor";
-            this.tlStrp_Actor.Size = new System.Drawing.Size(104, 19);
-            this.tlStrp_Actor.Text = "Actor";
-            this.tlStrp_Actor.Click += new System.EventHandler(this.tlStrp_Click);
-            // 
-            // tlStrp_Director
-            // 
-            this.tlStrp_Director.Name = "tlStrp_Director";
-            this.tlStrp_Director.Size = new System.Drawing.Size(104, 19);
-            this.tlStrp_Director.Text = "Director";
-            this.tlStrp_Director.Click += new System.EventHandler(this.tlStrp_Click);
-            // 
-            // tlStrp_Year
-            // 
-            this.tlStrp_Year.Name = "tlStrp_Year";
-            this.tlStrp_Year.Size = new System.Drawing.Size(104, 19);
-            this.tlStrp_Year.Text = "Year";
-            this.tlStrp_Year.Click += new System.EventHandler(this.tlStrp_Click);
-            // 
-            // tlStrp_Rating
-            // 
-            this.tlStrp_Rating.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tool_5Stars,
-            this.tool_4Stars,
-            this.tool_3Stars,
-            this.tool_2Stars,
-            this.tool_1Stars,
-            this.tool_0Stars,
-            this.tool_AllStars});
-            this.tlStrp_Rating.Name = "tlStrp_Rating";
-            this.tlStrp_Rating.Size = new System.Drawing.Size(104, 19);
-            this.tlStrp_Rating.Text = "Rating";
-            this.tlStrp_Rating.Click += new System.EventHandler(this.tlStrp_Click);
-            // 
-            // tool_5Stars
-            // 
-            this.tool_5Stars.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tool_5Stars.Name = "tool_5Stars";
-            this.tool_5Stars.Size = new System.Drawing.Size(136, 24);
-            this.tool_5Stars.Text = "★★★★★";
-            this.tool_5Stars.Click += new System.EventHandler(this.tool_5Stars_Click);
-            // 
-            // tool_4Stars
-            // 
-            this.tool_4Stars.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tool_4Stars.Name = "tool_4Stars";
-            this.tool_4Stars.Size = new System.Drawing.Size(136, 24);
-            this.tool_4Stars.Text = "★★★★";
-            this.tool_4Stars.Click += new System.EventHandler(this.tool_4Stars_Click);
-            // 
-            // tool_3Stars
-            // 
-            this.tool_3Stars.Font = new System.Drawing.Font("Mistral", 12F);
-            this.tool_3Stars.Name = "tool_3Stars";
-            this.tool_3Stars.Size = new System.Drawing.Size(136, 24);
-            this.tool_3Stars.Text = "★★★";
-            this.tool_3Stars.Click += new System.EventHandler(this.tool_3Stars_Click);
-            // 
-            // tool_2Stars
-            // 
-            this.tool_2Stars.Font = new System.Drawing.Font("Mistral", 12F);
-            this.tool_2Stars.Name = "tool_2Stars";
-            this.tool_2Stars.Size = new System.Drawing.Size(136, 24);
-            this.tool_2Stars.Text = "★★";
-            this.tool_2Stars.Click += new System.EventHandler(this.tool_2Stars_Click);
-            // 
-            // tool_1Stars
-            // 
-            this.tool_1Stars.Font = new System.Drawing.Font("Mistral", 12F);
-            this.tool_1Stars.Name = "tool_1Stars";
-            this.tool_1Stars.Size = new System.Drawing.Size(136, 24);
-            this.tool_1Stars.Text = "★";
-            this.tool_1Stars.Click += new System.EventHandler(this.tool_1Stars_Click);
-            // 
-            // tool_0Stars
-            // 
-            this.tool_0Stars.Font = new System.Drawing.Font("Mistral", 12F);
-            this.tool_0Stars.Name = "tool_0Stars";
-            this.tool_0Stars.Size = new System.Drawing.Size(136, 24);
-            this.tool_0Stars.Text = "☆";
-            this.tool_0Stars.Click += new System.EventHandler(this.tool_0Stars_Click);
-            // 
-            // tool_AllStars
-            // 
-            this.tool_AllStars.Name = "tool_AllStars";
-            this.tool_AllStars.Size = new System.Drawing.Size(136, 24);
-            this.tool_AllStars.Text = "All Ratings";
-            this.tool_AllStars.Click += new System.EventHandler(this.tool_AllStars_Click);
-            // 
-            // tlStrp_RecentlyViewed
-            // 
-            this.tlStrp_RecentlyViewed.Name = "tlStrp_RecentlyViewed";
-            this.tlStrp_RecentlyViewed.Size = new System.Drawing.Size(104, 19);
-            this.tlStrp_RecentlyViewed.Text = "Recently Viewed";
-            // 
-            // tlStrp_TimesWatched
-            // 
-            this.tlStrp_TimesWatched.Name = "tlStrp_TimesWatched";
-            this.tlStrp_TimesWatched.Size = new System.Drawing.Size(104, 19);
-            this.tlStrp_TimesWatched.Text = "Times Watched";
-            // 
-            // label_panel
-            // 
-            this.label_panel.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label_panel.Controls.Add(this.lbl_SortBy);
-            this.label_panel.Location = new System.Drawing.Point(0, 87);
-            this.label_panel.Name = "label_panel";
-            this.label_panel.Size = new System.Drawing.Size(121, 26);
-            this.label_panel.TabIndex = 6;
-            // 
-            // LibraryPanel
-            // 
-            this.LibraryPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lnkWishlist.ActiveLinkColor = System.Drawing.Color.Black;
+            this.lnkWishlist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LibraryPanel.Controls.Add(this.label_panel);
-            this.LibraryPanel.Controls.Add(this.toolStripContainer1);
-            this.LibraryPanel.Controls.Add(this.txt_Search);
-            this.LibraryPanel.Controls.Add(this.panel_MovieListing);
-            this.LibraryPanel.Location = new System.Drawing.Point(0, 0);
-            this.LibraryPanel.Name = "LibraryPanel";
-            this.LibraryPanel.Size = new System.Drawing.Size(612, 615);
-            this.LibraryPanel.TabIndex = 2;
+            this.lnkWishlist.AutoSize = true;
+            this.lnkWishlist.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkWishlist.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkWishlist.LinkColor = System.Drawing.Color.Black;
+            this.lnkWishlist.Location = new System.Drawing.Point(16, 270);
+            this.lnkWishlist.Name = "lnk_Wishlist";
+            this.lnkWishlist.Size = new System.Drawing.Size(82, 16);
+            this.lnkWishlist.TabIndex = 10;
+            this.lnkWishlist.TabStop = true;
+            this.lnkWishlist.Text = "My Wishlist";
+            this.lnkWishlist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnkWishlist.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkWishlist_LinkClicked);
             // 
-            // link_pMain_pLibrary
+            // lnk_Give
             // 
-            this.link_pMain_pLibrary.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.link_pMain_pLibrary.AutoSize = true;
-            this.link_pMain_pLibrary.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.link_pMain_pLibrary.Location = new System.Drawing.Point(174, 138);
-            this.link_pMain_pLibrary.Name = "link_pMain_pLibrary";
-            this.link_pMain_pLibrary.Size = new System.Drawing.Size(340, 39);
-            this.link_pMain_pLibrary.TabIndex = 2;
-            this.link_pMain_pLibrary.TabStop = true;
-            this.link_pMain_pLibrary.Text = "View Library / Search";
-            this.link_pMain_pLibrary.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_pMain_pLibrary_LinkClicked);
-            // 
-            // pic_pMain_pLibrary
-            // 
-            this.pic_pMain_pLibrary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_pMain_pLibrary.Location = new System.Drawing.Point(102, 125);
-            this.pic_pMain_pLibrary.Name = "pic_pMain_pLibrary";
-            this.pic_pMain_pLibrary.Size = new System.Drawing.Size(66, 62);
-            this.pic_pMain_pLibrary.TabIndex = 3;
-            this.pic_pMain_pLibrary.TabStop = false;
-            // 
-            // link_pMain_pDataEntry
-            // 
-            this.link_pMain_pDataEntry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.link_pMain_pDataEntry.AutoSize = true;
-            this.link_pMain_pDataEntry.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.link_pMain_pDataEntry.Location = new System.Drawing.Point(174, 206);
-            this.link_pMain_pDataEntry.Name = "link_pMain_pDataEntry";
-            this.link_pMain_pDataEntry.Size = new System.Drawing.Size(206, 39);
-            this.link_pMain_pDataEntry.TabIndex = 4;
-            this.link_pMain_pDataEntry.TabStop = true;
-            this.link_pMain_pDataEntry.Text = "Add a Movie";
-            this.link_pMain_pDataEntry.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_pMain_pDataEntry_LinkClicked);
-            // 
-            // pic_pMain_pDataEntry
-            // 
-            this.pic_pMain_pDataEntry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_pMain_pDataEntry.Location = new System.Drawing.Point(102, 193);
-            this.pic_pMain_pDataEntry.Name = "pic_pMain_pDataEntry";
-            this.pic_pMain_pDataEntry.Size = new System.Drawing.Size(66, 62);
-            this.pic_pMain_pDataEntry.TabIndex = 5;
-            this.pic_pMain_pDataEntry.TabStop = false;
-            // 
-            // pic_pMain_frmSuggest
-            // 
-            this.pic_pMain_frmSuggest.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_pMain_frmSuggest.Location = new System.Drawing.Point(102, 261);
-            this.pic_pMain_frmSuggest.Name = "pic_pMain_frmSuggest";
-            this.pic_pMain_frmSuggest.Size = new System.Drawing.Size(66, 62);
-            this.pic_pMain_frmSuggest.TabIndex = 6;
-            this.pic_pMain_frmSuggest.TabStop = false;
-            // 
-            // pic_pMain_pTagged
-            // 
-            this.pic_pMain_pTagged.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_pMain_pTagged.Location = new System.Drawing.Point(102, 329);
-            this.pic_pMain_pTagged.Name = "pic_pMain_pTagged";
-            this.pic_pMain_pTagged.Size = new System.Drawing.Size(66, 62);
-            this.pic_pMain_pTagged.TabIndex = 7;
-            this.pic_pMain_pTagged.TabStop = false;
-            // 
-            // link_pMain_frmSuggest
-            // 
-            this.link_pMain_frmSuggest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.link_pMain_frmSuggest.AutoSize = true;
-            this.link_pMain_frmSuggest.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.link_pMain_frmSuggest.Location = new System.Drawing.Point(174, 274);
-            this.link_pMain_frmSuggest.Name = "link_pMain_frmSuggest";
-            this.link_pMain_frmSuggest.Size = new System.Drawing.Size(374, 39);
-            this.link_pMain_frmSuggest.TabIndex = 8;
-            this.link_pMain_frmSuggest.TabStop = true;
-            this.link_pMain_frmSuggest.Text = "Suggest a Movie for Me";
-            this.link_pMain_frmSuggest.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_pMain_frmSuggest_LinkClicked);
-            // 
-            // link_pMain_pTaggedSearch
-            // 
-            this.link_pMain_pTaggedSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.link_pMain_pTaggedSearch.AutoSize = true;
-            this.link_pMain_pTaggedSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.link_pMain_pTaggedSearch.Location = new System.Drawing.Point(174, 342);
-            this.link_pMain_pTaggedSearch.Name = "link_pMain_pTaggedSearch";
-            this.link_pMain_pTaggedSearch.Size = new System.Drawing.Size(250, 39);
-            this.link_pMain_pTaggedSearch.TabIndex = 9;
-            this.link_pMain_pTaggedSearch.TabStop = true;
-            this.link_pMain_pTaggedSearch.Text = "Tagged Search";
-            this.link_pMain_pTaggedSearch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_pMain_pTaggedSearch_LinkClicked);
-            // 
-            // lbl_WelcomeBanner
-            // 
-            this.lbl_WelcomeBanner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_WelcomeBanner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl_WelcomeBanner.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_WelcomeBanner.Location = new System.Drawing.Point(0, 0);
-            this.lbl_WelcomeBanner.Name = "lbl_WelcomeBanner";
-            this.lbl_WelcomeBanner.Size = new System.Drawing.Size(612, 48);
-            this.lbl_WelcomeBanner.TabIndex = 10;
-            this.lbl_WelcomeBanner.Text = "Welcome to the Movie Organizer";
-            this.lbl_WelcomeBanner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // MainMenuPanel
-            // 
-            this.MainMenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lnkGive.ActiveLinkColor = System.Drawing.Color.Black;
+            this.lnkGive.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.MainMenuPanel.Controls.Add(this.lbl_WelcomeBanner);
-            this.MainMenuPanel.Controls.Add(this.link_pMain_pTaggedSearch);
-            this.MainMenuPanel.Controls.Add(this.link_pMain_frmSuggest);
-            this.MainMenuPanel.Controls.Add(this.pic_pMain_pTagged);
-            this.MainMenuPanel.Controls.Add(this.pic_pMain_frmSuggest);
-            this.MainMenuPanel.Controls.Add(this.pic_pMain_pDataEntry);
-            this.MainMenuPanel.Controls.Add(this.link_pMain_pDataEntry);
-            this.MainMenuPanel.Controls.Add(this.pic_pMain_pLibrary);
-            this.MainMenuPanel.Controls.Add(this.link_pMain_pLibrary);
-            this.MainMenuPanel.Location = new System.Drawing.Point(0, 0);
-            this.MainMenuPanel.Name = "MainMenuPanel";
-            this.MainMenuPanel.Size = new System.Drawing.Size(612, 615);
-            this.MainMenuPanel.TabIndex = 3;
+            this.lnkGive.AutoSize = true;
+            this.lnkGive.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkGive.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkGive.LinkColor = System.Drawing.Color.Black;
+            this.lnkGive.Location = new System.Drawing.Point(16, 252);
+            this.lnkGive.Name = "lnk_Give";
+            this.lnkGive.Size = new System.Drawing.Size(81, 16);
+            this.lnkGive.TabIndex = 9;
+            this.lnkGive.TabStop = true;
+            this.lnkGive.Text = "Gift Movies";
+            this.lnkGive.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnkGive.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkGive_LinkClicked);
             // 
-            // lnk_Library
+            // lnk_WatchNext
             // 
-            this.lnk_Library.ActiveLinkColor = System.Drawing.Color.Black;
-            this.lnk_Library.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lnkWatchNext.ActiveLinkColor = System.Drawing.Color.Black;
+            this.lnkWatchNext.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnk_Library.AutoSize = true;
-            this.lnk_Library.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnk_Library.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnk_Library.LinkColor = System.Drawing.Color.Black;
-            this.lnk_Library.Location = new System.Drawing.Point(6, 3);
-            this.lnk_Library.Name = "lnk_Library";
-            this.lnk_Library.Size = new System.Drawing.Size(142, 42);
-            this.lnk_Library.TabIndex = 0;
-            this.lnk_Library.TabStop = true;
-            this.lnk_Library.Text = "View Library";
-            this.lnk_Library.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lnk_Library.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_Library_LinkClicked);
-            // 
-            // lnk_AddMovie
-            // 
-            this.lnk_AddMovie.ActiveLinkColor = System.Drawing.Color.Black;
-            this.lnk_AddMovie.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnk_AddMovie.AutoSize = true;
-            this.lnk_AddMovie.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnk_AddMovie.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnk_AddMovie.LinkColor = System.Drawing.Color.Black;
-            this.lnk_AddMovie.Location = new System.Drawing.Point(157, 3);
-            this.lnk_AddMovie.Name = "lnk_AddMovie";
-            this.lnk_AddMovie.Size = new System.Drawing.Size(142, 42);
-            this.lnk_AddMovie.TabIndex = 1;
-            this.lnk_AddMovie.TabStop = true;
-            this.lnk_AddMovie.Text = "Add Movie";
-            this.lnk_AddMovie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lnk_AddMovie.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_AddMovie_LinkClicked);
-            // 
-            // lnk_Suggest
-            // 
-            this.lnk_Suggest.ActiveLinkColor = System.Drawing.Color.Black;
-            this.lnk_Suggest.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnk_Suggest.AutoSize = true;
-            this.lnk_Suggest.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnk_Suggest.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnk_Suggest.LinkColor = System.Drawing.Color.Black;
-            this.lnk_Suggest.Location = new System.Drawing.Point(308, 3);
-            this.lnk_Suggest.Name = "lnk_Suggest";
-            this.lnk_Suggest.Size = new System.Drawing.Size(142, 42);
-            this.lnk_Suggest.TabIndex = 2;
-            this.lnk_Suggest.TabStop = true;
-            this.lnk_Suggest.Text = "Suggest Movie";
-            this.lnk_Suggest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lnk_Suggest.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_Suggest_LinkClicked);
-            // 
-            // lnk_TagSearch
-            // 
-            this.lnk_TagSearch.ActiveLinkColor = System.Drawing.Color.Black;
-            this.lnk_TagSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnk_TagSearch.AutoSize = true;
-            this.lnk_TagSearch.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnk_TagSearch.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnk_TagSearch.LinkColor = System.Drawing.Color.Black;
-            this.lnk_TagSearch.Location = new System.Drawing.Point(459, 3);
-            this.lnk_TagSearch.Name = "lnk_TagSearch";
-            this.lnk_TagSearch.Size = new System.Drawing.Size(144, 42);
-            this.lnk_TagSearch.TabIndex = 3;
-            this.lnk_TagSearch.TabStop = true;
-            this.lnk_TagSearch.Text = "Tagged Search";
-            this.lnk_TagSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lnk_TagSearch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_TagSearch_LinkClicked);
-            // 
-            // NavigationPanel
-            // 
-            this.NavigationPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.NavigationPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
-            this.NavigationPanel.ColumnCount = 4;
-            this.NavigationPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.NavigationPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.NavigationPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.NavigationPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.NavigationPanel.Controls.Add(this.lnk_TagSearch, 3, 0);
-            this.NavigationPanel.Controls.Add(this.lnk_Suggest, 2, 0);
-            this.NavigationPanel.Controls.Add(this.lnk_AddMovie, 1, 0);
-            this.NavigationPanel.Controls.Add(this.lnk_Library, 0, 0);
-            this.NavigationPanel.Location = new System.Drawing.Point(0, 0);
-            this.NavigationPanel.Name = "NavigationPanel";
-            this.NavigationPanel.RowCount = 1;
-            this.NavigationPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.NavigationPanel.Size = new System.Drawing.Size(609, 48);
-            this.NavigationPanel.TabIndex = 7;
-            // 
-            // TagPanel
-            // 
-            this.TagPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TagPanel.Controls.Add(this.btn_Delete);
-            this.TagPanel.Controls.Add(this.btn_Create);
-            this.TagPanel.Controls.Add(this.btn_Search);
-            this.TagPanel.Controls.Add(this.list_ToSearch);
-            this.TagPanel.Controls.Add(this.btn_Remove_Tag);
-            this.TagPanel.Controls.Add(this.btn_Add_Tag);
-            this.TagPanel.Controls.Add(this.list_availableTags);
-            this.TagPanel.Controls.Add(this.lblSearch);
-            this.TagPanel.Controls.Add(this.lblAvailable);
-            this.TagPanel.Location = new System.Drawing.Point(0, 84);
-            this.TagPanel.Name = "TagPanel";
-            this.TagPanel.Size = new System.Drawing.Size(609, 531);
-            this.TagPanel.TabIndex = 11;
-            // 
-            // btn_Delete
-            // 
-            this.btn_Delete.Location = new System.Drawing.Point(86, 434);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(93, 27);
-            this.btn_Delete.TabIndex = 9;
-            this.btn_Delete.Text = "Delete Tag";
-            this.btn_Delete.UseVisualStyleBackColor = true;
-            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
-            // 
-            // btn_Create
-            // 
-            this.btn_Create.Location = new System.Drawing.Point(86, 402);
-            this.btn_Create.Name = "btn_Create";
-            this.btn_Create.Size = new System.Drawing.Size(93, 27);
-            this.btn_Create.TabIndex = 8;
-            this.btn_Create.Text = "Create Tag";
-            this.btn_Create.UseVisualStyleBackColor = true;
-            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
-            // 
-            // btn_Search
-            // 
-            this.btn_Search.Location = new System.Drawing.Point(436, 434);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(79, 27);
-            this.btn_Search.TabIndex = 7;
-            this.btn_Search.Text = "Search";
-            this.btn_Search.UseVisualStyleBackColor = true;
-            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
-            // 
-            // list_ToSearch
-            // 
-            this.list_ToSearch.FormattingEnabled = true;
-            this.list_ToSearch.Location = new System.Drawing.Point(353, 126);
-            this.list_ToSearch.Name = "list_ToSearch";
-            this.list_ToSearch.Size = new System.Drawing.Size(162, 238);
-            this.list_ToSearch.TabIndex = 6;
-            // 
-            // btn_Remove_Tag
-            // 
-            this.btn_Remove_Tag.Location = new System.Drawing.Point(263, 227);
-            this.btn_Remove_Tag.Name = "btn_Remove_Tag";
-            this.btn_Remove_Tag.Size = new System.Drawing.Size(75, 23);
-            this.btn_Remove_Tag.TabIndex = 5;
-            this.btn_Remove_Tag.Text = "< <";
-            this.btn_Remove_Tag.UseVisualStyleBackColor = true;
-            this.btn_Remove_Tag.Click += new System.EventHandler(this.btn_Remove_Tag_Click);
-            // 
-            // btn_Add_Tag
-            // 
-            this.btn_Add_Tag.Location = new System.Drawing.Point(263, 187);
-            this.btn_Add_Tag.Name = "btn_Add_Tag";
-            this.btn_Add_Tag.Size = new System.Drawing.Size(75, 23);
-            this.btn_Add_Tag.TabIndex = 4;
-            this.btn_Add_Tag.Text = "> >";
-            this.btn_Add_Tag.UseVisualStyleBackColor = true;
-            this.btn_Add_Tag.Click += new System.EventHandler(this.btn_Add_Tag_Click);
-            // 
-            // list_availableTags
-            // 
-            this.list_availableTags.FormattingEnabled = true;
-            this.list_availableTags.Location = new System.Drawing.Point(86, 126);
-            this.list_availableTags.Name = "list_availableTags";
-            this.list_availableTags.Size = new System.Drawing.Size(162, 238);
-            this.list_availableTags.TabIndex = 3;
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(349, 88);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(137, 24);
-            this.lblSearch.TabIndex = 2;
-            this.lblSearch.Text = "Tags to Search";
-            // 
-            // lblAvailable
-            // 
-            this.lblAvailable.AutoSize = true;
-            this.lblAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvailable.Location = new System.Drawing.Point(82, 88);
-            this.lblAvailable.Name = "lblAvailable";
-            this.lblAvailable.Size = new System.Drawing.Size(133, 24);
-            this.lblAvailable.TabIndex = 1;
-            this.lblAvailable.Text = "Available Tags";
+            this.lnkWatchNext.AutoSize = true;
+            this.lnkWatchNext.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkWatchNext.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkWatchNext.LinkColor = System.Drawing.Color.Black;
+            this.lnkWatchNext.Location = new System.Drawing.Point(16, 233);
+            this.lnkWatchNext.Name = "lnk_WatchNext";
+            this.lnkWatchNext.Size = new System.Drawing.Size(86, 16);
+            this.lnkWatchNext.TabIndex = 8;
+            this.lnkWatchNext.TabStop = true;
+            this.lnkWatchNext.Text = "Watch Next";
+            this.lnkWatchNext.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnkWatchNext.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkWatchNext_LinkClicked);
             // 
             // panel1
             // 
@@ -690,76 +269,497 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "My Lists";
             // 
+            // menuStrip1
+            // 
+            this.mnsStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.mnsStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tlsGenre,
+            this.tlsActor,
+            this.tlsDirector,
+            this.tlsYear,
+            this.tlsRating,
+            this.tlsRecentlyViewed,
+            this.tlsTimesWatched});
+            this.mnsStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.mnsStrip.Location = new System.Drawing.Point(3, 18);
+            this.mnsStrip.Name = "menuStrip1";
+            this.mnsStrip.Size = new System.Drawing.Size(111, 139);
+            this.mnsStrip.TabIndex = 0;
+            this.mnsStrip.Text = "menuStrip1";
+            // 
+            // tlStrp_Genre
+            // 
+            this.tlsGenre.Name = "tlStrp_Genre";
+            this.tlsGenre.Size = new System.Drawing.Size(104, 19);
+            this.tlsGenre.Text = "Genre";
+            this.tlsGenre.Click += new System.EventHandler(this.tlStrp_Click);
+            // 
+            // tlStrp_Actor
+            // 
+            this.tlsActor.Name = "tlStrp_Actor";
+            this.tlsActor.Size = new System.Drawing.Size(104, 19);
+            this.tlsActor.Text = "Actor";
+            this.tlsActor.Click += new System.EventHandler(this.tlStrp_Click);
+            // 
+            // tlStrp_Director
+            // 
+            this.tlsDirector.Name = "tlStrp_Director";
+            this.tlsDirector.Size = new System.Drawing.Size(104, 19);
+            this.tlsDirector.Text = "Director";
+            this.tlsDirector.Click += new System.EventHandler(this.tlStrp_Click);
+            // 
+            // tlStrp_Year
+            // 
+            this.tlsYear.Name = "tlStrp_Year";
+            this.tlsYear.Size = new System.Drawing.Size(104, 19);
+            this.tlsYear.Text = "Year";
+            this.tlsYear.Click += new System.EventHandler(this.tlStrp_Click);
+            // 
+            // tlStrp_Rating
+            // 
+            this.tlsRating.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tl5Stars,
+            this.tl4Stars,
+            this.tl3Stars,
+            this.tl2Stars,
+            this.tl1Stars,
+            this.tl0Stars,
+            this.tlAllStars});
+            this.tlsRating.Name = "tlStrp_Rating";
+            this.tlsRating.Size = new System.Drawing.Size(104, 19);
+            this.tlsRating.Text = "Rating";
+            this.tlsRating.Click += new System.EventHandler(this.tlStrp_Click);
+            // 
+            // tool_5Stars
+            // 
+            this.tl5Stars.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tl5Stars.Name = "tool_5Stars";
+            this.tl5Stars.Size = new System.Drawing.Size(136, 24);
+            this.tl5Stars.Text = "★★★★★";
+            this.tl5Stars.Click += new System.EventHandler(this.tl5Stars_Click);
+            // 
+            // tool_4Stars
+            // 
+            this.tl4Stars.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tl4Stars.Name = "tool_4Stars";
+            this.tl4Stars.Size = new System.Drawing.Size(136, 24);
+            this.tl4Stars.Text = "★★★★";
+            this.tl4Stars.Click += new System.EventHandler(this.tl4Stars_Click);
+            // 
+            // tool_3Stars
+            // 
+            this.tl3Stars.Font = new System.Drawing.Font("Mistral", 12F);
+            this.tl3Stars.Name = "tool_3Stars";
+            this.tl3Stars.Size = new System.Drawing.Size(136, 24);
+            this.tl3Stars.Text = "★★★";
+            this.tl3Stars.Click += new System.EventHandler(this.tl3Stars_Click);
+            // 
+            // tool_2Stars
+            // 
+            this.tl2Stars.Font = new System.Drawing.Font("Mistral", 12F);
+            this.tl2Stars.Name = "tool_2Stars";
+            this.tl2Stars.Size = new System.Drawing.Size(136, 24);
+            this.tl2Stars.Text = "★★";
+            this.tl2Stars.Click += new System.EventHandler(this.tl2Stars_Click);
+            // 
+            // tool_1Stars
+            // 
+            this.tl1Stars.Font = new System.Drawing.Font("Mistral", 12F);
+            this.tl1Stars.Name = "tool_1Stars";
+            this.tl1Stars.Size = new System.Drawing.Size(136, 24);
+            this.tl1Stars.Text = "★";
+            this.tl1Stars.Click += new System.EventHandler(this.tl1Stars_Click);
+            // 
+            // tool_0Stars
+            // 
+            this.tl0Stars.Font = new System.Drawing.Font("Mistral", 12F);
+            this.tl0Stars.Name = "tool_0Stars";
+            this.tl0Stars.Size = new System.Drawing.Size(136, 24);
+            this.tl0Stars.Text = "☆";
+            this.tl0Stars.Click += new System.EventHandler(this.tl0Stars_Click);
+            // 
+            // tool_AllStars
+            // 
+            this.tlAllStars.Name = "tool_AllStars";
+            this.tlAllStars.Size = new System.Drawing.Size(136, 24);
+            this.tlAllStars.Text = "All Ratings";
+            this.tlAllStars.Click += new System.EventHandler(this.tlAllStars_Click);
+            // 
+            // tlStrp_RecentlyViewed
+            // 
+            this.tlsRecentlyViewed.Name = "tlStrp_RecentlyViewed";
+            this.tlsRecentlyViewed.Size = new System.Drawing.Size(104, 19);
+            this.tlsRecentlyViewed.Text = "Recently Viewed";
+            // 
+            // tlStrp_TimesWatched
+            // 
+            this.tlsTimesWatched.Name = "tlStrp_TimesWatched";
+            this.tlsTimesWatched.Size = new System.Drawing.Size(104, 19);
+            this.tlsTimesWatched.Text = "Times Watched";
+            // 
+            // label_panel
+            // 
+            this.LabelPanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.LabelPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LabelPanel.Controls.Add(this.lblSortBy);
+            this.LabelPanel.Location = new System.Drawing.Point(0, 87);
+            this.LabelPanel.Name = "label_panel";
+            this.LabelPanel.Size = new System.Drawing.Size(121, 26);
+            this.LabelPanel.TabIndex = 6;
+            // 
             // lbl_SortBy
             // 
-            this.lbl_SortBy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblSortBy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_SortBy.AutoSize = true;
-            this.lbl_SortBy.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lbl_SortBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SortBy.Location = new System.Drawing.Point(32, 4);
-            this.lbl_SortBy.Name = "lbl_SortBy";
-            this.lbl_SortBy.Size = new System.Drawing.Size(54, 17);
-            this.lbl_SortBy.TabIndex = 2;
-            this.lbl_SortBy.Text = "Sort By";
+            this.lblSortBy.AutoSize = true;
+            this.lblSortBy.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblSortBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSortBy.Location = new System.Drawing.Point(32, 4);
+            this.lblSortBy.Name = "lbl_SortBy";
+            this.lblSortBy.Size = new System.Drawing.Size(54, 17);
+            this.lblSortBy.TabIndex = 2;
+            this.lblSortBy.Text = "Sort By";
             // 
-            // lnk_WatchNext
+            // LibraryPanel
             // 
-            this.lnk_WatchNext.ActiveLinkColor = System.Drawing.Color.Black;
-            this.lnk_WatchNext.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.LibraryPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnk_WatchNext.AutoSize = true;
-            this.lnk_WatchNext.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnk_WatchNext.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnk_WatchNext.LinkColor = System.Drawing.Color.Black;
-            this.lnk_WatchNext.Location = new System.Drawing.Point(16, 233);
-            this.lnk_WatchNext.Name = "lnk_WatchNext";
-            this.lnk_WatchNext.Size = new System.Drawing.Size(86, 16);
-            this.lnk_WatchNext.TabIndex = 8;
-            this.lnk_WatchNext.TabStop = true;
-            this.lnk_WatchNext.Text = "Watch Next";
-            this.lnk_WatchNext.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lnk_WatchNext.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_WatchNext_LinkClicked);
+            this.LibraryPanel.Controls.Add(this.LabelPanel);
+            this.LibraryPanel.Controls.Add(this.tlsContainer);
+            this.LibraryPanel.Controls.Add(this.txtSearch);
+            this.LibraryPanel.Controls.Add(this.MovieListingPanel);
+            this.LibraryPanel.Location = new System.Drawing.Point(0, 0);
+            this.LibraryPanel.Name = "LibraryPanel";
+            this.LibraryPanel.Size = new System.Drawing.Size(612, 615);
+            this.LibraryPanel.TabIndex = 2;
             // 
-            // lnk_Give
+            // link_pMain_pLibrary
             // 
-            this.lnk_Give.ActiveLinkColor = System.Drawing.Color.Black;
-            this.lnk_Give.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lnkMainLibrary.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnkMainLibrary.AutoSize = true;
+            this.lnkMainLibrary.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkMainLibrary.Location = new System.Drawing.Point(174, 138);
+            this.lnkMainLibrary.Name = "link_pMain_pLibrary";
+            this.lnkMainLibrary.Size = new System.Drawing.Size(340, 39);
+            this.lnkMainLibrary.TabIndex = 2;
+            this.lnkMainLibrary.TabStop = true;
+            this.lnkMainLibrary.Text = "View Library / Search";
+            this.lnkMainLibrary.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkMainLibrary_LinkClicked);
+            // 
+            // pic_pMain_pLibrary
+            // 
+            this.picMainLibrary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picMainLibrary.Location = new System.Drawing.Point(102, 125);
+            this.picMainLibrary.Name = "pic_pMain_pLibrary";
+            this.picMainLibrary.Size = new System.Drawing.Size(66, 62);
+            this.picMainLibrary.TabIndex = 3;
+            this.picMainLibrary.TabStop = false;
+            // 
+            // link_pMain_pDataEntry
+            // 
+            this.lnkMainDataEntry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnkMainDataEntry.AutoSize = true;
+            this.lnkMainDataEntry.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkMainDataEntry.Location = new System.Drawing.Point(174, 206);
+            this.lnkMainDataEntry.Name = "link_pMain_pDataEntry";
+            this.lnkMainDataEntry.Size = new System.Drawing.Size(206, 39);
+            this.lnkMainDataEntry.TabIndex = 4;
+            this.lnkMainDataEntry.TabStop = true;
+            this.lnkMainDataEntry.Text = "Add a Movie";
+            this.lnkMainDataEntry.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkMainDataEntry_LinkClicked);
+            // 
+            // pic_pMain_pDataEntry
+            // 
+            this.picMainDataEntry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picMainDataEntry.Location = new System.Drawing.Point(102, 193);
+            this.picMainDataEntry.Name = "pic_pMain_pDataEntry";
+            this.picMainDataEntry.Size = new System.Drawing.Size(66, 62);
+            this.picMainDataEntry.TabIndex = 5;
+            this.picMainDataEntry.TabStop = false;
+            // 
+            // pic_pMain_frmSuggest
+            // 
+            this.picMainSuggest.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picMainSuggest.Location = new System.Drawing.Point(102, 261);
+            this.picMainSuggest.Name = "pic_pMain_frmSuggest";
+            this.picMainSuggest.Size = new System.Drawing.Size(66, 62);
+            this.picMainSuggest.TabIndex = 6;
+            this.picMainSuggest.TabStop = false;
+            // 
+            // pic_pMain_pTagged
+            // 
+            this.picMainTaggedSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picMainTaggedSearch.Location = new System.Drawing.Point(102, 329);
+            this.picMainTaggedSearch.Name = "pic_pMain_pTagged";
+            this.picMainTaggedSearch.Size = new System.Drawing.Size(66, 62);
+            this.picMainTaggedSearch.TabIndex = 7;
+            this.picMainTaggedSearch.TabStop = false;
+            // 
+            // link_pMain_frmSuggest
+            // 
+            this.lnkMainSuggest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnkMainSuggest.AutoSize = true;
+            this.lnkMainSuggest.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkMainSuggest.Location = new System.Drawing.Point(174, 274);
+            this.lnkMainSuggest.Name = "link_pMain_frmSuggest";
+            this.lnkMainSuggest.Size = new System.Drawing.Size(374, 39);
+            this.lnkMainSuggest.TabIndex = 8;
+            this.lnkMainSuggest.TabStop = true;
+            this.lnkMainSuggest.Text = "Suggest a Movie for Me";
+            this.lnkMainSuggest.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkMainSuggest_LinkClicked);
+            // 
+            // link_pMain_pTaggedSearch
+            // 
+            this.lnkMainTaggedSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnkMainTaggedSearch.AutoSize = true;
+            this.lnkMainTaggedSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkMainTaggedSearch.Location = new System.Drawing.Point(174, 342);
+            this.lnkMainTaggedSearch.Name = "link_pMain_pTaggedSearch";
+            this.lnkMainTaggedSearch.Size = new System.Drawing.Size(250, 39);
+            this.lnkMainTaggedSearch.TabIndex = 9;
+            this.lnkMainTaggedSearch.TabStop = true;
+            this.lnkMainTaggedSearch.Text = "Tagged Search";
+            this.lnkMainTaggedSearch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkMainTaggedSearch_LinkClicked);
+            // 
+            // lbl_WelcomeBanner
+            // 
+            this.lblWelcomeBanner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblWelcomeBanner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblWelcomeBanner.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcomeBanner.Location = new System.Drawing.Point(0, 0);
+            this.lblWelcomeBanner.Name = "lbl_WelcomeBanner";
+            this.lblWelcomeBanner.Size = new System.Drawing.Size(612, 48);
+            this.lblWelcomeBanner.TabIndex = 10;
+            this.lblWelcomeBanner.Text = "Welcome to the Movie Organizer";
+            this.lblWelcomeBanner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // MainMenuPanel
+            // 
+            this.MainMenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnk_Give.AutoSize = true;
-            this.lnk_Give.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnk_Give.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnk_Give.LinkColor = System.Drawing.Color.Black;
-            this.lnk_Give.Location = new System.Drawing.Point(16, 252);
-            this.lnk_Give.Name = "lnk_Give";
-            this.lnk_Give.Size = new System.Drawing.Size(81, 16);
-            this.lnk_Give.TabIndex = 9;
-            this.lnk_Give.TabStop = true;
-            this.lnk_Give.Text = "Gift Movies";
-            this.lnk_Give.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lnk_Give.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_Give_LinkClicked);
+            this.MainMenuPanel.Controls.Add(this.lblWelcomeBanner);
+            this.MainMenuPanel.Controls.Add(this.lnkMainTaggedSearch);
+            this.MainMenuPanel.Controls.Add(this.lnkMainSuggest);
+            this.MainMenuPanel.Controls.Add(this.picMainTaggedSearch);
+            this.MainMenuPanel.Controls.Add(this.picMainSuggest);
+            this.MainMenuPanel.Controls.Add(this.picMainDataEntry);
+            this.MainMenuPanel.Controls.Add(this.lnkMainDataEntry);
+            this.MainMenuPanel.Controls.Add(this.picMainLibrary);
+            this.MainMenuPanel.Controls.Add(this.lnkMainLibrary);
+            this.MainMenuPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainMenuPanel.Name = "MainMenuPanel";
+            this.MainMenuPanel.Size = new System.Drawing.Size(612, 615);
+            this.MainMenuPanel.TabIndex = 3;
             // 
-            // lnk_Wishlist
+            // lnkLibrary
             // 
-            this.lnk_Wishlist.ActiveLinkColor = System.Drawing.Color.Black;
-            this.lnk_Wishlist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lnkLibrary.ActiveLinkColor = System.Drawing.Color.Black;
+            this.lnkLibrary.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnk_Wishlist.AutoSize = true;
-            this.lnk_Wishlist.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnk_Wishlist.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.lnk_Wishlist.LinkColor = System.Drawing.Color.Black;
-            this.lnk_Wishlist.Location = new System.Drawing.Point(16, 270);
-            this.lnk_Wishlist.Name = "lnk_Wishlist";
-            this.lnk_Wishlist.Size = new System.Drawing.Size(82, 16);
-            this.lnk_Wishlist.TabIndex = 10;
-            this.lnk_Wishlist.TabStop = true;
-            this.lnk_Wishlist.Text = "My Wishlist";
-            this.lnk_Wishlist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lnk_Wishlist.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_Wishlist_LinkClicked);
+            this.lnkLibrary.AutoSize = true;
+            this.lnkLibrary.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkLibrary.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkLibrary.LinkColor = System.Drawing.Color.Black;
+            this.lnkLibrary.Location = new System.Drawing.Point(6, 3);
+            this.lnkLibrary.Name = "lnkLibrary";
+            this.lnkLibrary.Size = new System.Drawing.Size(142, 42);
+            this.lnkLibrary.TabIndex = 0;
+            this.lnkLibrary.TabStop = true;
+            this.lnkLibrary.Text = "View Library";
+            this.lnkLibrary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnkLibrary.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkLibrary_LinkClicked);
+            // 
+            // lnkAddMovie
+            // 
+            this.lnkAddMovie.ActiveLinkColor = System.Drawing.Color.Black;
+            this.lnkAddMovie.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnkAddMovie.AutoSize = true;
+            this.lnkAddMovie.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkAddMovie.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkAddMovie.LinkColor = System.Drawing.Color.Black;
+            this.lnkAddMovie.Location = new System.Drawing.Point(157, 3);
+            this.lnkAddMovie.Name = "lnkAddMovie";
+            this.lnkAddMovie.Size = new System.Drawing.Size(142, 42);
+            this.lnkAddMovie.TabIndex = 1;
+            this.lnkAddMovie.TabStop = true;
+            this.lnkAddMovie.Text = "Add Movie";
+            this.lnkAddMovie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnkAddMovie.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkMainDataEntry_LinkClicked);
+            // 
+            // lnkSuggest
+            // 
+            this.lnkSuggest.ActiveLinkColor = System.Drawing.Color.Black;
+            this.lnkSuggest.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnkSuggest.AutoSize = true;
+            this.lnkSuggest.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkSuggest.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkSuggest.LinkColor = System.Drawing.Color.Black;
+            this.lnkSuggest.Location = new System.Drawing.Point(308, 3);
+            this.lnkSuggest.Name = "lnkSuggest";
+            this.lnkSuggest.Size = new System.Drawing.Size(142, 42);
+            this.lnkSuggest.TabIndex = 2;
+            this.lnkSuggest.TabStop = true;
+            this.lnkSuggest.Text = "Suggest Movie";
+            this.lnkSuggest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnkSuggest.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkMainSuggest_LinkClicked);
+            // 
+            // lnkTaggedSearch
+            // 
+            this.lnkTaggedSearch.ActiveLinkColor = System.Drawing.Color.Black;
+            this.lnkTaggedSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnkTaggedSearch.AutoSize = true;
+            this.lnkTaggedSearch.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkTaggedSearch.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lnkTaggedSearch.LinkColor = System.Drawing.Color.Black;
+            this.lnkTaggedSearch.Location = new System.Drawing.Point(459, 3);
+            this.lnkTaggedSearch.Name = "lnkTaggedSearch";
+            this.lnkTaggedSearch.Size = new System.Drawing.Size(144, 42);
+            this.lnkTaggedSearch.TabIndex = 3;
+            this.lnkTaggedSearch.TabStop = true;
+            this.lnkTaggedSearch.Text = "Tagged Search";
+            this.lnkTaggedSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnkTaggedSearch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkTaggedSearch_LinkClicked);
+            // 
+            // NavigationPanel
+            // 
+            this.NavigationPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NavigationPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
+            this.NavigationPanel.ColumnCount = 4;
+            this.NavigationPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.NavigationPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.NavigationPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.NavigationPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.NavigationPanel.Controls.Add(this.lnkTaggedSearch, 3, 0);
+            this.NavigationPanel.Controls.Add(this.lnkSuggest, 2, 0);
+            this.NavigationPanel.Controls.Add(this.lnkAddMovie, 1, 0);
+            this.NavigationPanel.Controls.Add(this.lnkLibrary, 0, 0);
+            this.NavigationPanel.Location = new System.Drawing.Point(0, 0);
+            this.NavigationPanel.Name = "NavigationPanel";
+            this.NavigationPanel.RowCount = 1;
+            this.NavigationPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.NavigationPanel.Size = new System.Drawing.Size(609, 48);
+            this.NavigationPanel.TabIndex = 7;
+            // 
+            // TagPanel
+            // 
+            this.TagPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TagPanel.Controls.Add(this.btnDelete);
+            this.TagPanel.Controls.Add(this.btnCreate);
+            this.TagPanel.Controls.Add(this.btnSearch);
+            this.TagPanel.Controls.Add(this.lstToSearch);
+            this.TagPanel.Controls.Add(this.btnRemoveTag);
+            this.TagPanel.Controls.Add(this.btnAddTag);
+            this.TagPanel.Controls.Add(this.lstTagsAvailable);
+            this.TagPanel.Controls.Add(this.lblSearch);
+            this.TagPanel.Controls.Add(this.lblAvailable);
+            this.TagPanel.Location = new System.Drawing.Point(0, 84);
+            this.TagPanel.Name = "TagPanel";
+            this.TagPanel.Size = new System.Drawing.Size(609, 531);
+            this.TagPanel.TabIndex = 11;
+            // 
+            // btn_Delete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(86, 434);
+            this.btnDelete.Name = "btn_Delete";
+            this.btnDelete.Size = new System.Drawing.Size(93, 27);
+            this.btnDelete.TabIndex = 9;
+            this.btnDelete.Text = "Delete Tag";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btn_Create
+            // 
+            this.btnCreate.Location = new System.Drawing.Point(86, 402);
+            this.btnCreate.Name = "btn_Create";
+            this.btnCreate.Size = new System.Drawing.Size(93, 27);
+            this.btnCreate.TabIndex = 8;
+            this.btnCreate.Text = "Create Tag";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
+            // btn_Search
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(436, 434);
+            this.btnSearch.Name = "btn_Search";
+            this.btnSearch.Size = new System.Drawing.Size(79, 27);
+            this.btnSearch.TabIndex = 7;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // list_ToSearch
+            // 
+            this.lstToSearch.FormattingEnabled = true;
+            this.lstToSearch.Location = new System.Drawing.Point(353, 126);
+            this.lstToSearch.Name = "list_ToSearch";
+            this.lstToSearch.Size = new System.Drawing.Size(162, 238);
+            this.lstToSearch.TabIndex = 6;
+            // 
+            // btn_Remove_Tag
+            // 
+            this.btnRemoveTag.Location = new System.Drawing.Point(263, 227);
+            this.btnRemoveTag.Name = "btn_Remove_Tag";
+            this.btnRemoveTag.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoveTag.TabIndex = 5;
+            this.btnRemoveTag.Text = "< <";
+            this.btnRemoveTag.UseVisualStyleBackColor = true;
+            this.btnRemoveTag.Click += new System.EventHandler(this.btnRemoveTag_Click);
+            // 
+            // btn_Add_Tag
+            // 
+            this.btnAddTag.Location = new System.Drawing.Point(263, 187);
+            this.btnAddTag.Name = "btn_Add_Tag";
+            this.btnAddTag.Size = new System.Drawing.Size(75, 23);
+            this.btnAddTag.TabIndex = 4;
+            this.btnAddTag.Text = "> >";
+            this.btnAddTag.UseVisualStyleBackColor = true;
+            this.btnAddTag.Click += new System.EventHandler(this.btnAddTag_Click);
+            // 
+            // list_availableTags
+            // 
+            this.lstTagsAvailable.FormattingEnabled = true;
+            this.lstTagsAvailable.Location = new System.Drawing.Point(86, 126);
+            this.lstTagsAvailable.Name = "list_availableTags";
+            this.lstTagsAvailable.Size = new System.Drawing.Size(162, 238);
+            this.lstTagsAvailable.TabIndex = 3;
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.Location = new System.Drawing.Point(349, 88);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(137, 24);
+            this.lblSearch.TabIndex = 2;
+            this.lblSearch.Text = "Tags to Search";
+            // 
+            // lblAvailable
+            // 
+            this.lblAvailable.AutoSize = true;
+            this.lblAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvailable.Location = new System.Drawing.Point(82, 88);
+            this.lblAvailable.Name = "lblAvailable";
+            this.lblAvailable.Size = new System.Drawing.Size(133, 24);
+            this.lblAvailable.TabIndex = 1;
+            this.lblAvailable.Text = "Available Tags";
             // 
             // MainForm
             // 
@@ -777,89 +777,89 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
-            this.toolStripContainer1.ContentPanel.ResumeLayout(false);
-            this.toolStripContainer1.ContentPanel.PerformLayout();
-            this.toolStripContainer1.ResumeLayout(false);
-            this.toolStripContainer1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.label_panel.ResumeLayout(false);
-            this.label_panel.PerformLayout();
+            this.tlsContainer.ContentPanel.ResumeLayout(false);
+            this.tlsContainer.ContentPanel.PerformLayout();
+            this.tlsContainer.ResumeLayout(false);
+            this.tlsContainer.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.mnsStrip.ResumeLayout(false);
+            this.mnsStrip.PerformLayout();
+            this.LabelPanel.ResumeLayout(false);
+            this.LabelPanel.PerformLayout();
             this.LibraryPanel.ResumeLayout(false);
             this.LibraryPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pLibrary)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pDataEntry)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_frmSuggest)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_pMain_pTagged)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMainLibrary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMainDataEntry)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMainSuggest)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMainTaggedSearch)).EndInit();
             this.MainMenuPanel.ResumeLayout(false);
             this.MainMenuPanel.PerformLayout();
             this.NavigationPanel.ResumeLayout(false);
             this.NavigationPanel.PerformLayout();
             this.TagPanel.ResumeLayout(false);
             this.TagPanel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.LinkLabel link_LOSI;
-        private System.Windows.Forms.Label lbl_LOSI;
-        private System.Windows.Forms.Label lbl_Username;
+        private System.Windows.Forms.LinkLabel linkLOSI;
+        private System.Windows.Forms.Label lblLOSI;
+        private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Panel LoginPanel;
-        private System.Windows.Forms.TextBox txt_Search;
-        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem tlStrp_Genre;
-        private System.Windows.Forms.ToolStripMenuItem tlStrp_Actor;
-        private System.Windows.Forms.ToolStripMenuItem tlStrp_Director;
-        private System.Windows.Forms.ToolStripMenuItem tlStrp_Year;
-        private System.Windows.Forms.ToolStripMenuItem tlStrp_Rating;
-        private System.Windows.Forms.ToolStripMenuItem tlStrp_RecentlyViewed;
-        private System.Windows.Forms.ToolStripMenuItem tlStrp_TimesWatched;
-        private System.Windows.Forms.Panel label_panel;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.ToolStripContainer tlsContainer;
+        private System.Windows.Forms.MenuStrip mnsStrip;
+        private System.Windows.Forms.ToolStripMenuItem tlsGenre;
+        private System.Windows.Forms.ToolStripMenuItem tlsActor;
+        private System.Windows.Forms.ToolStripMenuItem tlsDirector;
+        private System.Windows.Forms.ToolStripMenuItem tlsYear;
+        private System.Windows.Forms.ToolStripMenuItem tlsRating;
+        private System.Windows.Forms.ToolStripMenuItem tlsRecentlyViewed;
+        private System.Windows.Forms.ToolStripMenuItem tlsTimesWatched;
+        private System.Windows.Forms.Panel LabelPanel;
         private System.Windows.Forms.Panel LibraryPanel;
-        private System.Windows.Forms.LinkLabel link_pMain_pLibrary;
-        private System.Windows.Forms.PictureBox pic_pMain_pLibrary;
-        private System.Windows.Forms.LinkLabel link_pMain_pDataEntry;
-        private System.Windows.Forms.PictureBox pic_pMain_pDataEntry;
-        private System.Windows.Forms.PictureBox pic_pMain_frmSuggest;
-        private System.Windows.Forms.PictureBox pic_pMain_pTagged;
-        private System.Windows.Forms.LinkLabel link_pMain_frmSuggest;
-        private System.Windows.Forms.LinkLabel link_pMain_pTaggedSearch;
-        private System.Windows.Forms.Label lbl_WelcomeBanner;
+        private System.Windows.Forms.LinkLabel lnkMainLibrary;
+        private System.Windows.Forms.PictureBox picMainLibrary;
+        private System.Windows.Forms.LinkLabel lnkMainDataEntry;
+        private System.Windows.Forms.PictureBox picMainDataEntry;
+        private System.Windows.Forms.PictureBox picMainSuggest;
+        private System.Windows.Forms.PictureBox picMainTaggedSearch;
+        private System.Windows.Forms.LinkLabel lnkMainSuggest;
+        private System.Windows.Forms.LinkLabel lnkMainTaggedSearch;
+        private System.Windows.Forms.Label lblWelcomeBanner;
         private System.Windows.Forms.Panel MainMenuPanel;
-        private System.Windows.Forms.Panel panel_MovieListing;
+        private System.Windows.Forms.Panel MovieListingPanel;
         private System.Windows.Forms.TableLayoutPanel NavigationPanel;
-        private System.Windows.Forms.LinkLabel lnk_TagSearch;
-        private System.Windows.Forms.LinkLabel lnk_Suggest;
-        private System.Windows.Forms.LinkLabel lnk_AddMovie;
-        private System.Windows.Forms.LinkLabel lnk_Library;
+        private System.Windows.Forms.LinkLabel lnkTaggedSearch;
+        private System.Windows.Forms.LinkLabel lnkSuggest;
+        private System.Windows.Forms.LinkLabel lnkAddMovie;
+        private System.Windows.Forms.LinkLabel lnkLibrary;
         private System.Windows.Forms.Panel TagPanel;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.Label lblAvailable;
-        private System.Windows.Forms.Button btn_Add_Tag;
-        private System.Windows.Forms.ListBox list_availableTags;
-        private System.Windows.Forms.ListBox list_ToSearch;
-        private System.Windows.Forms.Button btn_Search;
-        private System.Windows.Forms.ToolStripMenuItem tool_5Stars;
-        private System.Windows.Forms.ToolStripMenuItem tool_4Stars;
-        private System.Windows.Forms.ToolStripMenuItem tool_3Stars;
-        private System.Windows.Forms.ToolStripMenuItem tool_2Stars;
-        private System.Windows.Forms.ToolStripMenuItem tool_1Stars;
-        private System.Windows.Forms.ToolStripMenuItem tool_0Stars;
-        private System.Windows.Forms.ToolStripMenuItem tool_AllStars;
-        private System.Windows.Forms.Button btn_Delete;
-        private System.Windows.Forms.Button btn_Create;
-        private System.Windows.Forms.Button btn_Remove_Tag;
+        private System.Windows.Forms.Button btnAddTag;
+        private System.Windows.Forms.ListBox lstTagsAvailable;
+        private System.Windows.Forms.ListBox lstToSearch;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ToolStripMenuItem tl5Stars;
+        private System.Windows.Forms.ToolStripMenuItem tl4Stars;
+        private System.Windows.Forms.ToolStripMenuItem tl3Stars;
+        private System.Windows.Forms.ToolStripMenuItem tl2Stars;
+        private System.Windows.Forms.ToolStripMenuItem tl1Stars;
+        private System.Windows.Forms.ToolStripMenuItem tl0Stars;
+        private System.Windows.Forms.ToolStripMenuItem tlAllStars;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.Button btnRemoveTag;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbl_SortBy;
-        private System.Windows.Forms.LinkLabel lnk_Wishlist;
-        private System.Windows.Forms.LinkLabel lnk_Give;
-        private System.Windows.Forms.LinkLabel lnk_WatchNext;
+        private System.Windows.Forms.Label lblSortBy;
+        private System.Windows.Forms.LinkLabel lnkWishlist;
+        private System.Windows.Forms.LinkLabel lnkGive;
+        private System.Windows.Forms.LinkLabel lnkWatchNext;
     }
 }
 

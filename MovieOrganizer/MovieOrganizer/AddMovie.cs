@@ -19,12 +19,12 @@ namespace MovieOrganizer
             setDeleteToFalse();
         }
 
-        protected override void btn_Save_Movie_Click(object sender, EventArgs e)
+        protected override void btnSaveMovie_Click(object sender, EventArgs e)
         {
             if (base.ValidateInput())
             {
-                movie = new MovieEntry(txt_MovieTitle.Text, Convert.ToInt32(txt_Year.Text), txt_Director.Text, txt_Actors.Text, (Rating)cmb_Rating.SelectedValue, txt_Genre.Text, txt_Description.Text, txt_Tags.Text, getFilename());
-                base.btn_Save_Movie_Click(sender, e);
+                movie = new MovieEntry(txtMovieTitle.Text, Convert.ToInt32(txtYear.Text), txtDirector.Text, txtActors.Text, (Rating)cmbRating.SelectedValue, txtGenre.Text, txtDescription.Text, txtTags.Text, getFilename());
+                base.btnSaveMovie_Click(sender, e);
             }
         }
 

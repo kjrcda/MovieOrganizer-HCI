@@ -26,18 +26,18 @@ namespace MovieOrganizer
             CenterToScreen();
             MinimizeBox = false;
             MaximizeBox = false;
-            cmb_Rating.DataSource = Enum.GetValues(typeof(Rating)).Cast<Rating>().Select(p => new { Key = (int)p, Value = p.ToString() }).ToList();
-            cmb_Rating.DisplayMember = "Value";
-            cmb_Rating.ValueMember = "Key";
+            cmbRating.DataSource = Enum.GetValues(typeof(Rating)).Cast<Rating>().Select(p => new { Key = (int)p, Value = p.ToString() }).ToList();
+            cmbRating.DisplayMember = "Value";
+            cmbRating.ValueMember = "Key";
         }
 
-        protected virtual void btn_Save_Movie_Click(object sender, EventArgs e)
+        protected virtual void btnSaveMovie_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
             Dispose();
         }
 
-        protected virtual void btn_Cancel_Movie_Click(object sender, EventArgs e)
+        protected virtual void btnCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             Dispose();
@@ -45,16 +45,16 @@ namespace MovieOrganizer
 
         protected void setDeleteToFalse()
         {
-            btn_Delete_Movie.Visible = false;
+            btnDeleteMovie.Visible = false;
         }
 
-        private void btn_Delete_Movie_Click(object sender, EventArgs e)
+        private void btnDeleteMovie_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Ignore;
             Dispose();
         }
 
-        private void btn_UploadImage_Click(object sender, EventArgs e)
+        private void btnUploadImage_Click(object sender, EventArgs e)
         {
             OpenFileDialog diag = new OpenFileDialog();
             var imageExtensions = string.Join(";", ImageCodecInfo.GetImageDecoders().Select(ici => ici.FilenameExtension));
@@ -67,7 +67,7 @@ namespace MovieOrganizer
             if (result == DialogResult.OK)
             {
                 picName = diag.FileName; 
-                pic_EditMovieImage.Image = Image.FromFile(diag.FileName);
+                picEditMovieImage.Image = Image.FromFile(diag.FileName);
                 picPresent = true;
             }
         }
@@ -88,11 +88,11 @@ namespace MovieOrganizer
         protected bool ValidateInput()
         {
             bool valid = true;
-            if (txt_Year.Text == "")
-                txt_Year.Text = "0";
+            if (txtYear.Text == "")
+                txtYear.Text = "0";
             try
             {
-                int year = Convert.ToInt32(txt_Year.Text);
+                int year = Convert.ToInt32(txtYear.Text);
                 if (year > 2200)
                 {
                     MessageBox.Show("Year field is too high");
@@ -105,7 +105,7 @@ namespace MovieOrganizer
                 valid = false;
             }
 
-            if (txt_MovieTitle.Text == "")
+            if (txtMovieTitle.Text == "")
             {
                 MessageBox.Show("Movie Title field must not be blank");
                 valid = false;
@@ -123,14 +123,14 @@ namespace MovieOrganizer
 
             entryTag.ShowAlways = true;
 
-            entryTag.SetToolTip(txt_MovieTitle, "Enter the movie title");
-            entryTag.SetToolTip(txt_Genre, "Enter the genre of the movie");
-            entryTag.SetToolTip(txt_Actors, "Enter some of the actors in the movie");
-            entryTag.SetToolTip(txt_Director, "Enter the movie director");
-            entryTag.SetToolTip(txt_Year, "Enter the year of the movie as a number");
-            entryTag.SetToolTip(txt_Description, "Enter a description of the movie");
-            entryTag.SetToolTip(txt_Tags, "Enter custom words you wish to add to the movie as tags");
-            entryTag.SetToolTip(pic_EditMovieImage, "Click the upload button to select a movie cover image");
+            entryTag.SetToolTip(txtMovieTitle, "Enter the movie title");
+            entryTag.SetToolTip(txtGenre, "Enter the genre of the movie");
+            entryTag.SetToolTip(txtActors, "Enter some of the actors in the movie");
+            entryTag.SetToolTip(txtDirector, "Enter the movie director");
+            entryTag.SetToolTip(txtYear, "Enter the year of the movie as a number");
+            entryTag.SetToolTip(txtDescription, "Enter a description of the movie");
+            entryTag.SetToolTip(txtTags, "Enter custom words you wish to add to the movie as tags");
+            entryTag.SetToolTip(picEditMovieImage, "Click the upload button to select a movie cover image");
         }
     }
 }
